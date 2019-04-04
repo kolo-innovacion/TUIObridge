@@ -13,5 +13,7 @@ class Button {
     posY=y;
     sizeX=sx;
     sizeY=sy;
+    currState=false;
+    prevState=false;
   }
 }
