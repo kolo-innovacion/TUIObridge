@@ -1,5 +1,5 @@
 class Button {
-  String name;
+  String identifier;
   int posX;
   int posY;
   int sizeX;
@@ -8,7 +8,7 @@ class Button {
   boolean prevState;
 
   Button(String n, int x, int y, int sx, int sy ) {
-    name=n;
+    identifier=n;
     posX=x;
     posY=y;
     sizeX=sx;
