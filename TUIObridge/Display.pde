@@ -17,7 +17,7 @@ class Display {
     println((width*(6.0/8.0))/sizeX);
   }
   void show() {
-    rect(width/8, height/8, 960, 270);
+    rect(width/8, height/8, 480, 135);
     //println(scale);
   }
 }

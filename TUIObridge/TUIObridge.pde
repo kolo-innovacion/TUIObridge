@@ -2,7 +2,8 @@ Display display=new Display(1920, 540);
 ArrayList<Button> buttons;
 
 void setup() {
-  size(1280, 720);
+  configSetup();
+  size(800, 450);
   frameRate(60);
   buttons=new ArrayList<Button>();
 
