@@ -7,8 +7,8 @@ class Button {
   boolean currState;
   boolean prevState;
 
-  Button(String n, int x, int y, int sx, int sy ) {
-    identifier=n;
+  Button(String id, int x, int y, int sx, int sy ) {
+    identifier=id;
     posX=x;
     posY=y;
     sizeX=sx;

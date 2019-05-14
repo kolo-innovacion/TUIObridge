@@ -1,0 +1,8 @@
+<display resx="960" resy="270">
+	<button id="button1" posx="100" posy="100" sizex="50" sizey="50">
+	</button>
+	<button id="button2" posx="200" posy="100" sizex="50" sizey="50">
+	</button>
+	<button id="button3" posx="300" posy="100" sizex="50" sizey="50">
+	</button>
+</display>
