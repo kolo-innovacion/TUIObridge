@@ -23,6 +23,8 @@ void loadConfig() {
   winX=int(config.getInt("resx", 100)*winScale);
   //winY=int(config.getInt("resy", 100)*winScale)+7*winTol;
   winY=int(config.getInt("resy", 100)*winScale);
+  targetIP=config.getString("targetIP", "255.255.255.255");
+  targetPort=config.getInt("targetPort", 5000);
 }
 
 int extInt(XML obj, String name) {

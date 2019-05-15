@@ -8,6 +8,8 @@ void setupUDP() {
   udp = new UDP( this, 6000 );
   //udp.log( true );     // <-- printout the connection activity
   udp.listen( true );
+
+  println("TARGET:  "+targetIP+": "+targetPort);
 }
 
 void sendUDP(String input) {
