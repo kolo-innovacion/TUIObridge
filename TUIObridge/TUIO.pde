@@ -67,6 +67,7 @@ void removeTuioObject(TuioObject tobj) {
 // called when a cursor is added to the scene
 void addTuioCursor(TuioCursor tcur) {
   if (tuioVerbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
+  checkPress();
   //redraw();
 }
 
@@ -108,4 +109,18 @@ void removeTuioBlob(TuioBlob tblb) {
 void refresh(TuioTime frameTime) {
   if (tuioVerbose) println("frame #"+frameTime.getFrameID()+" ("+frameTime.getTotalMilliseconds()+")");
   if (callback) redraw();
+}
+
+void checkPress() {
+  for (int i=0; i<buttons.size(); i++) {
+    buttons.get(i);
+  }
+}
+
+boolean inRange(int input, int lef, int rig) {
+  if ((input>=lef)&&(input<=rig)) {
+    return true;
+  } else {
+    return false;
+  }
 }
