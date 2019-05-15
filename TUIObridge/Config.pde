@@ -33,5 +33,10 @@ String extString(XML obj, String name) {
 
 void loadButtons() {
   XML[] buttons = config.getChildren("button");
+
+  for (int i=0; i<buttons.length; i++) {
+    XML temp = buttons[i];
+    println(temp.getString("id"));
+  }
   println(buttons.length+"  buttons have been added");
 }
