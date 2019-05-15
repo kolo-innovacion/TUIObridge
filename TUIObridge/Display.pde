@@ -1,28 +1,24 @@
 class Display {
   int sizeX;
   int sizeY;
-  float scale;
   //ArrayList<Button> buttonList;
 
   Display() {
     //getConfig();
-    sizeX=dispConf.getInt("resx", 100);
-    sizeY=dispConf.getInt("resy", 100);
-    scale=0.1;
+    sizeX=config.getInt("resx", 100);
+    sizeY=config.getInt("resy", 100);
+    println(sizeX +" X "+sizeY+"  display has been created");
     //scale=(width*(6.0/8.0));
     //println(scale);
     //buttonList = new ArrayList<Button>() ;
   }
-  void  setScale(float input) {
-    //scale=input;
-    println((width*(6.0/8.0))/sizeX);
-  }
+
   void show() {
     rect(winTol, winTol, sizeX, sizeY);
     //println(scale);
   }
   void getConfig() {
-    println(dispConf.getInt("resx"));
-    println(dispConf.getInt("resy"));
+    println(config.getInt("resx"));
+    println(config.getInt("resy"));
   }
 }

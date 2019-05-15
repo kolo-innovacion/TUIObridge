@@ -4,13 +4,14 @@ ArrayList<Button> buttons;
 
 void settings() {
   //gui config happens here
-  configLoad();
+  loadConfig();
   setWindow();
 }
 
 void setup() {
 
   display=new Display();
+  loadButtons();
   frameRate(60);
   buttons=new ArrayList<Button>();
 
