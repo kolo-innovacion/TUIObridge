@@ -7,10 +7,36 @@ boolean callback = true; // updates only after callbacks
 
 void tuioSetup() {
   tuioClient  = new TuioProcessing(this);
+  if (!callback) {
+    frameRate(60);
+    loop();
+  } else noLoop(); // or callback updates
 }
 
 void updateTUIO() {
   tuioCursorList = tuioClient.getTuioCursorList();
+
+  //ArrayList<TuioCursor> tuioCursorList = tuioClient.getTuioCursorList();
+  for (int i=0; i<tuioCursorList.size(); i++) {
+    TuioCursor tcur = tuioCursorList.get(i);
+    ArrayList<TuioPoint> pointList = tcur.getPath();
+
+    if (pointList.size()>0) {
+      stroke(0, 0, 255);
+      TuioPoint start_point = pointList.get(0);
+      for (int j=0; j<pointList.size(); j++) {
+        TuioPoint end_point = pointList.get(j);
+        line(start_point.getScreenX(width), start_point.getScreenY(height), end_point.getScreenX(width), end_point.getScreenY(height));
+        start_point = end_point;
+      }
+
+      stroke(192, 192, 192);
+      fill(192, 192, 192);
+      ellipse( tcur.getScreenX(width), tcur.getScreenY(height), 20, 20);
+      fill(0);
+      text(""+ tcur.getCursorID(), tcur.getScreenX(width)-5, tcur.getScreenY(height)+5);
+    }
+  }
 }
 
 // --------------------------------------------------------------
