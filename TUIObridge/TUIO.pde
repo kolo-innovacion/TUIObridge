@@ -2,8 +2,10 @@ import TUIO.*;
 TuioProcessing tuioClient;
 ArrayList<TuioCursor> tuioCursorList;
 
-boolean verbose = true; // print console debug messages
+boolean tuioVerbose = true; // print console debug messages
 boolean callback = true; // updates only after callbacks
+
+int curColor=color(0, 255, 0);
 
 void tuioSetup() {
   tuioClient  = new TuioProcessing(this);
@@ -31,7 +33,8 @@ void updateTUIO() {
       }
 
       stroke(192, 192, 192);
-      fill(192, 192, 192);
+      noStroke();
+      fill(curColor);
       ellipse( tcur.getScreenX(width), tcur.getScreenY(height), 20, 20);
       fill(0);
       text(""+ tcur.getCursorID(), tcur.getScreenX(width)-5, tcur.getScreenY(height)+5);
@@ -46,63 +49,63 @@ void updateTUIO() {
 
 // called when an object is added to the scene
 void addTuioObject(TuioObject tobj) {
-  if (verbose) println("add obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle());
+  if (tuioVerbose) println("add obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle());
 }
 
 // called when an object is moved
 void updateTuioObject (TuioObject tobj) {
-  if (verbose) println("set obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle()
+  if (tuioVerbose) println("set obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle()
     +" "+tobj.getMotionSpeed()+" "+tobj.getRotationSpeed()+" "+tobj.getMotionAccel()+" "+tobj.getRotationAccel());
 }
 
 // called when an object is removed from the scene
 void removeTuioObject(TuioObject tobj) {
-  if (verbose) println("del obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+")");
+  if (tuioVerbose) println("del obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+")");
 }
 
 // --------------------------------------------------------------
 // called when a cursor is added to the scene
 void addTuioCursor(TuioCursor tcur) {
-  if (verbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
+  if (tuioVerbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
   //redraw();
 }
 
 // called when a cursor is moved
 void updateTuioCursor (TuioCursor tcur) {
-  if (verbose) println("set cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY()
+  if (tuioVerbose) println("set cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY()
     +" "+tcur.getMotionSpeed()+" "+tcur.getMotionAccel());
   //redraw();
 }
 
 // called when a cursor is removed from the scene
 void removeTuioCursor(TuioCursor tcur) {
-  if (verbose) println("del cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+")");
+  if (tuioVerbose) println("del cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+")");
   //redraw()
 }
 
 // --------------------------------------------------------------
 // called when a blob is added to the scene
 void addTuioBlob(TuioBlob tblb) {
-  if (verbose) println("add blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea());
+  if (tuioVerbose) println("add blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea());
   //redraw();
 }
 
 // called when a blob is moved
 void updateTuioBlob (TuioBlob tblb) {
-  if (verbose) println("set blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea()
+  if (tuioVerbose) println("set blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea()
     +" "+tblb.getMotionSpeed()+" "+tblb.getRotationSpeed()+" "+tblb.getMotionAccel()+" "+tblb.getRotationAccel());
   //redraw()
 }
 
 // called when a blob is removed from the scene
 void removeTuioBlob(TuioBlob tblb) {
-  if (verbose) println("del blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+")");
+  if (tuioVerbose) println("del blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+")");
   //redraw()
 }
 
 // --------------------------------------------------------------
 // called at the end of each TUIO frame
 void refresh(TuioTime frameTime) {
-  if (verbose) println("frame #"+frameTime.getFrameID()+" ("+frameTime.getTotalMilliseconds()+")");
+  if (tuioVerbose) println("frame #"+frameTime.getFrameID()+" ("+frameTime.getTotalMilliseconds()+")");
   if (callback) redraw();
 }
