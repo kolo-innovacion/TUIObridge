@@ -16,7 +16,8 @@ class Display {
 
   void show() {
     fill(tone);
-    rect(winTol, winTol, sizeX, sizeY);
+    stroke(255, 128, 0);
+    rect(0, 0, sizeX, sizeY);
     //println(scale);
   }
   void getConfig() {

@@ -22,6 +22,9 @@ class Button {
   }
   void show() {
     fill(inTone);
+    noStroke();
     rect(posX, posY, sizeX, sizeY);
+    fill(255);
+    text(identifier, posX, posY+(sizeY/2));
   }
 }

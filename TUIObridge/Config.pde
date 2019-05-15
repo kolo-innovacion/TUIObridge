@@ -19,7 +19,8 @@ void loadConfig() {
   }
 
   winScale=config.getFloat("winScale", 100);
-  winX=int(config.getInt("resx", 100)*winScale)+2*winTol;
+  //winX=int(config.getInt("resx", 100)*winScale)+1*winTol;
+  winX=int(config.getInt("resx", 100)*winScale);
   winY=int(config.getInt("resy", 100)*winScale)+7*winTol;
 }
 
@@ -42,4 +43,8 @@ void instanceButtons() {
     buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
   }
   println(buttonArr.length+"  buttons have been added");
+}
+
+void instanceDisplay() {
+  display=new Display();
 }
