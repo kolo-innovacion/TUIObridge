@@ -1,6 +1,7 @@
 class Display {
   int sizeX;
   int sizeY;
+  int tone =color(255, 255, 255);
   //ArrayList<Button> buttonList;
 
   Display() {
@@ -14,6 +15,7 @@ class Display {
   }
 
   void show() {
+    fill(tone);
     rect(winTol, winTol, sizeX, sizeY);
     //println(scale);
   }

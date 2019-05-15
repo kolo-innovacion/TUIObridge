@@ -9,7 +9,9 @@ void settings() {
 }
 
 void setup() {
-
+  rectMode(CORNER);
+  colorMode(RGB, 255);
+  noStroke();
   display=new Display();
   instanceButtons();
   frameRate(60);
@@ -24,6 +26,9 @@ void draw() {
   //println(width);
   //display.setScale(2);
   display.show();
+  for (int i=0; i<buttons.size(); i++) {
+    buttons.get(i).show();
+  }
 }
 
 void setWindow() {

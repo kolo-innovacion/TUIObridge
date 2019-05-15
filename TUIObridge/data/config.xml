@@ -5,6 +5,6 @@
 	</button>
 	<button id="button3" posx="300" posy="100" sizex="50" sizey="50">
 	</button>
-	<button id="button3" posx="300" posy="100" sizex="50" sizey="50">
+	<button id="button4" posx="400" posy="100" sizex="50" sizey="50">
 	</button>
 </config>

@@ -38,8 +38,8 @@ void instanceButtons() {
 
   for (int i=0; i<buttonArr.length; i++) {
     XML temp = buttonArr[i];
-    println(temp.getString("id"));
-    buttons.add(new Button("a", 1, 2, 3, 4));
+    //println(temp.getString("id"));
+    buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
   }
   println(buttonArr.length+"  buttons have been added");
 }
