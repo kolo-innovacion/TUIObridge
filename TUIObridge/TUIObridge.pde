@@ -3,16 +3,14 @@ ArrayList<Button> buttons;
 
 
 void settings() {
+  //gui config happens here
   configLoad();
-
-  
-  display=new Display();
   size(winX, winY);
 }
 
 void setup() {
 
-  //size(1000, 450);
+  display=new Display();
   frameRate(60);
   buttons=new ArrayList<Button>();
 
