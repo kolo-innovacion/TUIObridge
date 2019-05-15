@@ -28,16 +28,16 @@ void updateTUIO() {
       TuioPoint start_point = pointList.get(0);
       for (int j=0; j<pointList.size(); j++) {
         TuioPoint end_point = pointList.get(j);
-        line(start_point.getScreenX(width), start_point.getScreenY(height), end_point.getScreenX(width), end_point.getScreenY(height));
+        line(start_point.getScreenX(display.sizeX), start_point.getScreenY(display.sizeY), end_point.getScreenX(display.sizeX), end_point.getScreenY(display.sizeY));
         start_point = end_point;
       }
 
       stroke(192, 192, 192);
       noStroke();
       fill(curColor);
-      ellipse( tcur.getScreenX(width), tcur.getScreenY(height), 20, 20);
+      ellipse( tcur.getScreenX(display.sizeX), tcur.getScreenY(display.sizeY), 20, 20);
       fill(0);
-      text(""+ tcur.getCursorID(), tcur.getScreenX(width)-5, tcur.getScreenY(height)+5);
+      text(""+ tcur.getCursorID(), tcur.getScreenX(display.sizeX)-5, tcur.getScreenY(display.sizeY)+5);
     }
   }
 }
@@ -73,7 +73,7 @@ boolean inRange(int input, int lef, int rig) {
 
 void addTuioCursor(TuioCursor tcur) {
   if (tuioVerbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
-  checkPress(tcur.getScreenX(width), tcur.getScreenY(height));
+  checkPress(tcur.getScreenX(display.sizeX), tcur.getScreenY(display.sizeY));
   //redraw();
 }
 
