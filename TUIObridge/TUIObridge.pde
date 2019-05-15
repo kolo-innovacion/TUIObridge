@@ -1,10 +1,18 @@
 Display display;
 ArrayList<Button> buttons;
 
-void setup() {
+
+void settings() {
   configLoad();
+
+  
   display=new Display();
-  size(1000, 450);
+  size(winX, winY);
+}
+
+void setup() {
+
+  //size(1000, 450);
   frameRate(60);
   buttons=new ArrayList<Button>();
 

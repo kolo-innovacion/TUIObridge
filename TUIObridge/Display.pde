@@ -18,7 +18,7 @@ class Display {
     println((width*(6.0/8.0))/sizeX);
   }
   void show() {
-    rect(20, 20, sizeX, sizeY);
+    rect(winTol, winTol, sizeX, sizeY);
     //println(scale);
   }
   void getConfig() {
