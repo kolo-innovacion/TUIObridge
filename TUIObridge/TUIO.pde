@@ -2,7 +2,7 @@ import TUIO.*;
 TuioProcessing tuioClient;
 ArrayList<TuioCursor> tuioCursorList;
 
-boolean tuioVerbose = true; // print console debug messages
+boolean tuioVerbose = false; // print console debug messages
 boolean callback = true; // updates only after callbacks
 
 int curColor=color(0, 255, 0);
@@ -122,6 +122,7 @@ void checkPress(int curX, int curY) {
     checkY=inRange(curY, temp.posY, temp.posY+temp.sizeY);
     if (checkX&&checkY) {
       println("XXXXXXXXXXXXXXXX");
+      //in this case, button is pressed, send UDP!
       temp.setState(true);
     } else {
       temp.setState(false);
