@@ -31,12 +31,15 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-void loadButtons() {
-  XML[] buttons = config.getChildren("button");
+void instanceButtons() {
 
-  for (int i=0; i<buttons.length; i++) {
-    XML temp = buttons[i];
+  buttons=new ArrayList<Button>();
+  XML[] buttonArr = config.getChildren("button");
+
+  for (int i=0; i<buttonArr.length; i++) {
+    XML temp = buttonArr[i];
     println(temp.getString("id"));
+    buttons.add(new Button("a", 1, 2, 3, 4));
   }
-  println(buttons.length+"  buttons have been added");
+  println(buttonArr.length+"  buttons have been added");
 }

@@ -11,9 +11,9 @@ void settings() {
 void setup() {
 
   display=new Display();
-  loadButtons();
+  instanceButtons();
   frameRate(60);
-  buttons=new ArrayList<Button>();
+  //buttons=new ArrayList<Button>();
 
   for (int i =0; i<10; i++) {
     //buttons.add(new Button("a"));
