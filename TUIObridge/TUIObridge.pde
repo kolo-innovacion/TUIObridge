@@ -1,9 +1,10 @@
-Display display=new Display(1920, 540);
+Display display;
 ArrayList<Button> buttons;
 
 void setup() {
-  configSetup();
-  size(800, 450);
+  configLoad();
+  display=new Display();
+  size(1000, 450);
   frameRate(60);
   buttons=new ArrayList<Button>();
 
@@ -14,6 +15,6 @@ void setup() {
 
 void draw() {
   //println(width);
-  display.setScale(2);
+  //display.setScale(2);
   display.show();
 }

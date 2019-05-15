@@ -4,9 +4,10 @@ class Display {
   float scale;
   //ArrayList<Button> buttonList;
 
-  Display(int sx, int sy) {
-    sizeX=sx;
-    sizeY=sy;
+  Display() {
+    //getConfig();
+    sizeX=dispConf.getInt("resx", 100);
+    sizeY=dispConf.getInt("resy", 100);
     scale=0.1;
     //scale=(width*(6.0/8.0));
     //println(scale);
@@ -17,7 +18,11 @@ class Display {
     println((width*(6.0/8.0))/sizeX);
   }
   void show() {
-    rect(width/8, height/8, 480, 135);
+    rect(20, 20, sizeX, sizeY);
     //println(scale);
+  }
+  void getConfig() {
+    println(dispConf.getInt("resx"));
+    println(dispConf.getInt("resy"));
   }
 }

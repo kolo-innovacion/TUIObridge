@@ -1,8 +1,9 @@
-XML xml;
+XML dispConf;
 
-void configSetup() {
-  xml = loadXML("config.xml");
-  XML display = xml.getChild("display");
+void configLoad() {
+  dispConf = loadXML("config.xml");
+  //XML display = config.getChild("diskplay");
+  //println("loaded");
   //display.getContent();
   //firstChild.getChild("button");
   //println(firstChild.getString("species"));
