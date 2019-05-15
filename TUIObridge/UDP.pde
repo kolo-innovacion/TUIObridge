@@ -5,7 +5,7 @@ String targetIP="localhost";
 int targetPort=6100;
 
 void setupUDP() {
-  udp = new UDP( this, 6000 );
+  udp = new UDP( this, 6077 );
   //udp.log( true );     // <-- printout the connection activity
   udp.listen( true );
 

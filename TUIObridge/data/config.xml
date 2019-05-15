@@ -1,4 +1,4 @@
-<config resx="960" resy="270" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
+<config resx="960" resy="270" fullscreen="1" winScale="1.0" targetIP="localhost" targetPort="6100">
 	<button id="button1" posx="100" posy="100" sizex="50" sizey="50">
 	</button>
 	<button id="button2" posx="200" posy="100" sizex="50" sizey="50">

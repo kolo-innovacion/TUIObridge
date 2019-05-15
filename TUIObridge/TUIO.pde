@@ -41,6 +41,41 @@ void updateTUIO() {
     }
   }
 }
+//
+
+void checkPress(int curX, int curY) {
+
+  boolean checkX=false;
+  boolean checkY=false;
+
+  for (int i=0; i<buttons.size(); i++) {
+    Button temp=buttons.get(i);
+    checkX=inRange(curX, temp.posX, temp.posX+temp.sizeX);
+    checkY=inRange(curY, temp.posY, temp.posY+temp.sizeY);
+    if (checkX&&checkY) {
+      //println(temp.identifier);
+      sendUDP(temp.identifier);
+      //in this case, button is pressed, send UDP!
+      temp.setState(true);
+    } else {
+      temp.setState(false);
+    }
+  }
+}
+
+boolean inRange(int input, int lef, int rig) {
+  if ((input>=lef)&&(input<=rig)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+void addTuioCursor(TuioCursor tcur) {
+  if (tuioVerbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
+  checkPress(tcur.getScreenX(width), tcur.getScreenY(height));
+  //redraw();
+}
 
 // --------------------------------------------------------------
 // these callback methods are called whenever a TUIO event occurs
@@ -65,11 +100,7 @@ void removeTuioObject(TuioObject tobj) {
 
 // --------------------------------------------------------------
 // called when a cursor is added to the scene
-void addTuioCursor(TuioCursor tcur) {
-  if (tuioVerbose) println("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
-  checkPress(tcur.getScreenX(width), tcur.getScreenY(height));
-  //redraw();
-}
+
 
 // called when a cursor is moved
 void updateTuioCursor (TuioCursor tcur) {
@@ -109,31 +140,4 @@ void removeTuioBlob(TuioBlob tblb) {
 void refresh(TuioTime frameTime) {
   if (tuioVerbose) println("frame #"+frameTime.getFrameID()+" ("+frameTime.getTotalMilliseconds()+")");
   if (callback) redraw();
-}
-
-void checkPress(int curX, int curY) {
-
-  boolean checkX=false;
-  boolean checkY=false;
-
-  for (int i=0; i<buttons.size(); i++) {
-    Button temp=buttons.get(i);
-    checkX=inRange(curX, temp.posX, temp.posX+temp.sizeX);
-    checkY=inRange(curY, temp.posY, temp.posY+temp.sizeY);
-    if (checkX&&checkY) {
-      println("XXXXXXXXXXXXXXXX");
-      //in this case, button is pressed, send UDP!
-      temp.setState(true);
-    } else {
-      temp.setState(false);
-    }
-  }
-}
-
-boolean inRange(int input, int lef, int rig) {
-  if ((input>=lef)&&(input<=rig)) {
-    return true;
-  } else {
-    return false;
-  }
 }

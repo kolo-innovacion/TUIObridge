@@ -13,6 +13,7 @@ void setup() {
   instanceDisplay();
   instanceButtons();
   tuioSetup();
+  setupUDP();
 }
 
 void draw() {
