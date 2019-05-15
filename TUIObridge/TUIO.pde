@@ -119,9 +119,12 @@ void checkPress(int curX, int curY) {
   for (int i=0; i<buttons.size(); i++) {
     Button temp=buttons.get(i);
     checkX=inRange(curX, temp.posX, temp.posX+temp.sizeX);
-    checkX=inRange(curX, temp.posX, temp.posX+temp.sizeX);
-    if (checkX) {
+    checkY=inRange(curY, temp.posY, temp.posY+temp.sizeY);
+    if (checkX&&checkY) {
       println("XXXXXXXXXXXXXXXX");
+      temp.setState(true);
+    } else {
+      temp.setState(false);
     }
   }
 }

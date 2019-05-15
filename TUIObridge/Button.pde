@@ -20,11 +20,21 @@ class Button {
     prevState=false;
     println(identifier+"  created on  "+posX+","+posY);
   }
+
+  void setState(boolean input) {
+    currState=input;
+  }
+
   void show() {
-    fill(inTone);
+    if (currState) {
+      fill(acTone);
+    } else {
+      fill(inTone);
+    }
     noStroke();
     rect(posX, posY, sizeX, sizeY);
     fill(255);
     text(identifier, posX, posY+(sizeY/2));
+    currState=false;
   }
 }
