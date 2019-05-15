@@ -5,7 +5,7 @@ ArrayList<Button> buttons;
 void settings() {
   //gui config happens here
   configLoad();
-  size(winX, winY);
+  setWindow();
 }
 
 void setup() {
@@ -23,4 +23,12 @@ void draw() {
   //println(width);
   //display.setScale(2);
   display.show();
+}
+
+void setWindow() {
+  if (fullScr) {
+    fullScreen(P2D);
+  } else {
+    size(winX, winY, P2D);
+  }
 }
