@@ -4,6 +4,7 @@ ArrayList<Button> buttons;
 
 void settings() {
   //gui config happens here
+  setupLog();
   loadConfig();
   setWindow();
 }

@@ -101,14 +101,27 @@ void logln(String input) {
   output+=String.format("%03d", (millis()%1000))+" ms  ";
   output+="->  ";
   output+=input;
-  logString+=output+"\n";
+  logList.add(output);
+  println(logList.size());
+  String[] logArr =null;
+  logArr = logList.toArray(new String[logList.size()]);
+  //logString+=output+"\n";
   //output+=input+"\n perro";
   println(output);
+  saveStrings("nouns.txt", logArr);
 }
 
 String logForm(int input) {
   return String.format("%02d", input);
 }
+
+ArrayList<String> logList;
+
+void setupLog() {
+
+  logList=new ArrayList<String>();
+}
+
 String logString="";
 
 void logFile() {
