@@ -56,10 +56,21 @@ void instanceButtons() {
   //println(buttonArr);
   for (int i=0; i<buttonArr.length; i++) {
     XML temp = buttonArr[i];
+
     String tempID=temp.getString("name");
+
     temp=nextLevel(temp, "userEvents");
     temp=nextLevel(temp, "userEvent");
     temp=nextLevel(temp, "parameters");
+    XML tempX=nextLevel(temp, "x");
+    XML tempY=nextLevel(temp, "y");
+    XML tempW=nextLevel(temp, "width");
+    XML tempH=nextLevel(temp, "height");
+
+    println(tempX);
+    println(7+tempX.getIntContent());
+
+    buttons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
   }
 }
 
