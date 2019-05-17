@@ -8,9 +8,9 @@ class Display {
     //getConfig();
     sizeX=config.getInt("resx", 100);
     sizeY=config.getInt("resy", 100);
-    println(sizeX +" X "+sizeY+"  display has been created");
+    logln(sizeX +" X "+sizeY+"  display has been created");
     //scale=(width*(6.0/8.0));
-    //println(scale);
+    //logln(scale);
     //buttonList = new ArrayList<Button>() ;
   }
 
@@ -18,10 +18,10 @@ class Display {
     fill(tone);
     stroke(255, 128, 0);
     rect(0, 0, sizeX, sizeY);
-    //println(scale);
+    //logln(scale);
   }
   void getConfig() {
-    println(config.getInt("resx"));
-    println(config.getInt("resy"));
+    //logln(config.getInt("resx"));
+    //logln(config.getInt("resy"));
   }
 }

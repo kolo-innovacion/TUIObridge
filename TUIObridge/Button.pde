@@ -18,7 +18,7 @@ class Button {
     sizeY=sy;
     currState=false;
     prevState=false;
-    println(identifier+"  created on  "+posX+","+posY);
+    logln(identifier+"  created on  "+posX+","+posY);
   }
 
   void setState(boolean input) {

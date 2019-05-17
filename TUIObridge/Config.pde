@@ -8,7 +8,7 @@ int winTol=20;
 
 void loadConfig() {
   config = loadXML("config.xml");
-  println("config XML file has been loaded");
+  logln("config XML file has been loaded");
 
   //fullScr=boolean(extInt(config, "fullscreen"));
   fullScr=boolean(config.getInt("fullscreen", 0));
@@ -42,10 +42,10 @@ void instanceButtons0() {
 
   for (int i=0; i<buttonArr.length; i++) {
     XML temp = buttonArr[i];
-    //println(temp.getString("id"));
+    //logln(temp.getString("id"));
     buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
   }
-  println(buttonArr.length+"  buttons have been added");
+  logln(buttonArr.length+"  buttons have been added");
 }
 
 
@@ -53,7 +53,7 @@ void instanceButtons() {
   buttons=new ArrayList<Button>();
   XML curr=nextLevel(config, "userDefinedEvents");
   XML[] buttonArr = curr.getChildren("userDefinedEvent");
-  //println(buttonArr);
+  //logln(buttonArr);
   for (int i=0; i<buttonArr.length; i++) {
     XML temp = buttonArr[i];
 
@@ -77,7 +77,7 @@ void instanceDisplay() {
 
 XML nextLevel(XML input, String name) {
   XML temp = input.getChild(name);
-  checkValid(temp);
+  //checkValid(temp);
   return temp;
   //return null;
 }
@@ -92,6 +92,17 @@ void checkValid(XML input) {
 
 void logln(String input) {
   String output = "";
-  output+=year();
+  output+=year()+"-";
+  output+=logForm(month())+"-";
+  output+=logForm(day())+"  ";
+  output+=logForm(hour())+":";
+  output+=logForm(minute())+":";
+  output+=logForm(second())+"  ";
+  output+=String.format("%03d", (millis()%1000))+"ms  ";
+  output+=input;
   println(output);
+}
+
+String logForm(int input) {
+  return String.format("%02d", input);
 }
