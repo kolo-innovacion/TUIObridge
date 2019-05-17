@@ -67,9 +67,6 @@ void instanceButtons() {
     XML tempW=nextLevel(temp, "width");
     XML tempH=nextLevel(temp, "height");
 
-    println(tempX);
-    println(7+tempX.getIntContent());
-
     buttons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
   }
 }

@@ -12,14 +12,14 @@ void setup() {
   setupGUI();
   instanceDisplay();
   instanceButtons();
-  //tuioSetup();
-  //setupUDP();
+  tuioSetup();
+  setupUDP();
 }
 
 void draw() {
-  //display.show();
-  //showButtons();
-  //updateTUIO();
+  display.show();
+  showButtons();
+  updateTUIO();
 }
 
 void setWindow() {
