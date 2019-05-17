@@ -50,18 +50,34 @@ void instanceButtons0() {
 
 
 void instanceButtons() {
-
   buttons=new ArrayList<Button>();
-  XML[] buttonArr = config.getChildren("button");
-
+  XML curr=nextLevel(config, "userDefinedEvents");
+  XML[] buttonArr = curr.getChildren("userDefinedEvent");
+  //println(buttonArr);
   for (int i=0; i<buttonArr.length; i++) {
     XML temp = buttonArr[i];
-    //println(temp.getString("id"));
-    buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
+    String tempID=temp.getString("name");
+    temp=nextLevel(temp, "userEvents");
+    temp=nextLevel(temp, "userEvent");
+    temp=nextLevel(temp, "parameters");
   }
-  println(buttonArr.length+"  buttons have been added");
 }
 
 void instanceDisplay() {
   display=new Display();
+}
+
+XML nextLevel(XML input, String name) {
+  XML temp = input.getChild(name);
+  checkValid(temp);
+  return temp;
+  //return null;
+}
+
+void checkValid(XML input) {
+  if (input!=null) {
+    println("VALID");
+  } else {
+    println("NULL ENCOUNTERED");
+  }
 }
