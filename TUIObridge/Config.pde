@@ -35,6 +35,20 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
+void instanceButtons0() {
+
+  buttons=new ArrayList<Button>();
+  XML[] buttonArr = config.getChildren("button");
+
+  for (int i=0; i<buttonArr.length; i++) {
+    XML temp = buttonArr[i];
+    //println(temp.getString("id"));
+    buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
+  }
+  println(buttonArr.length+"  buttons have been added");
+}
+
+
 void instanceButtons() {
 
   buttons=new ArrayList<Button>();
