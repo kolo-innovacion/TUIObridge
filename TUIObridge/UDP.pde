@@ -9,7 +9,7 @@ void setupUDP() {
   //udp.log( true );     // <-- printout the connection activity
   udp.listen( true );
 
-  logln("TARGET:  "+targetIP+": "+targetPort);
+  logln("Target: "+targetIP+"  Port: "+targetPort);
 }
 
 void sendUDP(String input) {

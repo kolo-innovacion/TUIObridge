@@ -98,7 +98,8 @@ void logln(String input) {
   output+=logForm(hour())+":";
   output+=logForm(minute())+":";
   output+=logForm(second())+"  ";
-  output+=String.format("%03d", (millis()%1000))+"ms  ";
+  output+=String.format("%03d", (millis()%1000))+" ms  ";
+  output+="->  ";
   output+=input;
   println(output);
 }
