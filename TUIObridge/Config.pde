@@ -101,9 +101,15 @@ void logln(String input) {
   output+=String.format("%03d", (millis()%1000))+" ms  ";
   output+="->  ";
   output+=input;
+  logString+=output+"\n";
+  //output+=input+"\n perro";
   println(output);
 }
 
 String logForm(int input) {
   return String.format("%02d", input);
+}
+String logString="";
+
+void logFile() {
 }
