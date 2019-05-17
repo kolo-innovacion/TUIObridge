@@ -84,8 +84,14 @@ XML nextLevel(XML input, String name) {
 
 void checkValid(XML input) {
   if (input!=null) {
-    println("VALID");
+    logln("VALID");
   } else {
-    println("NULL ENCOUNTERED");
+    logln("NULL ENCOUNTERED");
   }
+}
+
+void logln(String input) {
+  String output = "";
+  output+=year();
+  println(output);
 }
