@@ -1,27 +1,79 @@
 <config resx="1690" resy="384" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
 <userDefinedEvents>
-      <userDefinedEvent name="boton1">
+      <userDefinedEvent name="buttonred">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>97</x>
-              <y>105</y>
-              <width>98</width>
-              <height>89</height>
+              <x>150</x>
+              <y>106</y>
+              <width>174</width>
+              <height>151</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="boton2">
+      <userDefinedEvent name="buttongreen">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>433</x>
-              <y>148</y>
-              <width>67</width>
-              <height>145</height>
+              <x>606</x>
+              <y>41</y>
+              <width>110</width>
+              <height>109</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttonblue">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>1285</x>
+              <y>219</y>
+              <width>317</width>
+              <height>109</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttonred">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>100</x>
+              <y>52</y>
+              <width>111</width>
+              <height>94</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttongreen">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>477</x>
+              <y>67</y>
+              <width>188</width>
+              <height>59</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttonblue">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>1047</x>
+              <y>27</y>
+              <width>119</width>
+              <height>141</height>
             </parameters>
           </userEvent>
         </userEvents>

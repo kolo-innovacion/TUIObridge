@@ -14,6 +14,6 @@ void setupUDP() {
 
 void sendUDP(String input) {
   String message  = input;
-  message = message+"\n";
+  //message = message+"\n";
   udp.send( message, targetIP, targetPort );
 }
