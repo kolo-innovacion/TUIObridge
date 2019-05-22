@@ -1,0 +1,5 @@
+2019-05-17  02:44:25  060 ms  ->  config XML file has been loaded
+2019-05-17  02:44:26  469 ms  ->  960 X 270  display has been created
+2019-05-17  02:44:26  476 ms  ->  boton1  created on  97,105
+2019-05-17  02:44:26  480 ms  ->  boton2  created on  433,148
+2019-05-17  02:44:26  516 ms  ->  Target: localhost  Port: 6100

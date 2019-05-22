@@ -108,7 +108,7 @@ void logln(String input) {
   //logString+=output+"\n";
   //output+=input+"\n perro";
   println(output);
-  saveStrings("nouns.txt", logArr);
+  saveStrings("logs.txt", logArr);
 }
 
 String logForm(int input) {
