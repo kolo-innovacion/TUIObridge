@@ -1,4 +1,4 @@
-<config resx="960" resy="270" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
+<config resx="1690" resy="384" fullscreen="1" winScale="1.0" targetIP="localhost" targetPort="6100">
 <userDefinedEvents>
       <userDefinedEvent name="boton1">
         <userEvents>
