@@ -102,12 +102,12 @@ void logln(String input) {
   output+="->  ";
   output+=input;
   logList.add(output);
-  println(logList.size());
+  //println(logList.size());
   String[] logArr =null;
   logArr = logList.toArray(new String[logList.size()]);
   //logString+=output+"\n";
   //output+=input+"\n perro";
-  println(output);
+  //println(output);
   saveStrings("logs.txt", logArr);
 }
 
