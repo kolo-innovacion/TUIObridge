@@ -39,44 +39,5 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttonred">
-        <userEvents>
-          <userEvent>
-            <name>rectangularTouchEvent</name>
-            <parameters>
-              <x>100</x>
-              <y>52</y>
-              <width>111</width>
-              <height>94</height>
-            </parameters>
-          </userEvent>
-        </userEvents>
-      </userDefinedEvent>
-      <userDefinedEvent name="buttongreen">
-        <userEvents>
-          <userEvent>
-            <name>rectangularTouchEvent</name>
-            <parameters>
-              <x>477</x>
-              <y>67</y>
-              <width>188</width>
-              <height>59</height>
-            </parameters>
-          </userEvent>
-        </userEvents>
-      </userDefinedEvent>
-      <userDefinedEvent name="buttonblue">
-        <userEvents>
-          <userEvent>
-            <name>rectangularTouchEvent</name>
-            <parameters>
-              <x>1047</x>
-              <y>27</y>
-              <width>119</width>
-              <height>141</height>
-            </parameters>
-          </userEvent>
-        </userEvents>
-      </userDefinedEvent>
     </userDefinedEvents>
 </config>
