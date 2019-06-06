@@ -1,6 +1,6 @@
-2019-06-05  17:29:06  062 ms  ->  config XML file has been loaded
-2019-06-05  17:29:07  420 ms  ->  1690 X 384  display has been created
-2019-06-05  17:29:07  428 ms  ->  buttonred  created on  150,106
-2019-06-05  17:29:07  432 ms  ->  buttongreen  created on  606,41
-2019-06-05  17:29:07  436 ms  ->  buttonblue  created on  1285,219
-2019-06-05  17:29:07  466 ms  ->  Target: localhost  Port: 6100
+2019-06-05  17:31:27  047 ms  ->  config XML file has been loaded
+2019-06-05  17:31:28  439 ms  ->  1690 X 384  display has been created
+2019-06-05  17:31:28  447 ms  ->  buttonred  created on  150,106
+2019-06-05  17:31:28  451 ms  ->  buttongreen  created on  606,41
+2019-06-05  17:31:28  455 ms  ->  buttonblue  created on  1285,219
+2019-06-05  17:31:28  484 ms  ->  Target: localhost  Port: 6100
