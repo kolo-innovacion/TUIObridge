@@ -1,7 +1,8 @@
 Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
-int currPage=1;
+int currPage=0;
+Page currentPage;
 
 
 void settings() {
@@ -32,7 +33,7 @@ void setup() {
   //instanceButtons();
   instancePages();
   tuioSetup();
-  //setupUDP();
+  setupUDP();
 }
 
 void draw() {

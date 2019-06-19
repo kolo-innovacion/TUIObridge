@@ -52,4 +52,9 @@ class Page {
       pButtons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
     }
   }
+  void showButtons() {  
+    for (int i=0; i<pButtons.size(); i++) {
+      pButtons.get(i).show();
+    }
+  }
 }
