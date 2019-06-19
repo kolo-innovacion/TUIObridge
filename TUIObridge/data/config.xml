@@ -1,5 +1,5 @@
 <config resx="1690" resy="384" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
-<userDefinedEvents name="page0" img="menu.png">
+<userDefinedEvents name="page0" img="page0.png">
       <userDefinedEvent name="buttonred">
         <userEvents>
           <userEvent>
@@ -40,7 +40,7 @@
         </userEvents>
       </userDefinedEvent>
     </userDefinedEvents>
-<userDefinedEvents name="page1" img="submenu.png">
+<userDefinedEvents name="page1" img="page1.png">
       <userDefinedEvent name="buttonred">
         <userEvents>
           <userEvent>

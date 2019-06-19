@@ -38,6 +38,7 @@ String extString(XML obj, String name) {
 void instanceButtons() {
   buttons=new ArrayList<Button>();
   XML curr=nextLevel(config, "userDefinedEvents");
+  //println("ORIGINAL: "+curr);
   XML[] buttonArr = curr.getChildren("userDefinedEvent");
   //logln(buttonArr);
   for (int i=0; i<buttonArr.length; i++) {
@@ -64,8 +65,12 @@ void instancePages() {
   XML[] pagesArr = config.getChildren("userDefinedEvents");
   for (int i=0; i<pagesArr.length; i++) {
     println(pagesArr[i].getString("name"));
-    println(pagesArr[i].getString("img"));
-    pages.add(new Page(i, "yolo", "path"));
+    //println(pagesArr[i].getString("img"));
+    //pages.add(new Page(i, "yolo", "path"));
+    //pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i].getString("img")));
+    //XML corpus;
+    //pages.add(new Page(i, pagesArr[i].getString("name")));
+    pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i]));
   }
 }
 

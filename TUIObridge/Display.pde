@@ -18,6 +18,7 @@ class Display {
     fill(tone);
     stroke(255, 128, 0);
     rect(0, 0, sizeX, sizeY);
+    image(pages.get(0).img, 0, 0);
     //logln(scale);
   }
   void getConfig() {
