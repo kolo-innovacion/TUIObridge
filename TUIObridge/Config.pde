@@ -64,7 +64,7 @@ void instancePages() {
   //XML curr=nextLevel(config, "userDefinedEvents");
   XML[] pagesArr = config.getChildren("userDefinedEvents");
   for (int i=0; i<pagesArr.length; i++) {
-    println(pagesArr[i].getString("name"));
+    //println(pagesArr[i].getString("name"));
     //println(pagesArr[i].getString("img"));
     //pages.add(new Page(i, "yolo", "path"));
     //pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i].getString("img")));

@@ -26,7 +26,10 @@ class Page {
     name=nam;
     imgPath=name+".png";
     img=loadImage(imgPath);
+
+    logln("Page "+name+" has been created.");
     instButtons(input);
+    logln("End of buttons creation on  "+name);
   }
   void instButtons(XML input) {    
     //println("NEW"+input);

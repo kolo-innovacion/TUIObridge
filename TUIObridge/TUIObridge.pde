@@ -1,6 +1,7 @@
 Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
+int currPage=1;
 
 
 void settings() {
@@ -9,20 +10,35 @@ void settings() {
   loadConfig();
   setWindow();
 }
-
+/*
+void setup0() {
+ setupGUI();
+ instanceDisplay();
+ instanceButtons();
+ instancePages();
+ tuioSetup();
+ setupUDP();
+ }
+ 
+ void draw0() {
+ display.show();
+ showButtons();
+ updateTUIO();
+ }
+ */
 void setup() {
   setupGUI();
   instanceDisplay();
-  instanceButtons();
+  //instanceButtons();
   instancePages();
   tuioSetup();
-  setupUDP();
+  //setupUDP();
 }
 
 void draw() {
   display.show();
-  showButtons();
-  updateTUIO();
+  //showButtons();
+  //updateTUIO();
 }
 
 void setWindow() {
