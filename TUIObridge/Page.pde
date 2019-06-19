@@ -1,12 +1,14 @@
 class Page {
-  String name;
-  ArrayList<Button> buttons;
-  PImage img;
-  int index;
 
-  Page(String n, PImage imgin, int ind) {
+  int index;
+  String name;
+  String imgPath;
+  PImage img;
+  ArrayList<Button> buttons;
+
+  Page(int ind, String n, String imgp) {
     name=n;
-    img=imgin;
+    imgPath=imgp;
     index=ind;
   }
 }

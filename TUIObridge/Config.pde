@@ -35,20 +35,6 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-void instanceButtons0() {
-
-  buttons=new ArrayList<Button>();
-  XML[] buttonArr = config.getChildren("button");
-
-  for (int i=0; i<buttonArr.length; i++) {
-    XML temp = buttonArr[i];
-    //logln(temp.getString("id"));
-    buttons.add(new Button(temp.getString("id"), temp.getInt("posx"), temp.getInt("posy"), temp.getInt("sizex"), temp.getInt("sizex")));
-  }
-  logln(buttonArr.length+"  buttons have been added");
-}
-
-
 void instanceButtons() {
   buttons=new ArrayList<Button>();
   XML curr=nextLevel(config, "userDefinedEvents");
@@ -71,10 +57,16 @@ void instanceButtons() {
   }
 }
 void instancePages() {
+
+  pages=new ArrayList<Page>();
   //buttons=new ArrayList<Button>();
   //XML curr=nextLevel(config, "userDefinedEvents");
   XML[] pagesArr = config.getChildren("userDefinedEvents");
-  println(pagesArr.length);
+  for (int i=0; i<pagesArr.length; i++) {
+    println(pagesArr[i].getString("name"));
+    println(pagesArr[i].getString("img"));
+    pages.add(new Page(i, "yolo", "path"));
+  }
 }
 
 void instanceDisplay() {

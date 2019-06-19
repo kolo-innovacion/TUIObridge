@@ -1,5 +1,6 @@
 Display display;
 ArrayList<Button> buttons;
+ArrayList<Page> pages;
 
 
 void settings() {
