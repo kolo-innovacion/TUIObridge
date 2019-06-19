@@ -19,6 +19,7 @@ class Button {
     currState=false;
     prevState=false;
     logln(identifier+"  created on  "+posX+","+posY);
+    println("Button Added");
   }
 
   void setState(boolean input) {
