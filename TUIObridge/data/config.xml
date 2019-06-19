@@ -1,5 +1,46 @@
 <config resx="1690" resy="384" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
-<userDefinedEvents>
+<userDefinedEvents name="page0" img="menu.png">
+      <userDefinedEvent name="buttonred">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>150</x>
+              <y>106</y>
+              <width>174</width>
+              <height>151</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttongreen">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>606</x>
+              <y>41</y>
+              <width>110</width>
+              <height>109</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="buttonblue">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>1285</x>
+              <y>219</y>
+              <width>317</width>
+              <height>109</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+    </userDefinedEvents>
+<userDefinedEvents name="page1" img="submenu.png">
       <userDefinedEvent name="buttonred">
         <userEvents>
           <userEvent>

@@ -13,6 +13,7 @@ void setup() {
   setupGUI();
   instanceDisplay();
   instanceButtons();
+  instancePages();
   tuioSetup();
   setupUDP();
 }

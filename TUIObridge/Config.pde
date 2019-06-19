@@ -70,6 +70,12 @@ void instanceButtons() {
     buttons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
   }
 }
+void instancePages() {
+  //buttons=new ArrayList<Button>();
+  //XML curr=nextLevel(config, "userDefinedEvents");
+  XML[] pagesArr = config.getChildren("userDefinedEvents");
+  println(pagesArr.length);
+}
 
 void instanceDisplay() {
   display=new Display();
