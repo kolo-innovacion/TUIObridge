@@ -1,7 +1,7 @@
 Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
-int currPage=1;
+int currPage=0;
 Page currentPage;
 
 

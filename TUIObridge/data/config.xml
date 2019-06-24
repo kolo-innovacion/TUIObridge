@@ -13,7 +13,7 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttongreen0">
+      <userDefinedEvent name="buttongreen0" callPage="page1">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>

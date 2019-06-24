@@ -1,13 +1,13 @@
-2019-06-24  14:07:58  061 ms  ->  config XML file has been loaded
-2019-06-24  14:08:00  551 ms  ->  1690 X 384  display has been created
-2019-06-24  14:08:00  697 ms  ->  Page page0 has been created.
-2019-06-24  14:08:00  703 ms  ->  buttonred0  created on  150,106
-2019-06-24  14:08:00  713 ms  ->  buttongreen0  created on  606,41
-2019-06-24  14:08:00  719 ms  ->  buttonblue0  created on  1285,219
-2019-06-24  14:08:00  723 ms  ->  End of buttons creation on  page0
-2019-06-24  14:08:00  753 ms  ->  Page page1 has been created.
-2019-06-24  14:08:00  758 ms  ->  buttonred1  created on  250,160
-2019-06-24  14:08:00  765 ms  ->  buttongreen1  created on  300,40
-2019-06-24  14:08:00  770 ms  ->  buttonblue1  created on  1020,50
-2019-06-24  14:08:00  775 ms  ->  End of buttons creation on  page1
-2019-06-24  14:08:00  816 ms  ->  Target: localhost  Port: 6100
+2019-06-24  18:29:57  060 ms  ->  config XML file has been loaded
+2019-06-24  18:29:59  545 ms  ->  1690 X 384  display has been created
+2019-06-24  18:29:59  673 ms  ->  Page page0 has been created.
+2019-06-24  18:29:59  686 ms  ->  buttonred0  created on  150,106
+2019-06-24  18:29:59  692 ms  ->  buttongreen0  created on  606,41
+2019-06-24  18:29:59  698 ms  ->  buttonblue0  created on  1285,219
+2019-06-24  18:29:59  704 ms  ->  End of buttons creation on  page0
+2019-06-24  18:29:59  736 ms  ->  Page page1 has been created.
+2019-06-24  18:29:59  743 ms  ->  buttonred1  created on  250,160
+2019-06-24  18:29:59  748 ms  ->  buttongreen1  created on  300,40
+2019-06-24  18:29:59  753 ms  ->  buttonblue1  created on  1020,50
+2019-06-24  18:29:59  760 ms  ->  End of buttons creation on  page1
+2019-06-24  18:29:59  802 ms  ->  Target: localhost  Port: 6100

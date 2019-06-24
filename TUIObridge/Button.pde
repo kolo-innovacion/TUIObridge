@@ -6,6 +6,7 @@ class Button {
   int sizeY;
   boolean currState;
   boolean prevState;
+  String callPage;
 
   int acTone =color(255, 0, 0);//active color
   int inTone =color(0, 0, 255);//inactive color
@@ -18,7 +19,21 @@ class Button {
     sizeY=sy;
     currState=false;
     prevState=false;
+    callPage=null;
     logln(identifier+"  created on  "+posX+","+posY);
+    //println("Button Added");
+  }
+
+  Button(String id, int x, int y, int sx, int sy, String call) {
+    identifier=id;
+    posX=x;
+    posY=y;
+    sizeX=sx;
+    sizeY=sy;
+    currState=false;
+    prevState=false;
+    callPage=call;
+    logln(identifier+"  created on  "+posX+","+posY+"  with callPage  "+callPage);
     //println("Button Added");
   }
 
