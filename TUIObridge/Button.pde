@@ -20,7 +20,7 @@ class Button {
     currState=false;
     prevState=false;
     callPage=null;
-    logln(identifier+"  created on  "+posX+","+posY);
+    logln(identifier+"  created on  ("+posX+","+posY+")");
     //println("Button Added");
   }
 
@@ -33,7 +33,7 @@ class Button {
     currState=false;
     prevState=false;
     callPage=call;
-    logln(identifier+"  created on  "+posX+","+posY+"  with callPage  "+callPage);
+    logln(identifier+"  created on  ("+posX+","+posY+")  with call to page  "+callPage);
     //println("Button Added");
   }
 

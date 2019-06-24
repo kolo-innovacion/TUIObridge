@@ -48,8 +48,8 @@ void checkPress(int curX, int curY) {
   boolean checkX=false;
   boolean checkY=false;
 
-  for (int i=0; i<buttons.size(); i++) {
-    Button temp=buttons.get(i);
+  for (int i=0; i<currentPage.pButtons.size(); i++) {
+    Button temp=currentPage.pButtons.get(i);
     checkX=inRange(curX, temp.posX, temp.posX+temp.sizeX);
     checkY=inRange(curY, temp.posY, temp.posY+temp.sizeY);
     if (checkX&&checkY) {
