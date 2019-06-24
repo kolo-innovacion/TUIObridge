@@ -1,6 +1,6 @@
 <config resx="1690" resy="384" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
 <userDefinedEvents name="page0" img="page0.png">
-      <userDefinedEvent name="buttonred">
+      <userDefinedEvent name="buttonred0">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
@@ -13,7 +13,7 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttongreen">
+      <userDefinedEvent name="buttongreen0">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
@@ -26,7 +26,7 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttonblue">
+      <userDefinedEvent name="buttonblue0">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
@@ -41,41 +41,41 @@
       </userDefinedEvent>
     </userDefinedEvents>
 <userDefinedEvents name="page1" img="page1.png">
-      <userDefinedEvent name="buttonred">
+      <userDefinedEvent name="buttonred1">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>150</x>
-              <y>106</y>
-              <width>174</width>
-              <height>151</height>
+              <x>250</x>
+              <y>160</y>
+              <width>140</width>
+              <height>150</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttongreen">
+      <userDefinedEvent name="buttongreen1">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>606</x>
-              <y>41</y>
-              <width>110</width>
-              <height>109</height>
+              <x>300</x>
+              <y>40</y>
+              <width>140</width>
+              <height>100</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttonblue">
+      <userDefinedEvent name="buttonblue1">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>1285</x>
-              <y>219</y>
-              <width>317</width>
-              <height>109</height>
+              <x>1020</x>
+              <y>50</y>
+              <width>100</width>
+              <height>80</height>
             </parameters>
           </userEvent>
         </userEvents>
