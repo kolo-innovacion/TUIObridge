@@ -1,7 +1,7 @@
 Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
-int currPage=0;
+int currPage=1;
 Page currentPage;
 
 
@@ -38,7 +38,7 @@ void setup() {
 
 void draw() {
   display.show();
-  //showButtons();
+  showPage();
   //updateTUIO();
 }
 
@@ -58,9 +58,7 @@ void setupGUI() {
   //instanceButtons();
   frameRate(60);
 }
-
-void showButtons() {  
-  for (int i=0; i<buttons.size(); i++) {
-    buttons.get(i).show();
-  }
+void showPage() {
+  //currentPage=pages.get(currPage);
+  currentPage.showButtons();
 }

@@ -72,6 +72,8 @@ void instancePages() {
     //pages.add(new Page(i, pagesArr[i].getString("name")));
     pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i]));
   }
+  
+  currentPage=pages.get(currPage);
 }
 
 void instanceDisplay() {
