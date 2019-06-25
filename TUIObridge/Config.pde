@@ -35,28 +35,6 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-void instanceButtons() {
-  buttons=new ArrayList<Button>();
-  XML curr=nextLevel(config, "userDefinedEvents");
-  //println("ORIGINAL: "+curr);
-  XML[] buttonArr = curr.getChildren("userDefinedEvent");
-  //logln(buttonArr);
-  for (int i=0; i<buttonArr.length; i++) {
-    XML temp = buttonArr[i];
-
-    String tempID=temp.getString("name");
-
-    temp=nextLevel(temp, "userEvents");
-    temp=nextLevel(temp, "userEvent");
-    temp=nextLevel(temp, "parameters");
-    XML tempX=nextLevel(temp, "x");
-    XML tempY=nextLevel(temp, "y");
-    XML tempW=nextLevel(temp, "width");
-    XML tempH=nextLevel(temp, "height");
-
-    buttons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
-  }
-}
 void instancePages() {
 
   pages=new ArrayList<Page>();
