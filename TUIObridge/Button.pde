@@ -30,6 +30,7 @@ class Button {
   void show() {
     if (currState) {
       fill(acTone);
+      //delay(500);
     } else {
       fill(inTone);
     }

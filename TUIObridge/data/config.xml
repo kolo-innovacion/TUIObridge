@@ -1,6 +1,6 @@
 <config resx="480" resy="288" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
 <userDefinedEvents name="loop" img="loop.png">
-      <userDefinedEvent name="menu" callPage="menu">
+      <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
@@ -15,7 +15,7 @@
       </userDefinedEvent>
     </userDefinedEvents>
 <userDefinedEvents name="menu" img="menu.png">
-      <userDefinedEvent name="copa" callPage="copa">
+      <userDefinedEvent name="copa">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
@@ -69,7 +69,7 @@
       </userDefinedEvent>
     </userDefinedEvents>
 <userDefinedEvents name="copa" img="copa.png">
-      <userDefinedEvent name="menu" callPage="menu">
+      <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
