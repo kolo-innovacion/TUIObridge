@@ -41,6 +41,7 @@ void draw() {
   background(0);
   //display.show();
   showPage();
+  updateTUIO();
   //updateTUIO();
 }
 

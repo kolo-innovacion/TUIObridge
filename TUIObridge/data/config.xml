@@ -13,7 +13,7 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-    </userDefinedEvents>
+</userDefinedEvents>
 <userDefinedEvents name="menu" img="menu.png">
       <userDefinedEvent name="copa">
         <userEvents>
@@ -67,7 +67,7 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-    </userDefinedEvents>
+</userDefinedEvents>
 <userDefinedEvents name="copa" img="copa.png">
       <userDefinedEvent name="menu">
         <userEvents>
@@ -82,5 +82,50 @@
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-    </userDefinedEvents>
+</userDefinedEvents>
+<userDefinedEvents name="predator" img="copa.png">
+      <userDefinedEvent name="menu">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>423</x>
+              <y>0</y>
+              <width>55</width>
+              <height>55</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+</userDefinedEvents>
+<userDefinedEvents name="nemeziz" img="copa.png">
+      <userDefinedEvent name="menu">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>423</x>
+              <y>0</y>
+              <width>55</width>
+              <height>55</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+</userDefinedEvents>
+<userDefinedEvents name="x" img="copa.png">
+      <userDefinedEvent name="menu">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>423</x>
+              <y>0</y>
+              <width>55</width>
+              <height>55</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+</userDefinedEvents>
 </config>
