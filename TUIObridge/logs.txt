@@ -1,15 +1,15 @@
-2019-06-24  21:30:36  070 ms  ->  config XML file has been loaded
-2019-06-24  21:30:38  911 ms  ->  480 X 288  display has been created
-2019-06-24  21:30:38  043 ms  ->  Page loop has been created.
-2019-06-24  21:30:38  053 ms  ->  menu  created on  (0,0)  with call to page  menu
-2019-06-24  21:30:38  062 ms  ->  End of buttons creation on  loop
-2019-06-24  21:30:38  123 ms  ->  Page menu has been created.
-2019-06-24  21:30:38  127 ms  ->  copa  created on  (28,130)  with call to page  copa
-2019-06-24  21:30:38  137 ms  ->  predator  created on  (151,131)
-2019-06-24  21:30:38  142 ms  ->  nemeziz  created on  (262,135)
-2019-06-24  21:30:38  151 ms  ->  x  created on  (404,126)
-2019-06-24  21:30:38  156 ms  ->  End of buttons creation on  menu
-2019-06-24  21:30:38  194 ms  ->  Page copa has been created.
-2019-06-24  21:30:38  203 ms  ->  menu  created on  (423,0)  with call to page  menu
-2019-06-24  21:30:38  207 ms  ->  End of buttons creation on  copa
-2019-06-24  21:30:38  238 ms  ->  Target: localhost  Port: 6100
+2019-06-24  21:36:15  072 ms  ->  config XML file has been loaded
+2019-06-24  21:36:17  921 ms  ->  480 X 288  display has been created
+2019-06-24  21:36:17  041 ms  ->  Page loop has been created.
+2019-06-24  21:36:17  052 ms  ->  menu  created on  (0,0)
+2019-06-24  21:36:17  064 ms  ->  End of buttons creation on  loop
+2019-06-24  21:36:17  124 ms  ->  Page menu has been created.
+2019-06-24  21:36:17  133 ms  ->  copa  created on  (28,130)
+2019-06-24  21:36:17  140 ms  ->  predator  created on  (151,131)
+2019-06-24  21:36:17  149 ms  ->  nemeziz  created on  (262,135)
+2019-06-24  21:36:17  156 ms  ->  x  created on  (404,126)
+2019-06-24  21:36:17  161 ms  ->  End of buttons creation on  menu
+2019-06-24  21:36:17  205 ms  ->  Page copa has been created.
+2019-06-24  21:36:17  210 ms  ->  menu  created on  (423,0)
+2019-06-24  21:36:17  220 ms  ->  End of buttons creation on  copa
+2019-06-24  21:36:17  256 ms  ->  Target: localhost  Port: 6100

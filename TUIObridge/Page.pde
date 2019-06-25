@@ -28,7 +28,6 @@ class Page {
       XML temp = buttonArr[i];
 
       String tempID=temp.getString("name");
-      String tempCall=temp.getString("callPage");
 
       temp=nextLevel(temp, "userEvents");
       temp=nextLevel(temp, "userEvent");
@@ -38,15 +37,7 @@ class Page {
       XML tempW=nextLevel(temp, "width");
       XML tempH=nextLevel(temp, "height");
       //end of extraction from XML
-      if (tempCall==null) {//button with no callpage
-        //   println("No callpage for button  "+tempID);
-
-        pButtons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
-      } else {//button WITH callpage
-        //println("Button   "+tempID+"  calls page  "+tempCall);
-
-        pButtons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent(), tempCall));
-      }
+      pButtons.add(new Button(tempID, tempX.getIntContent(), tempY.getIntContent(), tempW.getIntContent(), tempH.getIntContent()));
     }
   }
   void showButtons() {  
