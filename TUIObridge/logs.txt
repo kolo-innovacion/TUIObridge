@@ -1,13 +1,15 @@
-2019-06-24  19:36:03  070 ms  ->  config XML file has been loaded
-2019-06-24  19:36:04  550 ms  ->  1690 X 384  display has been created
-2019-06-24  19:36:04  672 ms  ->  Page page0 has been created.
-2019-06-24  19:36:04  677 ms  ->  buttonred0  created on  (150,106)
-2019-06-24  19:36:04  687 ms  ->  buttongreen0  created on  (606,41)  with call to page  page1
-2019-06-24  19:36:04  691 ms  ->  buttonblue0  created on  (1285,219)
-2019-06-24  19:36:04  696 ms  ->  End of buttons creation on  page0
-2019-06-24  19:36:04  729 ms  ->  Page page1 has been created.
-2019-06-24  19:36:04  735 ms  ->  buttonred1  created on  (250,160)
-2019-06-24  19:36:04  742 ms  ->  buttongreen1  created on  (300,40)
-2019-06-24  19:36:04  746 ms  ->  buttonblue1  created on  (1020,50)
-2019-06-24  19:36:04  753 ms  ->  End of buttons creation on  page1
-2019-06-24  19:36:04  791 ms  ->  Target: localhost  Port: 6100
+2019-06-24  20:56:22  061 ms  ->  config XML file has been loaded
+2019-06-24  20:56:24  540 ms  ->  480 X 288  display has been created
+2019-06-24  20:56:24  665 ms  ->  Page loop has been created.
+2019-06-24  20:56:24  672 ms  ->  menu  created on  (0,0)  with call to page  menu
+2019-06-24  20:56:24  682 ms  ->  End of buttons creation on  loop
+2019-06-24  20:56:24  732 ms  ->  Page menu has been created.
+2019-06-24  20:56:24  738 ms  ->  copa  created on  (28,130)  with call to page  copa
+2019-06-24  20:56:24  744 ms  ->  predator  created on  (151,131)
+2019-06-24  20:56:24  751 ms  ->  nemeziz  created on  (262,135)
+2019-06-24  20:56:24  756 ms  ->  x  created on  (404,126)
+2019-06-24  20:56:24  761 ms  ->  End of buttons creation on  menu
+2019-06-24  20:56:24  809 ms  ->  Page copa has been created.
+2019-06-24  20:56:24  815 ms  ->  menu  created on  (423,0)  with call to page  menu
+2019-06-24  20:56:24  821 ms  ->  End of buttons creation on  copa
+2019-06-24  20:56:24  848 ms  ->  Target: localhost  Port: 6100

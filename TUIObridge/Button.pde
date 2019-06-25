@@ -8,8 +8,8 @@ class Button {
   boolean prevState;
   String callPage;
 
-  int acTone =color(255, 0, 0);//active color
-  int inTone =color(0, 0, 255);//inactive color
+  int acTone =color(255, 0, 0, 100);//active color
+  int inTone =color(0, 0, 255, 100);//inactive color
 
   Button(String id, int x, int y, int sx, int sy ) {
     identifier=id;
