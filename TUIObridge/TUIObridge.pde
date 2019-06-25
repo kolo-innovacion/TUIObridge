@@ -61,6 +61,8 @@ void setupGUI() {
   frameRate(60);
 }
 void showPage() {
+  image(currentPage.img, 0, 0);
+
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
 }

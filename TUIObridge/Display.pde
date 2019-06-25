@@ -2,7 +2,6 @@ class Display {
   int sizeX;
   int sizeY;
   int tone =color(255, 255, 255);
-  PImage currImage;
   //ArrayList<Button> buttonList;
 
   Display() {
@@ -19,9 +18,6 @@ class Display {
     fill(tone);
     stroke(255, 128, 0);
     rect(0, 0, sizeX, sizeY);
-    //currImage=pages.get(currPage).img;
-    //currImage=pages.get(currPage).img;
-    //image(currImage, 0, 0);
     //logln(scale);
   }
   void getConfig() {

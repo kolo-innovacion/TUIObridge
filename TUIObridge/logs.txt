@@ -1,15 +1,15 @@
-2019-06-24  21:00:53  059 ms  ->  config XML file has been loaded
-2019-06-24  21:00:55  571 ms  ->  480 X 288  display has been created
-2019-06-24  21:00:55  675 ms  ->  Page loop has been created.
-2019-06-24  21:00:55  683 ms  ->  menu  created on  (0,0)  with call to page  menu
-2019-06-24  21:00:55  699 ms  ->  End of buttons creation on  loop
-2019-06-24  21:00:55  739 ms  ->  Page menu has been created.
-2019-06-24  21:00:55  746 ms  ->  copa  created on  (28,130)  with call to page  copa
-2019-06-24  21:00:55  751 ms  ->  predator  created on  (151,131)
-2019-06-24  21:00:55  757 ms  ->  nemeziz  created on  (262,135)
-2019-06-24  21:00:55  765 ms  ->  x  created on  (404,126)
-2019-06-24  21:00:55  770 ms  ->  End of buttons creation on  menu
-2019-06-24  21:00:55  826 ms  ->  Page copa has been created.
-2019-06-24  21:00:55  831 ms  ->  menu  created on  (423,0)  with call to page  menu
-2019-06-24  21:00:55  835 ms  ->  End of buttons creation on  copa
-2019-06-24  21:00:55  864 ms  ->  Target: localhost  Port: 6100
+2019-06-24  21:05:19  065 ms  ->  config XML file has been loaded
+2019-06-24  21:05:21  558 ms  ->  480 X 288  display has been created
+2019-06-24  21:05:21  665 ms  ->  Page loop has been created.
+2019-06-24  21:05:21  670 ms  ->  menu  created on  (0,0)  with call to page  menu
+2019-06-24  21:05:21  680 ms  ->  End of buttons creation on  loop
+2019-06-24  21:05:21  729 ms  ->  Page menu has been created.
+2019-06-24  21:05:21  736 ms  ->  copa  created on  (28,130)  with call to page  copa
+2019-06-24  21:05:21  742 ms  ->  predator  created on  (151,131)
+2019-06-24  21:05:21  749 ms  ->  nemeziz  created on  (262,135)
+2019-06-24  21:05:21  754 ms  ->  x  created on  (404,126)
+2019-06-24  21:05:21  761 ms  ->  End of buttons creation on  menu
+2019-06-24  21:05:21  805 ms  ->  Page copa has been created.
+2019-06-24  21:05:21  811 ms  ->  menu  created on  (423,0)  with call to page  menu
+2019-06-24  21:05:21  818 ms  ->  End of buttons creation on  copa
+2019-06-24  21:05:21  849 ms  ->  Target: localhost  Port: 6100
