@@ -26,7 +26,7 @@ class Page {
     name=nam;
     imgPath=name+".png";
     img=loadImage(imgPath);
-
+    pageDict.set(name, index);
     logln("Page "+name+" has been created.");
     instButtons(input);
     logln("End of buttons creation on  "+name);

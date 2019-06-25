@@ -30,6 +30,7 @@ void setup0() {
 void setup() {
   setupGUI();
   instanceDisplay();
+  setupDict();
   //instanceButtons();
   instancePages();
   tuioSetup();
