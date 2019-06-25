@@ -1,81 +1,83 @@
-<config resx="1690" resy="384" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
-<userDefinedEvents name="page0" img="page0.png">
-      <userDefinedEvent name="buttonred0">
+<config resx="480" resy="288" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
+<userDefinedEvents name="loop" img="loop.png">
+      <userDefinedEvent name="menu" callPage="menu">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>150</x>
-              <y>106</y>
-              <width>174</width>
-              <height>151</height>
-            </parameters>
-          </userEvent>
-        </userEvents>
-      </userDefinedEvent>
-      <userDefinedEvent name="buttongreen0" callPage="page1">
-        <userEvents>
-          <userEvent>
-            <name>rectangularTouchEvent</name>
-            <parameters>
-              <x>606</x>
-              <y>41</y>
-              <width>110</width>
-              <height>109</height>
-            </parameters>
-          </userEvent>
-        </userEvents>
-      </userDefinedEvent>
-      <userDefinedEvent name="buttonblue0">
-        <userEvents>
-          <userEvent>
-            <name>rectangularTouchEvent</name>
-            <parameters>
-              <x>1285</x>
-              <y>219</y>
-              <width>317</width>
-              <height>109</height>
+              <x>0</x>
+              <y>0</y>
+              <width>480</width>
+              <height>288</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
     </userDefinedEvents>
-<userDefinedEvents name="page1" img="page1.png">
-      <userDefinedEvent name="buttonred1">
+<userDefinedEvents name="menu" img="menu.png">
+      <userDefinedEvent name="copa" callPage="copa">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>250</x>
-              <y>160</y>
-              <width>140</width>
-              <height>150</height>
+              <x>28</x>
+              <y>130</y>
+              <width>103</width>
+              <height>47</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttongreen1">
+      <userDefinedEvent name="predator">
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>300</x>
-              <y>40</y>
-              <width>140</width>
-              <height>100</height>
+              <x>151</x>
+              <y>131</y>
+              <width>95</width>
+              <height>48</height>
             </parameters>
           </userEvent>
         </userEvents>
       </userDefinedEvent>
-      <userDefinedEvent name="buttonblue1">
+      <userDefinedEvent name="nemeziz" >
         <userEvents>
           <userEvent>
             <name>rectangularTouchEvent</name>
             <parameters>
-              <x>1020</x>
-              <y>50</y>
-              <width>100</width>
-              <height>80</height>
+              <x>262</x>
+              <y>135</y>
+              <width>113</width>
+              <height>37</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+      <userDefinedEvent name="x">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>404</x>
+              <y>126</y>
+              <width>42</width>
+              <height>58</height>
+            </parameters>
+          </userEvent>
+        </userEvents>
+      </userDefinedEvent>
+    </userDefinedEvents>
+<userDefinedEvents name="copa" img="copa.png">
+      <userDefinedEvent name="menu" callPage="menu">
+        <userEvents>
+          <userEvent>
+            <name>rectangularTouchEvent</name>
+            <parameters>
+              <x>423</x>
+              <y>0</y>
+              <width>55</width>
+              <height>55</height>
             </parameters>
           </userEvent>
         </userEvents>
