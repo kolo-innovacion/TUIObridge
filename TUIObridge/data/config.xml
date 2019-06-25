@@ -1,5 +1,5 @@
 <config resx="480" resy="288" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
-<userDefinedEvents name="loop" img="loop.png">
+<userDefinedEvents name="loop">
       <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
@@ -14,7 +14,7 @@
         </userEvents>
       </userDefinedEvent>
 </userDefinedEvents>
-<userDefinedEvents name="menu" img="menu.png">
+<userDefinedEvents name="menu">
       <userDefinedEvent name="copa">
         <userEvents>
           <userEvent>
@@ -68,7 +68,7 @@
         </userEvents>
       </userDefinedEvent>
 </userDefinedEvents>
-<userDefinedEvents name="copa" img="copa.png">
+<userDefinedEvents name="copa">
       <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
@@ -83,7 +83,7 @@
         </userEvents>
       </userDefinedEvent>
 </userDefinedEvents>
-<userDefinedEvents name="predator" img="copa.png">
+<userDefinedEvents name="predator">
       <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
@@ -98,7 +98,7 @@
         </userEvents>
       </userDefinedEvent>
 </userDefinedEvents>
-<userDefinedEvents name="nemeziz" img="copa.png">
+<userDefinedEvents name="nemeziz">
       <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>
@@ -113,7 +113,7 @@
         </userEvents>
       </userDefinedEvent>
 </userDefinedEvents>
-<userDefinedEvents name="x" img="copa.png">
+<userDefinedEvents name="x">
       <userDefinedEvent name="menu">
         <userEvents>
           <userEvent>

@@ -2,7 +2,6 @@ class Page {
 
   int index;
   String name;
-  String imgPath;
   PImage img;
   ArrayList<Button> pButtons;
 
