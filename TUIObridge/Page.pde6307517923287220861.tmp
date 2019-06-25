@@ -11,9 +11,8 @@ class Page {
     pButtons=new ArrayList<Button>();
     index=ind;
     name=nam;
-    //imgPath=name+".png";
-    //img=loadImage(imgPath);
-    img=loadPageImage(name);
+    imgPath=name+".png";
+    img=loadImage(imgPath);
     pageDict.set(name, index);
     logln("Page "+name+" has been created.");
     instButtons(input);
@@ -55,7 +54,7 @@ class Page {
     }
   }
 
-  PImage loadPageImage(String input) {
+  PImage loadPageImg(String input) {
     String pathPNG=input+".png";
     String pathJPG=input+".jpg";
     //String pathJPEG=input+".jpeg";
@@ -71,11 +70,9 @@ class Page {
       tempImg=loadImage(pathJPG);
       if (tempImg!=null) {
         return tempImg;
-      } else {
-        return null;
       }
     }
 
-    //return null;
+    return null;
   }
 }
