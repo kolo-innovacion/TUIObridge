@@ -6,19 +6,6 @@ class Page {
   PImage img;
   ArrayList<Button> pButtons;
 
-  Page(int ind, String n, String imgp) {
-
-    index=ind;
-    name=n;
-    imgPath=imgp;
-  }
-  Page(int ind, String n) {
-
-    index=ind;
-    name=n;
-    imgPath=name+".png";
-    img=loadImage(imgPath);
-  }  
   Page(int ind, String nam, XML input) {
 
     pButtons=new ArrayList<Button>();
