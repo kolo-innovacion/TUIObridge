@@ -56,6 +56,7 @@ void checkPress(int curX, int curY) {
       //logln(temp.identifier);
       sendUDP(temp.identifier);
       println(temp.callPage);
+      switchPage(temp.callPage);//if no callpage is assigned, nothing happens
       //in this case, button is pressed, send UDP!
       temp.setState(true);
     } else {

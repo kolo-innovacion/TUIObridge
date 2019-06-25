@@ -63,3 +63,10 @@ void showPage() {
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
 }
+
+void switchPage(String input) {
+  if (input==null) {//do nothing
+  } else {
+    currentPage=pages.get(pageDict.get(input));
+  }
+}
