@@ -38,7 +38,8 @@ void setup() {
 }
 
 void draw() {
-  display.show();
+  background(0);
+  //display.show();
   showPage();
   //updateTUIO();
 }
