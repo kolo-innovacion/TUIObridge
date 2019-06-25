@@ -19,9 +19,9 @@ class Display {
     fill(tone);
     stroke(255, 128, 0);
     rect(0, 0, sizeX, sizeY);
-    currImage=pages.get(currPage).img;
     //currImage=pages.get(currPage).img;
-    image(currImage, 0, 0);
+    //currImage=pages.get(currPage).img;
+    //image(currImage, 0, 0);
     //logln(scale);
   }
   void getConfig() {
