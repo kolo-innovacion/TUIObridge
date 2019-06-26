@@ -3,7 +3,7 @@ TuioProcessing tuioClient;
 ArrayList<TuioCursor> tuioCursorList;
 
 boolean tuioVerbose = false; // print console debug messages
-boolean callback = true; // updates only after callbacks
+boolean callback = false; // updates only after callbacks
 
 int curColor=color(0, 255, 0);
 
