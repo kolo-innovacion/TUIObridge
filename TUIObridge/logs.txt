@@ -1,24 +1,24 @@
-2019-06-26  12:26:28  062 ms  ->  config XML file has been loaded
-2019-06-26  12:26:29  549 ms  ->  480 X 288  display has been created
-2019-06-26  12:26:30  743 ms  ->  Page loop has been created.
-2019-06-26  12:26:30  754 ms  ->  menu  created on  (0,0)
-2019-06-26  12:26:30  771 ms  ->  End of buttons creation on  loop
-2019-06-26  12:26:30  967 ms  ->  Page menu has been created.
-2019-06-26  12:26:30  997 ms  ->  copa  created on  (28,130)
-2019-06-26  12:26:30  004 ms  ->  predator  created on  (151,131)
-2019-06-26  12:26:30  011 ms  ->  nemeziz  created on  (262,135)
-2019-06-26  12:26:30  019 ms  ->  x  created on  (404,126)
-2019-06-26  12:26:30  028 ms  ->  End of buttons creation on  menu
-2019-06-26  12:26:30  065 ms  ->  Page copa has been created.
-2019-06-26  12:26:30  151 ms  ->  menu  created on  (423,0)
-2019-06-26  12:26:30  161 ms  ->  End of buttons creation on  copa
-2019-06-26  12:26:30  201 ms  ->  Page predator has been created.
-2019-06-26  12:26:30  216 ms  ->  menu  created on  (423,0)
-2019-06-26  12:26:30  223 ms  ->  End of buttons creation on  predator
-2019-06-26  12:26:30  241 ms  ->  Page nemeziz has been created.
-2019-06-26  12:26:30  249 ms  ->  menu  created on  (423,0)
-2019-06-26  12:26:30  255 ms  ->  End of buttons creation on  nemeziz
-2019-06-26  12:26:30  274 ms  ->  Page x has been created.
-2019-06-26  12:26:30  279 ms  ->  menu  created on  (423,0)
-2019-06-26  12:26:30  284 ms  ->  End of buttons creation on  x
-2019-06-26  12:26:31  323 ms  ->  Target: localhost  Port: 6100
+2019-06-26  16:04:06  060 ms  ->  config XML file has been loaded
+2019-06-26  16:04:07  545 ms  ->  480 X 288  display has been created
+2019-06-26  16:04:07  710 ms  ->  Page loop has been created.
+2019-06-26  16:04:07  717 ms  ->  menu  created on  (0,0)
+2019-06-26  16:04:07  727 ms  ->  End of buttons creation on  loop
+2019-06-26  16:04:07  773 ms  ->  Page menu has been created.
+2019-06-26  16:04:07  778 ms  ->  copa  created on  (28,130)
+2019-06-26  16:04:07  784 ms  ->  predator  created on  (151,131)
+2019-06-26  16:04:07  789 ms  ->  nemeziz  created on  (262,135)
+2019-06-26  16:04:07  794 ms  ->  x  created on  (404,126)
+2019-06-26  16:04:07  800 ms  ->  End of buttons creation on  menu
+2019-06-26  16:04:07  841 ms  ->  Page copa has been created.
+2019-06-26  16:04:07  846 ms  ->  menu  created on  (423,0)
+2019-06-26  16:04:07  851 ms  ->  End of buttons creation on  copa
+2019-06-26  16:04:07  873 ms  ->  Page predator has been created.
+2019-06-26  16:04:07  879 ms  ->  menu  created on  (423,0)
+2019-06-26  16:04:07  886 ms  ->  End of buttons creation on  predator
+2019-06-26  16:04:07  903 ms  ->  Page nemeziz has been created.
+2019-06-26  16:04:07  908 ms  ->  menu  created on  (423,0)
+2019-06-26  16:04:07  914 ms  ->  End of buttons creation on  nemeziz
+2019-06-26  16:04:07  933 ms  ->  Page x has been created.
+2019-06-26  16:04:07  940 ms  ->  menu  created on  (423,0)
+2019-06-26  16:04:08  946 ms  ->  End of buttons creation on  x
+2019-06-26  16:04:09  024 ms  ->  Target: localhost  Port: 6100
