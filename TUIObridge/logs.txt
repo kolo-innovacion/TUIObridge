@@ -1,13 +1,13 @@
-2019-06-29  00:24:37  057 ms  ->  config XML file has been loaded
-2019-06-29  00:24:38  487 ms  ->  480 X 288  display has been created
-2019-06-29  00:24:39  666 ms  ->  Page menu.png has been created.
-2019-06-29  00:24:39  678 ms  ->  copa.png  created on  (27,132)
-2019-06-29  00:24:39  685 ms  ->  predator.png  created on  (154,134)
-2019-06-29  00:24:39  690 ms  ->  End of buttons creation on  menu.png
-2019-06-29  00:24:39  712 ms  ->  Page copa.png has been created.
-2019-06-29  00:24:39  721 ms  ->  menu.png  created on  (422,0)
-2019-06-29  00:24:39  727 ms  ->  End of buttons creation on  copa.png
-2019-06-29  00:24:39  744 ms  ->  Page predator.png has been created.
-2019-06-29  00:24:39  751 ms  ->  menu.png  created on  (423,0)
-2019-06-29  00:24:39  756 ms  ->  End of buttons creation on  predator.png
-2019-06-29  00:24:40  787 ms  ->  Target: localhost  Port: 6100
+2019-06-29  00:25:22  060 ms  ->  config XML file has been loaded
+2019-06-29  00:25:24  670 ms  ->  480 X 288  display has been created
+2019-06-29  00:25:24  859 ms  ->  Page menu.png has been created.
+2019-06-29  00:25:24  873 ms  ->  copa.png  created on  (27,132)
+2019-06-29  00:25:24  879 ms  ->  predator.png  created on  (154,134)
+2019-06-29  00:25:24  886 ms  ->  End of buttons creation on  menu.png
+2019-06-29  00:25:24  939 ms  ->  Page copa.png has been created.
+2019-06-29  00:25:24  946 ms  ->  menu.png  created on  (422,0)
+2019-06-29  00:25:24  953 ms  ->  End of buttons creation on  copa.png
+2019-06-29  00:25:24  003 ms  ->  Page predator.png has been created.
+2019-06-29  00:25:24  009 ms  ->  menu.png  created on  (423,0)
+2019-06-29  00:25:24  016 ms  ->  End of buttons creation on  predator.png
+2019-06-29  00:25:25  046 ms  ->  Target: localhost  Port: 6100
