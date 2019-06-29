@@ -22,6 +22,8 @@ void loadPres() {
 
 
   initState=nextLevel(rootStates, "initialState");//this will be initial page
+  initPage=initState.getContent();
+  println("-------Init page is:  "+initPage);
 
   statesArr=rootStates.getChildren("state");//this will be  the pages
   println(statesArr.length);
@@ -55,6 +57,7 @@ void instancePages() {
     println("Page and index:  "+tempName+i);
     pages.add(new Page(i, tempName));
   }
+  switchPage(initPage);
 }
 
 void loadConfig() {

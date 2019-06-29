@@ -2,13 +2,12 @@ Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
 int currPage=0;
+String initPage;
 Page currentPage;
 
 
 void settings() {
   setupLog();
-  loadPres();
-  instancePages();
   //loadConfig();
   //setWindow();
 }
@@ -16,8 +15,10 @@ void settings() {
 void setup() {
   //setupGUI();
   //instanceDisplay();
-  //setupDict();
-  //instancePages();
+
+  setupDict();
+  loadPres();
+  instancePages();
   //tuioSetup();
   //setupUDP();
 }

@@ -27,10 +27,10 @@ class Page {
     index=ind;
     name=nam;
     img=loadMedia(name);
-    fetchButtons();
-    //pageDict.set(name, index);
-
+    pageDict.set(name, index);
     logln("Page "+name+" has been created.");
+    fetchButtons();
+    logln("End of buttons creation on  "+name);
   }
 
   void fetchButtons() {  
@@ -75,7 +75,7 @@ class Page {
     String h = metaH.getContent();
 
     pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
-    
+
     println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
   }
 
