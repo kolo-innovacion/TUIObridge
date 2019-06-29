@@ -44,7 +44,7 @@ class Page {
 
         if (eventIsButton(usrEvent)) {
           println("BUTTON");
-          XML params= nextLevel(usrEvent, "parameters");
+          addButton(target, usrEvent);
         } else {
           println("NOT BUTTON");
         }
@@ -58,6 +58,23 @@ class Page {
       // XML transType=nextLevel(usrEvent, "name");
       // XML params= nextLevel(usrEvent, "parameters");
     }
+  }
+  void addButton(XML target, XML event) {
+    String btnID = target.getContent();
+
+    XML params= nextLevel(event, "parameters");
+
+    XML metaX= nextLevel(params, "x");
+    XML metaY= nextLevel(params, "y");
+    XML metaW= nextLevel(params, "width");
+    XML metaH= nextLevel(params, "height");
+
+    String x = metaX.getContent();
+    String y = metaY.getContent();
+    String w = metaW.getContent();
+    String h = metaH.getContent();
+
+    println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
   }
 
   boolean eventIsButton(XML event) {    
