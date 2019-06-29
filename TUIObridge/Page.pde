@@ -36,15 +36,38 @@ class Page {
   void fetchButtons() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
-      if (isMine(temp)) {
+      if (isMine(temp)) {//checks if this transition is relevant to itself as a source
         println("RELEVANT");
-      }else{println("NOT MINE");}
+
+        XML target = nextLevel(temp, "targetMediaState");
+        XML usrEvent = nextLevel(temp, "userEvent");
+
+        if (eventIsButton(usrEvent)) {
+          println("BUTTON");
+          XML params= nextLevel(usrEvent, "parameters");
+        } else {
+          println("NOT BUTTON");
+        }
+      } else {
+        println("NOT MINE");
+      }
       // XML source = nextLevel(temp, "sourceMediaState");
 
       //XML target = nextLevel(temp, "targetMediaState");
       // XML usrEvent = nextLevel(temp, "userEvent");
       // XML transType=nextLevel(usrEvent, "name");
       // XML params= nextLevel(usrEvent, "parameters");
+    }
+  }
+
+  boolean eventIsButton(XML event) {    
+    XML eventName=nextLevel(event, "name");
+    String eName = eventName.getContent();
+
+    if (eName.equals("rectangularTouchEvent")) {
+      return true;
+    } else {
+      return false;
     }
   }
 
