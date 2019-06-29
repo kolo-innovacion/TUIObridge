@@ -36,11 +36,25 @@ class Page {
   void fetchButtons() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
-      XML source = nextLevel(temp, "sourceMediaState");
-      XML target = nextLevel(temp, "targetMediaState");
-      XML usrEvent = nextLevel(temp, "userEvent");
-      XML transType=nextLevel(usrEvent, "name");
-      XML params= nextLevel(usrEvent, "parameters");
+      if (isMine(temp)) {
+        println("RELEVANT");
+      }else{println("NOT MINE");}
+      // XML source = nextLevel(temp, "sourceMediaState");
+
+      //XML target = nextLevel(temp, "targetMediaState");
+      // XML usrEvent = nextLevel(temp, "userEvent");
+      // XML transType=nextLevel(usrEvent, "name");
+      // XML params= nextLevel(usrEvent, "parameters");
+    }
+  }
+
+  boolean isMine(XML input) {
+    XML source = nextLevel(input, "sourceMediaState");
+    String sourceName=source.getContent();
+    if (sourceName.equals(name)) {
+      return true;
+    } else {
+      return false;
     }
   }
 
