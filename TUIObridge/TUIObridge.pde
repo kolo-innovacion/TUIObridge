@@ -6,42 +6,23 @@ Page currentPage;
 
 
 void settings() {
-  //gui config happens here
   setupLog();
   loadConfig();
   setWindow();
 }
-/*
-void setup0() {
- setupGUI();
- instanceDisplay();
- instanceButtons();
- instancePages();
- tuioSetup();
- setupUDP();
- }
- 
- void draw0() {
- display.show();
- showButtons();
- updateTUIO();
- }
- */
+
 void setup() {
-  setupGUI();
-  instanceDisplay();
-  setupDict();
-  //instanceButtons();
-  instancePages();
-  tuioSetup();
-  setupUDP();
+  //setupGUI();
+  //instanceDisplay();
+  //setupDict();
+  //instancePages();
+  //tuioSetup();
+  //setupUDP();
 }
 
 void draw() {
-  background(0);
-  //display.show();
-  showPage();
-  updateTUIO();
+  //background(0);
+  //showPage();
   //updateTUIO();
 }
 

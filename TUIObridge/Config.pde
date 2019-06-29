@@ -41,6 +41,7 @@ void instancePages() {
   //buttons=new ArrayList<Button>();
   //XML curr=nextLevel(config, "userDefinedEvents");
   XML[] pagesArr = config.getChildren("userDefinedEvents");
+  
   for (int i=0; i<pagesArr.length; i++) {
     //println(pagesArr[i].getString("name"));
     //println(pagesArr[i].getString("img"));
