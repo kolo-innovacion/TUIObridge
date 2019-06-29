@@ -10,7 +10,17 @@ String presName="adidasFloor.bpf";
 
 void loadPres() {
   pres = loadXML(presName);
-  println(pres.hasChildren());
+
+  XML zones=nextLevel(pres, "zones");
+  XML zone=nextLevel(zones, "zone");
+  XML playlist=nextLevel(zone, "playlist");
+  XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
+
+  XML initState=nextLevel(rootStates, "initialState");
+  XML[] states=rootStates.getChildren("state");
+  println(states.length);
+  XML[] transitions=rootStates.getChildren("transition");
+  println(transitions.length);
 }
 
 void loadConfig() {
@@ -68,16 +78,24 @@ void instanceDisplay() {
 
 XML nextLevel(XML input, String name) {
   XML temp = input.getChild(name);
-  //checkValid(temp);
-  return temp;
+  if (checkValid(temp)) {
+    println("Succesfull access to:  "+name);
+    return temp;
+  } else {
+    println("NOT able to access to:  "+name);
+    return null;
+  }
+  //return temp;
   //return null;
 }
 
-void checkValid(XML input) {
+boolean checkValid(XML input) {
   if (input!=null) {
-    logln("VALID");
+    //logln("VALID");
+    return true;
   } else {
-    logln("NULL ENCOUNTERED");
+    //logln("NULL ENCOUNTERED");
+    return false;
   }
 }
 
