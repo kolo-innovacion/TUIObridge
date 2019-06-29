@@ -1,10 +1,17 @@
 XML config;
+XML pres;
 int winX=100;
 int winY=100;
 boolean fullScr=false;
 float winScale=1.0;
 
 int winTol=20;
+String presName="adidasFloor.bpf";
+
+void loadPres() {
+  pres = loadXML(presName);
+  println(pres.hasChildren());
+}
 
 void loadConfig() {
   config = loadXML("config.xml");
@@ -41,7 +48,7 @@ void instancePages() {
   //buttons=new ArrayList<Button>();
   //XML curr=nextLevel(config, "userDefinedEvents");
   XML[] pagesArr = config.getChildren("userDefinedEvents");
-  
+
   for (int i=0; i<pagesArr.length; i++) {
     //println(pagesArr[i].getString("name"));
     //println(pagesArr[i].getString("img"));
@@ -51,7 +58,7 @@ void instancePages() {
     //pages.add(new Page(i, pagesArr[i].getString("name")));
     pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i]));
   }
-  
+
   currentPage=pages.get(currPage);
 }
 

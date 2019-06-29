@@ -7,8 +7,9 @@ Page currentPage;
 
 void settings() {
   setupLog();
-  loadConfig();
-  setWindow();
+  loadPres();
+  //loadConfig();
+  //setWindow();
 }
 
 void setup() {
