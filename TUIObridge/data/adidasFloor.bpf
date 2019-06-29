@@ -285,8 +285,8 @@
           <initialState>menu.png</initialState>
           <state>
             <name>menu.png</name>
-            <x>527</x>
-            <y>206</y>
+            <x>516</x>
+            <y>108</y>
             <width>114</width>
             <height>97</height>
             <id>0</id>
@@ -304,8 +304,8 @@
           </state>
           <state>
             <name>copa.png</name>
-            <x>418</x>
-            <y>340</y>
+            <x>210</x>
+            <y>343</y>
             <width>114</width>
             <height>97</height>
             <id>1</id>
@@ -323,13 +323,51 @@
           </state>
           <state>
             <name>predator.png</name>
-            <x>600</x>
-            <y>337</y>
+            <x>436</x>
+            <y>359</y>
             <width>114</width>
             <height>97</height>
             <id>2</id>
             <imageItem>
               <file name="predator.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\predator.png" />
+              <fileIsLocal>True</fileIsLocal>
+              <slideDelayInterval>6</slideDelayInterval>
+              <slideTransition>No effect</slideTransition>
+              <transitionDuration>1.0</transitionDuration>
+              <videoPlayerRequired>False</videoPlayerRequired>
+            </imageItem>
+            <brightSignExitCommands>
+            </brightSignExitCommands>
+            <notes />
+          </state>
+          <state>
+            <name>nemeziz.png</name>
+            <x>658</x>
+            <y>367</y>
+            <width>114</width>
+            <height>97</height>
+            <id>3</id>
+            <imageItem>
+              <file name="nemeziz.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\nemeziz.png" />
+              <fileIsLocal>True</fileIsLocal>
+              <slideDelayInterval>6</slideDelayInterval>
+              <slideTransition>No effect</slideTransition>
+              <transitionDuration>1.0</transitionDuration>
+              <videoPlayerRequired>False</videoPlayerRequired>
+            </imageItem>
+            <brightSignExitCommands>
+            </brightSignExitCommands>
+            <notes />
+          </state>
+          <state>
+            <name>x.png</name>
+            <x>888</x>
+            <y>367</y>
+            <width>114</width>
+            <height>97</height>
+            <id>4</id>
+            <imageItem>
+              <file name="x.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\x.png" />
               <fileIsLocal>True</fileIsLocal>
               <slideDelayInterval>6</slideDelayInterval>
               <slideTransition>No effect</slideTransition>
@@ -370,6 +408,42 @@
               </parameters>
             </userEvent>
             <targetMediaState>predator.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>menu.png</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>263</x>
+                <y>132</y>
+                <width>106</width>
+                <height>40</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>nemeziz.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>menu.png</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>405</x>
+                <y>121</y>
+                <width>42</width>
+                <height>64</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>x.png</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayConnectingLine</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -429,6 +503,72 @@
           </transition>
           <transition>
             <sourceMediaState>predator.png</sourceMediaState>
+            <userEvent>
+              <name>timeout</name>
+              <parameters>
+                <parameter>6</parameter>
+              </parameters>
+            </userEvent>
+            <targetMediaState>menu.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayLabel</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>nemeziz.png</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>420</x>
+                <y>0</y>
+                <width>59</width>
+                <height>63</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>menu.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>nemeziz.png</sourceMediaState>
+            <userEvent>
+              <name>timeout</name>
+              <parameters>
+                <parameter>6</parameter>
+              </parameters>
+            </userEvent>
+            <targetMediaState>menu.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayLabel</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>x.png</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>418</x>
+                <y>0</y>
+                <width>60</width>
+                <height>61</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>menu.png</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>x.png</sourceMediaState>
             <userEvent>
               <name>timeout</name>
               <parameters>
