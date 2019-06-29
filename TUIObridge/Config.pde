@@ -10,7 +10,7 @@ String presName="adidasFloor.bpf";
 
 XML initState;
 XML[] statesArr;
-XML[] transitionsArr;
+XML[] transArr;
 
 void loadPres() {
   pres = loadXML(presName);
@@ -25,8 +25,13 @@ void loadPres() {
   statesArr=rootStates.getChildren("state");//this will be  the pages
   println(statesArr.length);
 
-  transitionsArr=rootStates.getChildren("transition");//buttons and timeouts
-  println(transitionsArr.length);
+  transArr=rootStates.getChildren("transition");//buttons and timeouts
+  printArray(transArr);
+}
+
+void xploreTrans() {
+  for (int i=0; i<transArr.length; i++) {
+  }
 }
 
 
