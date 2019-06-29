@@ -8,6 +8,10 @@ float winScale=1.0;
 int winTol=20;
 String presName="adidasFloor.bpf";
 
+XML initState;
+XML[] statesArr;
+XML[] transitionsArr;
+
 void loadPres() {
   pres = loadXML(presName);
 
@@ -16,11 +20,26 @@ void loadPres() {
   XML playlist=nextLevel(zone, "playlist");
   XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
 
-  XML initState=nextLevel(rootStates, "initialState");
-  XML[] states=rootStates.getChildren("state");
-  println(states.length);
-  XML[] transitions=rootStates.getChildren("transition");
-  println(transitions.length);
+  initState=nextLevel(rootStates, "initialState");//this will be initial page
+
+  statesArr=rootStates.getChildren("state");//this will be  the pages
+  println(statesArr.length);
+
+  transitionsArr=rootStates.getChildren("transition");//buttons and timeouts
+  println(transitionsArr.length);
+}
+
+
+void instancePages() {
+
+  pages=new ArrayList<Page>();//global creation of Page objects array
+
+  for (int i=0; i<statesArr.length; i++) {
+    XML tempState=nextLevel(statesArr[i], "name");
+    String tempName=tempState.getContent();
+    println("Page and index:  "+tempName+i);
+    pages.add(new Page(i, tempName));
+  }
 }
 
 void loadConfig() {
@@ -52,7 +71,8 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-void instancePages() {
+
+void instancePages0() {
 
   pages=new ArrayList<Page>();
   //buttons=new ArrayList<Button>();

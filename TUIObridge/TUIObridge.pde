@@ -8,6 +8,7 @@ Page currentPage;
 void settings() {
   setupLog();
   loadPres();
+  instancePages();
   //loadConfig();
   //setWindow();
 }

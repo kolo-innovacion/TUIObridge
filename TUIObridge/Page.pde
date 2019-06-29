@@ -18,6 +18,20 @@ class Page {
     instButtons(input);
     logln("End of buttons creation on  "+name);
   }
+
+
+  Page(int ind, String nam) {
+
+    pButtons=new ArrayList<Button>();
+    index=ind;
+    name=nam;
+    //img=loadPageImage(name);
+
+    //pageDict.set(name, index);
+
+    logln("Page "+name+" has been created.");
+  }
+
   void instButtons(XML input) {    
     //println("NEW"+input);
     //println("ORIGINAL: "+curr);
@@ -46,26 +60,21 @@ class Page {
   }
 
   PImage loadPageImage(String input) {
-    String pathPNG=input+".png";
-    String pathJPG=input+".jpg";
+    //String pathPNG=input+".png";
+    //String pathJPG=input+".jpg";
     //String pathJPEG=input+".jpeg";
 
     PImage tempImg;
 
     //first attempt
-    tempImg=loadImage(pathPNG);
+    tempImg=loadImage(input);
 
     if (tempImg!=null) {
+      println("Unable to load"+input);
       return tempImg;
     } else {
-      tempImg=loadImage(pathJPG);
-      if (tempImg!=null) {
-        return tempImg;
-      } else {
-        return null;
-      }
+      println("Image Loaded"+input);
+      return tempImg;
     }
-
-    //return null;
   }
 }
