@@ -27,10 +27,21 @@ class Page {
     index=ind;
     name=nam;
     img=loadMedia(name);
-
+    fetchButtons();
     //pageDict.set(name, index);
 
     logln("Page "+name+" has been created.");
+  }
+
+  void fetchButtons() {  
+    for (int i=0; i<transArr.length; i++) {
+      XML temp = transArr[i];
+      XML source = nextLevel(temp, "sourceMediaState");
+      XML target = nextLevel(temp, "targetMediaState");
+      XML usrEvent = nextLevel(temp, "userEvent");
+      XML transType=nextLevel(usrEvent, "name");
+      XML params= nextLevel(usrEvent, "parameters");
+    }
   }
 
   PImage loadMedia(String input) {

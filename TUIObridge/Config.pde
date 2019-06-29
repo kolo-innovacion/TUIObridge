@@ -20,17 +20,27 @@ void loadPres() {
   XML playlist=nextLevel(zone, "playlist");
   XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
 
+
   initState=nextLevel(rootStates, "initialState");//this will be initial page
 
   statesArr=rootStates.getChildren("state");//this will be  the pages
   println(statesArr.length);
 
+
   transArr=rootStates.getChildren("transition");//buttons and timeouts
-  printArray(transArr);
+  println(transArr.length);
+
+  //xploreTrans();
 }
 
 void xploreTrans() {
   for (int i=0; i<transArr.length; i++) {
+    XML temp = transArr[i];
+    XML source = nextLevel(temp, "sourceMediaState");
+    XML target = nextLevel(temp, "targetMediaState");
+    XML usrEvent = nextLevel(temp, "userEvent");
+    XML transType=nextLevel(usrEvent, "name");
+    XML params= nextLevel(usrEvent, "parameters");
   }
 }
 
