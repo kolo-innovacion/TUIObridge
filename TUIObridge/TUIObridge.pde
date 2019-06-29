@@ -19,14 +19,14 @@ void setup() {
   setupDict();
   loadPres();
   instancePages();
-  //tuioSetup();
-  //setupUDP();
+  tuioSetup();
+  setupUDP();
 }
 
 void draw() {
-  //background(0);
-  //showPage();
-  //updateTUIO();
+  background(0);
+  showPage();
+  updateTUIO();
 }
 
 void setWindow() {
