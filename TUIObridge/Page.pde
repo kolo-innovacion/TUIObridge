@@ -23,13 +23,26 @@ class Page {
   Page(int ind, String nam) {
 
     pButtons=new ArrayList<Button>();
+
     index=ind;
     name=nam;
-    //img=loadPageImage(name);
+    img=loadMedia(name);
 
     //pageDict.set(name, index);
 
     logln("Page "+name+" has been created.");
+  }
+
+  PImage loadMedia(String input) {
+    PImage temp = loadImage(input);
+    if (temp!=null) {
+      println(input+"  loaded successfully");
+      return temp;
+    } else {
+
+      println(input+"  NOT loaded");
+      return null;
+    }
   }
 
   void instButtons(XML input) {    
