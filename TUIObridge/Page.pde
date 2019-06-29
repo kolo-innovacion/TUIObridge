@@ -74,6 +74,8 @@ class Page {
     String w = metaW.getContent();
     String h = metaH.getContent();
 
+    pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
+    
     println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
   }
 

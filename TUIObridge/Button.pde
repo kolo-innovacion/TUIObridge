@@ -20,7 +20,7 @@ class Button {
     prevState=false;
     //callPage=null;
     logln(identifier+"  created on  ("+posX+","+posY+")");
-    //println("Button Added");
+    println("-------------------------Button Added");
   }
 
   void setState(boolean input) {

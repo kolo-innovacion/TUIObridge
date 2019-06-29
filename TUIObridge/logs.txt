@@ -1,3 +1,7 @@
-2019-06-29  00:01:45  160 ms  ->  Page menu.png has been created.
-2019-06-29  00:01:45  186 ms  ->  Page copa.png has been created.
-2019-06-29  00:01:45  200 ms  ->  Page predator.png has been created.
+2019-06-29  00:06:28  149 ms  ->  copa.png  created on  (27,132)
+2019-06-29  00:06:28  163 ms  ->  predator.png  created on  (154,134)
+2019-06-29  00:06:28  170 ms  ->  Page menu.png has been created.
+2019-06-29  00:06:28  200 ms  ->  menu.png  created on  (422,0)
+2019-06-29  00:06:28  200 ms  ->  Page copa.png has been created.
+2019-06-29  00:06:28  225 ms  ->  menu.png  created on  (423,0)
+2019-06-29  00:06:28  230 ms  ->  Page predator.png has been created.
