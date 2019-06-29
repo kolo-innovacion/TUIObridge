@@ -8,13 +8,13 @@ Page currentPage;
 
 void settings() {
   setupLog();
-  //loadConfig();
-  //setWindow();
+  loadConfig();
+  setWindow();
 }
 
 void setup() {
-  //setupGUI();
-  //instanceDisplay();
+  setupGUI();
+  instanceDisplay();
 
   setupDict();
   loadPres();

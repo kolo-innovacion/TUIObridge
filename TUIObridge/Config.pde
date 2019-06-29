@@ -111,7 +111,7 @@ void instancePages0() {
 }
 
 void instanceDisplay() {
-  display=new Display();
+  display=new Display();//used for tuio
 }
 
 XML nextLevel(XML input, String name) {

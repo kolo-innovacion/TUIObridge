@@ -1,10 +1,12 @@
-2019-06-29  00:20:14  400 ms  ->  Page menu.png has been created.
-2019-06-29  00:20:14  403 ms  ->  copa.png  created on  (27,132)
-2019-06-29  00:20:14  410 ms  ->  predator.png  created on  (154,134)
-2019-06-29  00:20:14  410 ms  ->  End of buttons creation on  menu.png
-2019-06-29  00:20:14  440 ms  ->  Page copa.png has been created.
-2019-06-29  00:20:14  455 ms  ->  menu.png  created on  (422,0)
-2019-06-29  00:20:14  460 ms  ->  End of buttons creation on  copa.png
-2019-06-29  00:20:14  510 ms  ->  Page predator.png has been created.
-2019-06-29  00:20:14  520 ms  ->  menu.png  created on  (423,0)
-2019-06-29  00:20:14  530 ms  ->  End of buttons creation on  predator.png
+2019-06-29  00:22:37  060 ms  ->  config XML file has been loaded
+2019-06-29  00:22:39  547 ms  ->  480 X 288  display has been created
+2019-06-29  00:22:39  730 ms  ->  Page menu.png has been created.
+2019-06-29  00:22:39  746 ms  ->  copa.png  created on  (27,132)
+2019-06-29  00:22:39  754 ms  ->  predator.png  created on  (154,134)
+2019-06-29  00:22:39  761 ms  ->  End of buttons creation on  menu.png
+2019-06-29  00:22:39  811 ms  ->  Page copa.png has been created.
+2019-06-29  00:22:39  819 ms  ->  menu.png  created on  (422,0)
+2019-06-29  00:22:39  824 ms  ->  End of buttons creation on  copa.png
+2019-06-29  00:22:39  878 ms  ->  Page predator.png has been created.
+2019-06-29  00:22:39  886 ms  ->  menu.png  created on  (423,0)
+2019-06-29  00:22:39  891 ms  ->  End of buttons creation on  predator.png
