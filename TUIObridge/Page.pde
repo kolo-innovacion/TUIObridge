@@ -34,10 +34,6 @@ class Page {
     fetchButtons();
     logln("End of buttons creation on  "+name);
   }
-  void setMovie(Movie input) {
-    movie = input;
-    movie.loop();
-  }
   void fetchButtons() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];

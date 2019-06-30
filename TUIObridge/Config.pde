@@ -8,7 +8,8 @@ boolean fullScr=false;
 float winScale=1.0;
 
 int winTol=20;
-String presName="adidasFloor.bpf";
+//String presName="adidasFloor.bpf";
+String presName="adidasFloor00.bpf";
 
 XML initState;
 XML[] statesArr;
@@ -59,8 +60,8 @@ void instancePages() {
     String tempName=tempState.getContent();
     println("Page and index:  "+tempName+i);
     //pages.add(new Page(i, tempName));
-    Movie tempMovie = new Movie(this, "pisoMenu.mp4");
-    tempMovie.loop();
+    Movie tempMovie = new Movie(this, tempName);
+    //tempMovie.loop();
     pages.add(new Page(i, tempName, tempMovie));
   }
   switchPage(initPage);

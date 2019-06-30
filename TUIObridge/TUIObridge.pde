@@ -48,6 +48,7 @@ void setupGUI() {
 void showPage() {
   //image(currentPage.img, 0, 0);
 
+  image(currentPage.movie, 0, 0, width, height);
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
 }
@@ -64,4 +65,8 @@ void switchPage(String input) {
   } else {
     currentPage=pages.get(pageDict.get(input));
   }
+}
+
+void movieEvent(Movie m) {
+  m.read();
 }
