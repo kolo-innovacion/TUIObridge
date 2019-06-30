@@ -2,7 +2,6 @@ class Page {
 
   int index;
   String name;
-  PImage img;
   Movie movie;
   ArrayList<Button> pButtons;
 

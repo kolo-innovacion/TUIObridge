@@ -282,11 +282,11 @@
         <name>Playlist 0</name>
         <type>interactive</type>
         <states>
-          <initialState>Piso_Menu.mp4</initialState>
+          <initialState>Piso_Loop.mp4</initialState>
           <state>
             <name>Piso_Menu.mp4</name>
-            <x>539</x>
-            <y>148</y>
+            <x>607</x>
+            <y>195</y>
             <width>114</width>
             <height>97</height>
             <id>0</id>
@@ -303,8 +303,8 @@
           </state>
           <state>
             <name>Piso_Copa.mp4</name>
-            <x>244</x>
-            <y>475</y>
+            <x>312</x>
+            <y>522</y>
             <width>114</width>
             <height>97</height>
             <id>1</id>
@@ -321,8 +321,8 @@
           </state>
           <state>
             <name>Piso_X.mp4</name>
-            <x>823</x>
-            <y>468</y>
+            <x>891</x>
+            <y>515</y>
             <width>114</width>
             <height>97</height>
             <id>3</id>
@@ -339,8 +339,8 @@
           </state>
           <state>
             <name>Piso_Nemeziz.mp4</name>
-            <x>637</x>
-            <y>480</y>
+            <x>705</x>
+            <y>527</y>
             <width>114</width>
             <height>97</height>
             <id>4</id>
@@ -357,13 +357,31 @@
           </state>
           <state>
             <name>Piso_Predator.mp4</name>
-            <x>438</x>
-            <y>475</y>
+            <x>506</x>
+            <y>522</y>
             <width>114</width>
             <height>97</height>
             <id>5</id>
             <videoItem>
               <file name="Piso_Predator.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Predator.mp4" />
+              <fileIsLocal>True</fileIsLocal>
+              <volume>100</volume>
+              <videoDisplayMode>2D</videoDisplayMode>
+              <automaticallyLoop>True</automaticallyLoop>
+            </videoItem>
+            <brightSignExitCommands>
+            </brightSignExitCommands>
+            <notes />
+          </state>
+          <state>
+            <name>Piso_Loop.mp4</name>
+            <x>605</x>
+            <y>19</y>
+            <width>114</width>
+            <height>97</height>
+            <id>6</id>
+            <videoItem>
+              <file name="Piso_Loop.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Loop.mp4" />
               <fileIsLocal>True</fileIsLocal>
               <volume>100</volume>
               <videoDisplayMode>2D</videoDisplayMode>
@@ -446,6 +464,21 @@
             <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
           </transition>
           <transition>
+            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
+            <userEvent>
+              <name>timeout</name>
+              <parameters>
+                <parameter>10</parameter>
+              </parameters>
+            </userEvent>
+            <targetMediaState>Piso_Loop.mp4</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayLabel</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
             <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
             <userEvent>
               <name>rectangularTouchEvent</name>
@@ -466,9 +499,9 @@
           <transition>
             <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
             <userEvent>
-              <name>timeout</name>
+              <name>mediaEnd</name>
               <parameters>
-                <parameter>6</parameter>
+                <parameter />
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Menu.mp4</targetMediaState>
@@ -499,9 +532,9 @@
           <transition>
             <sourceMediaState>Piso_X.mp4</sourceMediaState>
             <userEvent>
-              <name>timeout</name>
+              <name>mediaEnd</name>
               <parameters>
-                <parameter>6</parameter>
+                <parameter />
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Menu.mp4</targetMediaState>
@@ -532,9 +565,9 @@
           <transition>
             <sourceMediaState>Piso_Nemeziz.mp4</sourceMediaState>
             <userEvent>
-              <name>timeout</name>
+              <name>mediaEnd</name>
               <parameters>
-                <parameter>6</parameter>
+                <parameter />
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Menu.mp4</targetMediaState>
@@ -565,14 +598,32 @@
           <transition>
             <sourceMediaState>Piso_Predator.mp4</sourceMediaState>
             <userEvent>
-              <name>timeout</name>
+              <name>mediaEnd</name>
               <parameters>
-                <parameter>6</parameter>
+                <parameter />
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Menu.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayLabel</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+          <transition>
+            <sourceMediaState>Piso_Loop.mp4</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>0</x>
+                <y>0</y>
+                <width>479</width>
+                <height>287</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>Piso_Menu.mp4</targetMediaState>
+            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
+            <displayMode>displayConnectingLine</displayMode>
             <labelLocation>bottom</labelLocation>
             <assignInputToUserVariable>False</assignInputToUserVariable>
             <assignWildcardToUserVariable>False</assignWildcardToUserVariable>

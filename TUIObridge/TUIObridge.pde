@@ -53,13 +53,6 @@ void showPage() {
   currentPage.showButtons();
 }
 
-void showPage0() {
-  image(currentPage.img, 0, 0);
-
-  //currentPage=pages.get(currPage);
-  currentPage.showButtons();
-}
-
 void switchPage(String input) {
   if (input==null) {//do nothing
   } else {

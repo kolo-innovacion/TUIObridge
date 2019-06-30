@@ -1,21 +1,24 @@
-2019-06-30  18:27:02  070 ms  ->  config XML file has been loaded
-2019-06-30  18:27:04  558 ms  ->  480 X 288  display has been created
-2019-06-30  18:27:05  197 ms  ->  Page Piso_Menu.mp4 has been created.
-2019-06-30  18:27:05  205 ms  ->  Piso_Copa.mp4  created on  (26,132)
-2019-06-30  18:27:05  212 ms  ->  Piso_Nemeziz.mp4  created on  (261,132)
-2019-06-30  18:27:05  217 ms  ->  Piso_X.mp4  created on  (401,124)
-2019-06-30  18:27:05  223 ms  ->  Piso_Predator.mp4  created on  (151,132)
-2019-06-30  18:27:05  231 ms  ->  End of buttons creation on  Piso_Menu.mp4
-2019-06-30  18:27:06  508 ms  ->  Page Piso_Copa.mp4 has been created.
-2019-06-30  18:27:06  524 ms  ->  Piso_Menu.mp4  created on  (438,0)
-2019-06-30  18:27:06  532 ms  ->  End of buttons creation on  Piso_Copa.mp4
-2019-06-30  18:27:06  713 ms  ->  Page Piso_X.mp4 has been created.
-2019-06-30  18:27:06  730 ms  ->  Piso_Menu.mp4  created on  (432,0)
-2019-06-30  18:27:06  736 ms  ->  End of buttons creation on  Piso_X.mp4
-2019-06-30  18:27:06  898 ms  ->  Page Piso_Nemeziz.mp4 has been created.
-2019-06-30  18:27:06  904 ms  ->  Piso_Menu.mp4  created on  (432,0)
-2019-06-30  18:27:06  910 ms  ->  End of buttons creation on  Piso_Nemeziz.mp4
-2019-06-30  18:27:06  061 ms  ->  Page Piso_Predator.mp4 has been created.
-2019-06-30  18:27:06  069 ms  ->  Piso_Menu.mp4  created on  (443,0)
-2019-06-30  18:27:06  074 ms  ->  End of buttons creation on  Piso_Predator.mp4
-2019-06-30  18:27:06  201 ms  ->  Target: localhost  Port: 6100
+2019-06-30  18:35:53  060 ms  ->  config XML file has been loaded
+2019-06-30  18:35:54  542 ms  ->  480 X 288  display has been created
+2019-06-30  18:35:56  197 ms  ->  Page Piso_Menu.mp4 has been created.
+2019-06-30  18:35:56  209 ms  ->  Piso_Copa.mp4  created on  (26,132)
+2019-06-30  18:35:56  215 ms  ->  Piso_Nemeziz.mp4  created on  (261,132)
+2019-06-30  18:35:56  221 ms  ->  Piso_X.mp4  created on  (401,124)
+2019-06-30  18:35:56  228 ms  ->  Piso_Predator.mp4  created on  (151,132)
+2019-06-30  18:35:56  236 ms  ->  End of buttons creation on  Piso_Menu.mp4
+2019-06-30  18:35:56  432 ms  ->  Page Piso_Copa.mp4 has been created.
+2019-06-30  18:35:56  464 ms  ->  Piso_Menu.mp4  created on  (438,0)
+2019-06-30  18:35:56  481 ms  ->  End of buttons creation on  Piso_Copa.mp4
+2019-06-30  18:35:57  663 ms  ->  Page Piso_X.mp4 has been created.
+2019-06-30  18:35:57  670 ms  ->  Piso_Menu.mp4  created on  (432,0)
+2019-06-30  18:35:57  678 ms  ->  End of buttons creation on  Piso_X.mp4
+2019-06-30  18:35:57  882 ms  ->  Page Piso_Nemeziz.mp4 has been created.
+2019-06-30  18:35:57  887 ms  ->  Piso_Menu.mp4  created on  (432,0)
+2019-06-30  18:35:57  893 ms  ->  End of buttons creation on  Piso_Nemeziz.mp4
+2019-06-30  18:35:57  036 ms  ->  Page Piso_Predator.mp4 has been created.
+2019-06-30  18:35:57  047 ms  ->  Piso_Menu.mp4  created on  (443,0)
+2019-06-30  18:35:57  055 ms  ->  End of buttons creation on  Piso_Predator.mp4
+2019-06-30  18:35:57  323 ms  ->  Page Piso_Loop.mp4 has been created.
+2019-06-30  18:35:57  332 ms  ->  Piso_Menu.mp4  created on  (0,0)
+2019-06-30  18:35:57  338 ms  ->  End of buttons creation on  Piso_Loop.mp4
+2019-06-30  18:35:57  531 ms  ->  Target: localhost  Port: 6100
