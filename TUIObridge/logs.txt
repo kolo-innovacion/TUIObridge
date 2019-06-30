@@ -1,21 +1,21 @@
-2019-06-29  00:32:32  060 ms  ->  config XML file has been loaded
-2019-06-29  00:32:33  510 ms  ->  480 X 288  display has been created
-2019-06-29  00:32:33  737 ms  ->  Page menu.png has been created.
-2019-06-29  00:32:34  758 ms  ->  copa.png  created on  (27,132)
-2019-06-29  00:32:34  769 ms  ->  predator.png  created on  (154,134)
-2019-06-29  00:32:34  783 ms  ->  nemeziz.png  created on  (263,132)
-2019-06-29  00:32:34  793 ms  ->  x.png  created on  (405,121)
-2019-06-29  00:32:34  806 ms  ->  End of buttons creation on  menu.png
-2019-06-29  00:32:34  875 ms  ->  Page copa.png has been created.
-2019-06-29  00:32:34  883 ms  ->  menu.png  created on  (422,0)
-2019-06-29  00:32:34  890 ms  ->  End of buttons creation on  copa.png
-2019-06-29  00:32:34  966 ms  ->  Page predator.png has been created.
-2019-06-29  00:32:34  979 ms  ->  menu.png  created on  (423,0)
-2019-06-29  00:32:34  987 ms  ->  End of buttons creation on  predator.png
-2019-06-29  00:32:34  045 ms  ->  Page nemeziz.png has been created.
-2019-06-29  00:32:34  073 ms  ->  menu.png  created on  (420,0)
-2019-06-29  00:32:34  081 ms  ->  End of buttons creation on  nemeziz.png
-2019-06-29  00:32:34  141 ms  ->  Page x.png has been created.
-2019-06-29  00:32:34  166 ms  ->  menu.png  created on  (418,0)
-2019-06-29  00:32:34  204 ms  ->  End of buttons creation on  x.png
-2019-06-29  00:32:35  249 ms  ->  Target: localhost  Port: 6100
+2019-06-30  17:06:54  065 ms  ->  config XML file has been loaded
+2019-06-30  17:06:55  642 ms  ->  480 X 288  display has been created
+2019-06-30  17:06:56  250 ms  ->  Page menu.png has been created.
+2019-06-30  17:06:56  284 ms  ->  copa.png  created on  (27,132)
+2019-06-30  17:06:56  387 ms  ->  predator.png  created on  (154,134)
+2019-06-30  17:06:56  436 ms  ->  nemeziz.png  created on  (263,132)
+2019-06-30  17:06:56  459 ms  ->  x.png  created on  (405,121)
+2019-06-30  17:06:56  527 ms  ->  End of buttons creation on  menu.png
+2019-06-30  17:06:56  592 ms  ->  Page copa.png has been created.
+2019-06-30  17:06:56  600 ms  ->  menu.png  created on  (422,0)
+2019-06-30  17:06:56  647 ms  ->  End of buttons creation on  copa.png
+2019-06-30  17:06:56  706 ms  ->  Page predator.png has been created.
+2019-06-30  17:06:56  728 ms  ->  menu.png  created on  (423,0)
+2019-06-30  17:06:56  747 ms  ->  End of buttons creation on  predator.png
+2019-06-30  17:06:57  776 ms  ->  Page nemeziz.png has been created.
+2019-06-30  17:06:57  783 ms  ->  menu.png  created on  (420,0)
+2019-06-30  17:06:57  792 ms  ->  End of buttons creation on  nemeziz.png
+2019-06-30  17:06:57  862 ms  ->  Page x.png has been created.
+2019-06-30  17:06:57  870 ms  ->  menu.png  created on  (418,0)
+2019-06-30  17:06:57  883 ms  ->  End of buttons creation on  x.png
+2019-06-30  17:06:58  949 ms  ->  Target: localhost  Port: 6100

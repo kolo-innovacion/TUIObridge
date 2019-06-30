@@ -1,24 +1,12 @@
+import processing.video.*;
+
 class Page {
 
   int index;
   String name;
   PImage img;
+  Movie movie;
   ArrayList<Button> pButtons;
-
-  Page(int ind, String nam, XML input) {
-
-    pButtons=new ArrayList<Button>();
-    index=ind;
-    name=nam;
-    //imgPath=name+".png";
-    //img=loadImage(imgPath);
-    img=loadPageImage(name);
-    pageDict.set(name, index);
-    logln("Page "+name+" has been created.");
-    instButtons(input);
-    logln("End of buttons creation on  "+name);
-  }
-
 
   Page(int ind, String nam) {
 

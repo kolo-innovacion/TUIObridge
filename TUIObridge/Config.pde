@@ -89,27 +89,6 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-
-void instancePages0() {
-
-  pages=new ArrayList<Page>();
-  //buttons=new ArrayList<Button>();
-  //XML curr=nextLevel(config, "userDefinedEvents");
-  XML[] pagesArr = config.getChildren("userDefinedEvents");
-
-  for (int i=0; i<pagesArr.length; i++) {
-    //println(pagesArr[i].getString("name"));
-    //println(pagesArr[i].getString("img"));
-    //pages.add(new Page(i, "yolo", "path"));
-    //pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i].getString("img")));
-    //XML corpus;
-    //pages.add(new Page(i, pagesArr[i].getString("name")));
-    pages.add(new Page(i, pagesArr[i].getString("name"), pagesArr[i]));
-  }
-
-  currentPage=pages.get(currPage);
-}
-
 void instanceDisplay() {
   display=new Display();//used for tuio
 }
