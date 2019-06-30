@@ -15,7 +15,6 @@ void settings() {
 void setup() {
   setupGUI();
   instanceDisplay();
-
   setupDict();
   loadPres();
   instancePages();
@@ -43,7 +42,8 @@ void setupGUI() {
   noStroke();
   //display=new Display();
   //instanceButtons();
-  frameRate(60);
+  background(0);
+  frameRate(25.00);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);
