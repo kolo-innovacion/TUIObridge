@@ -64,6 +64,7 @@ void switchPage(String input) {
   if (input==null) {//do nothing
   } else {
     currentPage=pages.get(pageDict.get(input));
+    currentPage.movie.jump(0.0);
   }
 }
 
