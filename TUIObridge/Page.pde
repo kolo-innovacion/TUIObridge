@@ -1,5 +1,3 @@
-import processing.video.*;
-
 class Page {
 
   int index;
@@ -14,13 +12,32 @@ class Page {
 
     index=ind;
     name=nam;
-    img=loadMedia(name);
+    //img=loadMedia(name);
+
     pageDict.set(name, index);
     logln("Page "+name+" has been created.");
     fetchButtons();
     logln("End of buttons creation on  "+name);
   }
 
+  Page(int ind, String nam, Movie input) {
+
+    pButtons=new ArrayList<Button>();
+
+    index=ind;
+    name=nam;
+    //img=loadMedia(name);
+    movie=input;
+    movie.loop();
+    pageDict.set(name, index);
+    logln("Page "+name+" has been created.");
+    fetchButtons();
+    logln("End of buttons creation on  "+name);
+  }
+  void setMovie(Movie input) {
+    movie = input;
+    movie.loop();
+  }
   void fetchButtons() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];

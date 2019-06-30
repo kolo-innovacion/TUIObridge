@@ -1,3 +1,5 @@
+import processing.video.*;
+
 XML config;
 XML pres;
 int winX=100;
@@ -49,13 +51,17 @@ void xploreTrans() {
 
 void instancePages() {
 
+
   pages=new ArrayList<Page>();//global creation of Page objects array
 
   for (int i=0; i<statesArr.length; i++) {
     XML tempState=nextLevel(statesArr[i], "name");
     String tempName=tempState.getContent();
     println("Page and index:  "+tempName+i);
-    pages.add(new Page(i, tempName));
+    //pages.add(new Page(i, tempName));
+    Movie tempMovie = new Movie(this, "pisoMenu.mp4");
+    tempMovie.loop();
+    pages.add(new Page(i, tempName, tempMovie));
   }
   switchPage(initPage);
 }
