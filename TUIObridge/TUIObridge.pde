@@ -5,7 +5,7 @@ int currPage=0;
 String initPage;
 Page currentPage;
 Page timeoutPage;
-boolean devMode=true;
+boolean devMode=false;
 
 
 void settings() {
@@ -33,9 +33,9 @@ void draw() {
 
 void setWindow() {
   if (fullScr) {
-    fullScreen(P2D);
+    fullScreen();
   } else {
-    size(winX, winY, P2D);
+    size(winX, winY);
   }
 }
 
@@ -51,7 +51,7 @@ void setupGUI() {
 void showPage() {
   //image(currentPage.img, 0, 0);
 
-  image(currentPage.movie, 0, 0, width, height);
+  image(currentPage.movie, 0, 0);
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
 }

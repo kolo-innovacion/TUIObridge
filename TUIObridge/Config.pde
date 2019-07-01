@@ -2,14 +2,14 @@ import processing.video.*;
 
 XML config;
 XML pres;
-int winX=100;
-int winY=100;
+int winX;
+int winY;
 boolean fullScr=false;
 float winScale=1.0;
 
 int winTol=20;
 //String presName="adidasFloor.bpf";
-String presName="adidasFloor00.bpf";
+String presName="adidasFloor01.bpf";
 
 XML initState;
 XML[] statesArr;
@@ -73,6 +73,7 @@ void loadConfig() {
 
   //fullScr=boolean(extInt(config, "fullscreen"));
   fullScr=boolean(config.getInt("fullscreen", 0));
+  //fullScr=true;
 
   if (fullScr) {
     winTol=0;

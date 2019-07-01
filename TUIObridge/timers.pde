@@ -20,6 +20,7 @@ void startPageTimer() {
     //println(currentPage.name+"  will timeout to  "+timeoutPage.name);
     //println("TIMER RUNNING:  "+pageTimer.isRunning());
     //println("TIMER PAUSED:  "+pageTimer.isPaused());
+    pageTimer.stop();
     pageTimer.reset();
     pageTimer.configure(100, currentPage.outTime);
     pageTimer.start();
