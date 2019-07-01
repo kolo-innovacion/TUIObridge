@@ -1,13 +1,13 @@
 import com.dhchoi.CountdownTimer;
 import com.dhchoi.CountdownTimerService;
 
-CountdownTimer timer;
+CountdownTimer pageTimer;
 
 void timerSetup() {
-  timer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
-  timer.reset();
+  pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
+  pageTimer.reset();
   //timer.start();
 }
 void onFinishEvent(CountdownTimer t) {
-  switchPage("Piso_Predator.mp4");
+  switchPage(timeoutPage.name);
 }

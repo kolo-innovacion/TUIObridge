@@ -64,8 +64,12 @@ void switchPage(String input) {
     if (currentPage.timeout) {
       timeoutPage=pages.get(pageDict.get(currentPage.timeoutTo));
       println(currentPage.name+"  will timeout to  "+timeoutPage.name);
-      println("TIMER RUNNING:  "+timer.isRunning());
-      println("TIMER PAUSED:  "+timer.isPaused());
+      println("TIMER RUNNING:  "+pageTimer.isRunning());
+      println("TIMER PAUSED:  "+pageTimer.isPaused());
+      pageTimer.reset();
+      pageTimer.configure(100, 6000);
+      pageTimer.start();
+      println("pagTimer STARTED");
     } else {
     }
   }

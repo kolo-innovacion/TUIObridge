@@ -44,7 +44,7 @@ class Page {
         } else {
         }
       } else {
-        println("NOT MINE");
+        //println("NOT MINE");
       }
       // XML source = nextLevel(temp, "sourceMediaState");
 
