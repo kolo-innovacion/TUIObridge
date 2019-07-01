@@ -4,6 +4,8 @@ class Page {
   String name;
   Movie movie;
   ArrayList<Button> pButtons;
+  boolean mediaEnd=false;
+  String mediaEndTo;
 
   Page(int ind, String nam) {
 
@@ -15,7 +17,7 @@ class Page {
 
     pageDict.set(name, index);
     logln("Page "+name+" has been created.");
-    fetchButtons();
+    fetchTransitions();
     logln("End of buttons creation on  "+name);
   }
 
@@ -30,10 +32,10 @@ class Page {
     movie.loop();
     pageDict.set(name, index);
     logln("Page "+name+" has been created.");
-    fetchButtons();
+    fetchTransitions();
     logln("End of buttons creation on  "+name);
   }
-  void fetchButtons() {  
+  void fetchTransitions() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
       if (isMine(temp)) {//checks if this transition is relevant to itself as a source
@@ -47,6 +49,11 @@ class Page {
           addButton(target, usrEvent);
         } else {
           println("NOT BUTTON");
+        }
+
+        if (eventIsMediaEnd(usrEvent)) {
+          println("***********MEDIA END EVENT");
+        } else {
         }
       } else {
         println("NOT MINE");
@@ -84,6 +91,17 @@ class Page {
     String eName = eventName.getContent();
 
     if (eName.equals("rectangularTouchEvent")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  boolean eventIsMediaEnd(XML event) {    
+    XML eventName=nextLevel(event, "name");
+    String eName = eventName.getContent();
+
+    if (eName.equals("mediaEnd")) {
       return true;
     } else {
       return false;
