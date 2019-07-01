@@ -103,7 +103,7 @@ void instanceDisplay() {
 XML nextLevel(XML input, String name) {
   XML temp = input.getChild(name);
   if (checkValid(temp)) {
-    println("Succesfull access to:  "+name);
+    //println("Succesfull access to:  "+name);
     return temp;
   } else {
     println("NOT able to access to:  "+name);
