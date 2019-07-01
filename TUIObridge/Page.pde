@@ -34,15 +34,19 @@ class Page {
         if (eventIsButton(usrEvent)) {
           println("BUTTON");
           addButton(target, usrEvent);
-        } else {
-          println("NOT BUTTON");
-        }
-
-        if (eventIsTimeout(usrEvent)) {
+        } else if (eventIsTimeout(usrEvent)) {
           println("TIMEOUT");
           addTimeout(target, usrEvent);
-        } else {
+        } else if (eventIsMediaEnd(usrEvent)) {
+          addMediaEnd(target, usrEvent);
         }
+        /*
+        if (eventIsTimeout(usrEvent)) {
+         println("TIMEOUT");
+         addTimeout(target, usrEvent);
+         } else {
+         }
+         */
       } else {
         //println("NOT MINE");
       }
@@ -86,10 +90,21 @@ class Page {
     outTime = int(timePar.getFloatContent()*1000);
 
     println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+  }
+  void addMediaEnd(XML target, XML event) {
+    //a media end event is the same as a timeout the difference is that the out time comes from the video duration
 
-    //pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
+    timeout=true;
 
-    //println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
+    timeoutTo = target.getContent();
+
+    //XML params= nextLevel(event, "parameters");
+    //XML timePar= nextLevel(params, "parameter");
+
+    outTime = int(movie.duration()*1000);
+
+
+    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
 
   boolean eventIsButton(XML event) {    
@@ -108,6 +123,17 @@ class Page {
     String eName = eventName.getContent();
 
     if (eName.equals("timeout")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  boolean eventIsMediaEnd(XML event) {    
+    XML eventName=nextLevel(event, "name");
+    String eName = eventName.getContent();
+
+    if (eName.equals("mediaEnd")) {
       return true;
     } else {
       return false;
