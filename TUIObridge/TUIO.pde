@@ -2,6 +2,10 @@ import TUIO.*;
 TuioProcessing tuioClient;
 ArrayList<TuioCursor> tuioCursorList;
 
+//for testing purposes, only:
+float scaleX=0.2840;//384/1690=0.22721...
+float scaleY=0.750;
+
 boolean tuioVerbose = false; // print console debug messages
 boolean callback = false; // updates only after callbacks
 
