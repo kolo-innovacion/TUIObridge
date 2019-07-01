@@ -10,6 +10,7 @@ void timerSetup() {
 }
 void onFinishEvent(CountdownTimer t) {
   if (currentPage.timeout) {
+    println("Timer ended. Switching to:  "+timeoutPage.name);
     switchPage(timeoutPage.name);
   }
 }
@@ -24,7 +25,7 @@ void startPageTimer() {
     pageTimer.reset();
     pageTimer.configure(100, currentPage.outTime);
     pageTimer.start();
-    println("pagTimer STARTED");
+    println("Page Timer from  "+currentPage.name+"  to "+currentPage.timeoutTo+"  in   "+currentPage.outTime+"  miliseconds" );
   } else {
     //pageTimer.stop();
   }
