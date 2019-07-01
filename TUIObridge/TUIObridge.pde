@@ -5,6 +5,7 @@ int currPage=0;
 String initPage;
 Page currentPage;
 Page timeoutPage;
+boolean devMode=true;
 
 
 void settings() {

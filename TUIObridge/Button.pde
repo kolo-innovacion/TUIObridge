@@ -28,16 +28,18 @@ class Button {
   }
 
   void show() {
-    if (currState) {
-      fill(acTone);
-      //delay(500);
-    } else {
-      fill(inTone);
+    if (devMode) {
+      if (currState) {
+        fill(acTone);
+        //delay(500);
+      } else {
+        fill(inTone);
+      }
+      noStroke();
+      rect(posX, posY, sizeX, sizeY);
+      fill(255);
+      text(identifier, posX, posY+(sizeY/2));
     }
-    noStroke();
-    rect(posX, posY, sizeX, sizeY);
-    fill(255);
-    text(identifier, posX, posY+(sizeY/2));
     currState=false;
   }
 }
