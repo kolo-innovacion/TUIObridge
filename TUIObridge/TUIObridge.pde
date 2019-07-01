@@ -66,6 +66,7 @@ void switchPage(String input) {
   } else {
     currentPage=pages.get(pageDict.get(input));
     currentPage.movie.jump(0.0);
+    delay(100);
     //set timeout next page
     startPageTimer();
     /*

@@ -466,9 +466,9 @@
           <transition>
             <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
             <userEvent>
-              <name>mediaEnd</name>
+              <name>timeout</name>
               <parameters>
-                <parameter />
+                <parameter>6</parameter>
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Loop.mp4</targetMediaState>

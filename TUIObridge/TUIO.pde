@@ -11,8 +11,9 @@ void tuioSetup() {
   tuioClient  = new TuioProcessing(this);
   if (!callback) {
     //frameRate(60);
-    //loop();
-  } else {}//noLoop(); // or callback updates
+    loop();
+  } else {
+  }//noLoop(); // or callback updates
 }
 
 void updateTUIO() {
