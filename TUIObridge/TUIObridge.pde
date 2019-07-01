@@ -61,17 +61,19 @@ void switchPage(String input) {
     currentPage=pages.get(pageDict.get(input));
     currentPage.movie.jump(0.0);
     //set timeout next page
+    startPageTimer();
+    /*
     if (currentPage.timeout) {
-      timeoutPage=pages.get(pageDict.get(currentPage.timeoutTo));
-      println(currentPage.name+"  will timeout to  "+timeoutPage.name);
-      println("TIMER RUNNING:  "+pageTimer.isRunning());
-      println("TIMER PAUSED:  "+pageTimer.isPaused());
-      pageTimer.reset();
-      pageTimer.configure(100, 6000);
-      pageTimer.start();
-      println("pagTimer STARTED");
-    } else {
-    }
+     timeoutPage=pages.get(pageDict.get(currentPage.timeoutTo));
+     println(currentPage.name+"  will timeout to  "+timeoutPage.name);
+     println("TIMER RUNNING:  "+pageTimer.isRunning());
+     println("TIMER PAUSED:  "+pageTimer.isPaused());
+     pageTimer.reset();
+     pageTimer.configure(100, 6000);
+     pageTimer.start();
+     println("pagTimer STARTED");
+     } else {
+     }*/
   }
 }
 

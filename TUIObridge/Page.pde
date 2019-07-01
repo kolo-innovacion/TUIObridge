@@ -6,7 +6,7 @@ class Page {
   ArrayList<Button> pButtons;
   boolean timeout=false;
   String timeoutTo;
-  float outTime=0.0;
+  long outTime=0;
 
   Page(int ind, String nam, Movie input) {
 
@@ -83,7 +83,7 @@ class Page {
     XML params= nextLevel(event, "parameters");
     XML timePar= nextLevel(params, "parameter");
 
-    outTime = timePar.getFloatContent();
+    outTime = int(timePar.getFloatContent()*1000);
 
     println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
 
