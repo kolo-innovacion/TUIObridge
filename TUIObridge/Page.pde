@@ -4,22 +4,9 @@ class Page {
   String name;
   Movie movie;
   ArrayList<Button> pButtons;
-  boolean mediaEnd=false;
-  String mediaEndTo;
-
-  Page(int ind, String nam) {
-
-    pButtons=new ArrayList<Button>();
-
-    index=ind;
-    name=nam;
-    //img=loadMedia(name);
-
-    pageDict.set(name, index);
-    logln("Page "+name+" has been created.");
-    fetchTransitions();
-    logln("End of buttons creation on  "+name);
-  }
+  boolean timeout=false;
+  String timeoutTo;
+  float outTime=0.0;
 
   Page(int ind, String nam, Movie input) {
 
@@ -51,8 +38,9 @@ class Page {
           println("NOT BUTTON");
         }
 
-        if (eventIsMediaEnd(usrEvent)) {
-          println("***********MEDIA END EVENT");
+        if (eventIsTimeout(usrEvent)) {
+          println("TIMEOUT");
+          addTimeout(target, usrEvent);
         } else {
         }
       } else {
@@ -83,7 +71,25 @@ class Page {
 
     pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
 
-    println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
+    println("Button for  "+btnID+"  with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
+  }
+
+  void addTimeout(XML target, XML event) {
+
+    timeout=true;
+
+    timeoutTo = target.getContent();
+
+    XML params= nextLevel(event, "parameters");
+    XML timePar= nextLevel(params, "parameter");
+
+    outTime = timePar.getFloatContent();
+
+    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+
+    //pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
+
+    //println("Button for  "+btnID+"with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
   }
 
   boolean eventIsButton(XML event) {    
@@ -97,11 +103,11 @@ class Page {
     }
   }
 
-  boolean eventIsMediaEnd(XML event) {    
+  boolean eventIsTimeout(XML event) {    
     XML eventName=nextLevel(event, "name");
     String eName = eventName.getContent();
 
-    if (eName.equals("mediaEnd")) {
+    if (eName.equals("timeout")) {
       return true;
     } else {
       return false;

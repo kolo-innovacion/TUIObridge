@@ -58,7 +58,7 @@ void instancePages() {
   for (int i=0; i<statesArr.length; i++) {
     XML tempState=nextLevel(statesArr[i], "name");
     String tempName=tempState.getContent();
-    println("Page and index:  "+tempName+i);
+    println("Page and index:  "+tempName);
     //pages.add(new Page(i, tempName));
     Movie tempMovie = new Movie(this, tempName);
     //tempMovie.loop();
@@ -156,6 +156,3 @@ void setupLog() {
 }
 
 String logString="";
-
-void logFile() {
-}
