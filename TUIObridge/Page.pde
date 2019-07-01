@@ -26,19 +26,20 @@ class Page {
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
       if (isMine(temp)) {//checks if this transition is relevant to itself as a source
-        println("RELEVANT");
+        //println("RELEVANT");
 
         XML target = nextLevel(temp, "targetMediaState");
         XML usrEvent = nextLevel(temp, "userEvent");
-
+        //movie.loop();
         if (eventIsButton(usrEvent)) {
-          println("BUTTON");
+          //println("BUTTON");
           addButton(target, usrEvent);
         } else if (eventIsTimeout(usrEvent)) {
-          println("TIMEOUT");
+          //println("TIMEOUT");
           addTimeout(target, usrEvent);
         } else if (eventIsMediaEnd(usrEvent)) {
           addMediaEnd(target, usrEvent);
+          //movie.noLoop();
         }
         /*
         if (eventIsTimeout(usrEvent)) {

@@ -54,6 +54,11 @@ void showPage() {
   image(currentPage.movie, 0, 0);
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
+  /*
+  if (currentPage.timeout&&(currentPage.movie.time()>=currentPage.movie.duration())) {
+   switchPage(currentPage.timeoutTo);
+   }
+   */
 }
 
 void switchPage(String input) {
