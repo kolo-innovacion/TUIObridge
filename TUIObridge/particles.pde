@@ -5,3 +5,13 @@ void partSetup() {
 
   //Movie tempMovie = new Movie(this, tempName);
 }
+class Particle {
+  int posX;
+  int posY;
+  boolean finished;
+  Particle(int x, int y) {
+    posX=x;
+    posY=y;
+    finished=false;
+  };
+}
