@@ -3,6 +3,7 @@ Movie partMovie;
 
 void partSetup() {
   partMovie=new Movie(this, "particles00.mp4");
+  //partMovie=new Movie(this, "light.mov");
   parts=new ArrayList<Particle>();
 
   //Movie tempMovie = new Movie(this, tempName);
