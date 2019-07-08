@@ -1,7 +1,9 @@
-Movie particles;
+ArrayList<Particle> parts;
+Movie partMovie;
 
 void partSetup() {
-  particles=new Movie(this, "particles00.mp4");
+  partMovie=new Movie(this, "particles00.mp4");
+  parts=new ArrayList<Particle>();
 
   //Movie tempMovie = new Movie(this, tempName);
 }
@@ -9,9 +11,16 @@ class Particle {
   int posX;
   int posY;
   boolean finished;
-  Particle(int x, int y) {
+  Movie visual;
+  Particle(int x, int y, Movie input) {
     posX=x;
     posY=y;
+    visual=input;
+    visual.loop();
     finished=false;
   };
+  void show() {
+    //image(visual, posX, posY, 50, 50);
+    ellipse(posX, posY, 50, 50);
+  }
 }

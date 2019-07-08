@@ -1,6 +1,7 @@
 Display display;
 ArrayList<Button> buttons;
 ArrayList<Page> pages;
+
 int currPage=0;
 String initPage;
 Page currentPage;
@@ -55,11 +56,22 @@ void showPage() {
   image(currentPage.movie, 0, 0);
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
+  showParts();
+
+
   /*
   if (currentPage.timeout&&(currentPage.movie.time()>=currentPage.movie.duration())) {
    switchPage(currentPage.timeoutTo);
    }
    */
+}
+
+
+void showParts() {
+  for (int i=0; i<parts.size(); i++) {
+    Particle temp = parts.get(i);
+    temp.show();
+  }
 }
 
 void switchPage(String input) {
