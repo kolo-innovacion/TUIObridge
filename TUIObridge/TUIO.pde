@@ -85,7 +85,6 @@ boolean inRange(int input, int lef, int rig) {
 
 void addTuioCursor(TuioCursor tcur) {
   if (tuioVerbose) logln("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
-  parts.add(new Particle(tcur.getScreenX(display.sizeX), tcur.getScreenY(display.sizeY), partMovie));
   checkPress(tcur.getScreenX(display.sizeX), tcur.getScreenY(display.sizeY));
   //startPageTimer();
   //redraw();
