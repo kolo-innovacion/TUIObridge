@@ -20,7 +20,7 @@ class Particle {
     finished=false;
   };
   void show() {
-    image(visual, posX, posY, 50, 50);
-    //ellipse(posX, posY, 50, 50);
+    //image(visual, posX, posY, 50, 50);
+    ellipse(posX, posY, 50, 50);
   }
 }
