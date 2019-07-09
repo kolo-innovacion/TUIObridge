@@ -23,7 +23,6 @@ void setup() {
   tuioSetup();
   setupUDP();
   timerSetup();
-  partSetup();
 }
 
 void draw() {
