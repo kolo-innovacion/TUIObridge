@@ -1,9 +1,9 @@
-2019-07-09  20:03:17  056 ms  ->  config XML file has been loaded
-2019-07-09  20:03:18  564 ms  ->  480 X 288  display has been created
-2019-07-09  20:03:20  167 ms  ->  Page Piso_Menu.mp4 has been created.
-2019-07-09  20:03:20  174 ms  ->  Piso_Copa.mp4  created on  (3,142)
-2019-07-09  20:03:20  181 ms  ->  End of buttons creation on  Piso_Menu.mp4
-2019-07-09  20:03:20  479 ms  ->  Page Piso_Copa.mp4 has been created.
-2019-07-09  20:03:20  496 ms  ->  Piso_Menu.mp4  created on  (430,0)
-2019-07-09  20:03:20  501 ms  ->  End of buttons creation on  Piso_Copa.mp4
-2019-07-09  20:03:20  787 ms  ->  Target: localhost  Port: 6100
+2019-07-09  20:06:24  062 ms  ->  config XML file has been loaded
+2019-07-09  20:06:25  569 ms  ->  480 X 288  display has been created
+2019-07-09  20:06:27  284 ms  ->  Page Piso_Menu.mp4 has been created.
+2019-07-09  20:06:27  289 ms  ->  Piso_Copa.mp4  created on  (3,142)
+2019-07-09  20:06:27  294 ms  ->  End of buttons creation on  Piso_Menu.mp4
+2019-07-09  20:06:27  558 ms  ->  Page Piso_Copa.mp4 has been created.
+2019-07-09  20:06:27  566 ms  ->  Piso_Menu.mp4  created on  (430,0)
+2019-07-09  20:06:27  573 ms  ->  End of buttons creation on  Piso_Copa.mp4
+2019-07-09  20:06:27  853 ms  ->  Target: localhost  Port: 6100

@@ -48,9 +48,9 @@ void updateTUIO() {
         noStroke();
         fill(curColor);
         ellipse( tcur.getScreenX(display.sizeX)*scaleX, tcur.getScreenY(display.sizeY)*scaleY, 20, 20);
-        
-        spawnCursor();
-        
+
+        spawnCursor(int(tcur.getScreenX(display.sizeX)*scaleX), int(tcur.getScreenY(display.sizeY)*scaleY));
+
         fill(0);
         text(""+ tcur.getCursorID(), tcur.getScreenX(display.sizeX)-5, tcur.getScreenY(display.sizeY)+5);
       }

@@ -178,7 +178,7 @@ public void spawnParticles() {
   }
 }
 
-public void spawnCursor() {
+public void spawnCursor(int posX, int posY) {
 
   float px, py, vx, vy, radius;
   int count, vw, vh;
@@ -209,8 +209,8 @@ public void spawnCursor() {
     //px = mouseX;
     //py = mouseY;
 
-    px = width/2;
-    py = height/2;
+    px = posX;
+    py = posY;
 
     vx = (mouseX - pmouseX) * +5;
     vy = (mouseY - pmouseY) * -5;
