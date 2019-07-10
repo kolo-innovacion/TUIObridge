@@ -33,14 +33,6 @@ void setupParticles() {
   viewport_h = (int) min(viewport_h, displayHeight * 0.9f);
   //size(viewport_w, viewport_h, P2D);
 
-
-  int count=1;
-
-  println("pre Smooth  "+count);
-  //smooth(0);
-  println("post Smooth  "+count);
-  count++;
-
   surface.setLocation(viewport_x-900, viewport_y);
 
   context = new DwPixelFlow(this);
@@ -140,53 +132,6 @@ void updateScene() {
   }
   pg_obstacles.popMatrix();
   pg_obstacles.endDraw();
-}
-
-
-
-public void spawnParticles() {
-
-  float px, py, vx, vy, radius;
-  int count, vw, vh;
-
-  vw = width;
-  vh = height;
-
-  count = 1;
-  radius = 10;
-  px = vw/2f;
-  py = vh/4f;
-  vx = 0;
-  vy = 4;
-
-  DwFlowFieldParticles.SpawnRadial sr = new DwFlowFieldParticles.SpawnRadial();
-  sr.num(count);
-  sr.dim(radius, radius);
-  sr.pos(px, vh-1-py);
-  sr.vel(vx, vy);
-  //particles.spawn(vw, vh, sr);
-
-  if (mousePressed) {
-    float pr = particles.getCollisionSize() * 0.5f;
-    count = ceil(particles.getCount() * 0.01f);
-    count = min(max(count, 1), 4000);  
-    radius = ceil(sqrt(count * pr * pr));
-
-    //px = mouseX;
-    //py = mouseY;
-
-    px = width/2;
-    py = height/2;
-
-    vx = (mouseX - pmouseX) * +5;
-    vy = (mouseY - pmouseY) * -5;
-
-    sr.num(count);
-    sr.dim(radius, radius);
-    sr.pos(px, vh-1-py);
-    sr.vel(vx, vy);
-    particles.spawn(vw, vh, sr);
-  }
 }
 
 public void spawnCursor(int posX, int posY) {
