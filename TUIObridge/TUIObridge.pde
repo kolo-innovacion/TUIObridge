@@ -12,6 +12,7 @@ void settings() {
   setupLog();
   loadConfig();
   setWindow();
+  smooth(0);
 }
 
 void setup() {
@@ -55,7 +56,7 @@ void setupGUI() {
   //instanceButtons();
   background(0);
   //frameRate(25.00);
-  frameRate(25.00);
+  frameRate(62.00);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);

@@ -32,7 +32,14 @@ void setupParticles() {
   viewport_w = (int) min(viewport_w, displayWidth  * 0.9f);
   viewport_h = (int) min(viewport_h, displayHeight * 0.9f);
   //size(viewport_w, viewport_h, P2D);
-  smooth(0);
+
+
+  int count=1;
+
+  println("pre Smooth  "+count);
+  //smooth(0);
+  println("post Smooth  "+count);
+  count++;
 
   surface.setLocation(viewport_x-900, viewport_y);
 
@@ -95,7 +102,6 @@ void renderObstPart() {
   //blendMode(REPLACE);
   image(pg_canvas, 0, 0);
   //blendMode(BLEND);
-  //frameRate(25.0);
 }
 
 void updateTitle() {

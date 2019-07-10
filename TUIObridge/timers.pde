@@ -15,6 +15,11 @@ void onFinishEvent(CountdownTimer t) {
   }
 }
 
+
+void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
+  //timerCallbackInfo = "[tick] - timeLeft: " + timeLeftUntilFinish + "ms";
+}
+
 void startPageTimer() {
   if (currentPage.timeout) {
     timeoutPage=pages.get(pageDict.get(currentPage.timeoutTo));
