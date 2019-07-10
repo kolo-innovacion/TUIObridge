@@ -465,13 +465,17 @@ public void mouseReleased() {
   }
 }
 
-
+int auxColor=0;
 public void keyReleased() {
   if (key == 'r') reset();
   if (key == 't') UPDATE_PHYSICS = !UPDATE_PHYSICS;
   if (key == 'f') DISPLAY_FLOW   = !DISPLAY_FLOW;
   if (key == 'd') DISPLAY_DIST   = !DISPLAY_DIST;
   if (key == 'h') toggleGUI();
+  if (key == 'c') {
+    auxColor++;
+    setParticleColor(auxColor%4);
+  }
 }
 
 public void toggleGUI() {
