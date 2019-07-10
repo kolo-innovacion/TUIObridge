@@ -10,6 +10,11 @@ import com.thomasdiewald.pixelflow.java.imageprocessing.filter.Merge;
 import processing.core.*;
 import processing.opengl.PGraphics2D;
 
+//myVars
+int partsCursor=25;
+int maxParts=0x32;
+
+//original vars
 int viewport_w = 1280;
 int viewport_h = 720;
 int viewport_x = 230;
@@ -47,7 +52,7 @@ void setupParticles() {
   particles.param.mul_coh = 0.50f;
   particles.param.mul_col = 1.00f;
   particles.param.mul_obs = 2.00f;
-  particles.resizeParticlesCount(10);
+  particles.resizeParticlesCount(maxParts);
 
   pg_canvas = (PGraphics2D) createGraphics(width, height, P2D);
   pg_canvas.smooth(0);
@@ -155,8 +160,58 @@ public void spawnParticles() {
     count = ceil(particles.getCount() * 0.01f);
     count = min(max(count, 1), 4000);  
     radius = ceil(sqrt(count * pr * pr));
-    px = mouseX;
-    py = mouseY;
+
+    //px = mouseX;
+    //py = mouseY;
+
+    px = width/2;
+    py = height/2;
+
+    vx = (mouseX - pmouseX) * +5;
+    vy = (mouseY - pmouseY) * -5;
+
+    sr.num(count);
+    sr.dim(radius, radius);
+    sr.pos(px, vh-1-py);
+    sr.vel(vx, vy);
+    particles.spawn(vw, vh, sr);
+  }
+}
+
+public void spawnCursor() {
+
+  float px, py, vx, vy, radius;
+  int count, vw, vh;
+
+  vw = width;
+  vh = height;
+
+  count = 1;
+  radius = 10;
+  px = vw/2f;
+  py = vh/4f;
+  vx = 0;
+  vy = 4;
+
+  DwFlowFieldParticles.SpawnRadial sr = new DwFlowFieldParticles.SpawnRadial();
+  sr.num(count);
+  sr.dim(radius, radius);
+  sr.pos(px, vh-1-py);
+  sr.vel(vx, vy);
+  //particles.spawn(vw, vh, sr);
+
+  if (true) {
+    float pr = particles.getCollisionSize() * 0.5f;
+    count = ceil(particles.getCount() * 0.01f);
+    count = min(max(count, 1), 4000);  
+    radius = ceil(sqrt(count * pr * pr));
+
+    //px = mouseX;
+    //py = mouseY;
+
+    px = width/2;
+    py = height/2;
+
     vx = (mouseX - pmouseX) * +5;
     vy = (mouseY - pmouseY) * -5;
 

@@ -33,7 +33,7 @@ void draw() {
   updateTUIO();
   //start particles
   updateScene();
-  spawnParticles();
+  //spawnParticles();
   updatePartSim();
   renderObstPart();
   updateTitle();
