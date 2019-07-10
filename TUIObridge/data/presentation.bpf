@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BrightAuthor version="6" BrightAuthorVersion="4.7.2.5" type="project">
   <meta>
-    <name>adidasFloor</name>
+    <name>adidasFloor01</name>
     <isBackup>False</isBackup>
     <model>XD1132</model>
     <videoMode>1920x1080x60p</videoMode>
@@ -282,114 +282,55 @@
         <name>Playlist 0</name>
         <type>interactive</type>
         <states>
-          <initialState>menu.png</initialState>
+          <initialState>Piso_Menu.mp4</initialState>
           <state>
-            <name>menu.png</name>
-            <x>516</x>
-            <y>108</y>
+            <name>Piso_Menu.mp4</name>
+            <x>607</x>
+            <y>195</y>
             <width>114</width>
             <height>97</height>
             <id>0</id>
-            <imageItem>
-              <file name="menu.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\menu.png" />
+            <videoItem>
+              <file name="Piso_Menu.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Menu.mp4" />
               <fileIsLocal>True</fileIsLocal>
-              <slideDelayInterval>6</slideDelayInterval>
-              <slideTransition>No effect</slideTransition>
-              <transitionDuration>1.0</transitionDuration>
-              <videoPlayerRequired>False</videoPlayerRequired>
-            </imageItem>
+              <volume>100</volume>
+              <videoDisplayMode>2D</videoDisplayMode>
+              <automaticallyLoop>True</automaticallyLoop>
+            </videoItem>
             <brightSignExitCommands>
             </brightSignExitCommands>
             <notes />
           </state>
           <state>
-            <name>copa.png</name>
-            <x>210</x>
-            <y>343</y>
+            <name>Piso_Copa.mp4</name>
+            <x>602</x>
+            <y>410</y>
             <width>114</width>
             <height>97</height>
             <id>1</id>
-            <imageItem>
-              <file name="copa.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\copa.png" />
+            <videoItem>
+              <file name="Piso_Copa.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Copa.mp4" />
               <fileIsLocal>True</fileIsLocal>
-              <slideDelayInterval>6</slideDelayInterval>
-              <slideTransition>No effect</slideTransition>
-              <transitionDuration>1.0</transitionDuration>
-              <videoPlayerRequired>False</videoPlayerRequired>
-            </imageItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
-          <state>
-            <name>predator.png</name>
-            <x>436</x>
-            <y>359</y>
-            <width>114</width>
-            <height>97</height>
-            <id>2</id>
-            <imageItem>
-              <file name="predator.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\predator.png" />
-              <fileIsLocal>True</fileIsLocal>
-              <slideDelayInterval>6</slideDelayInterval>
-              <slideTransition>No effect</slideTransition>
-              <transitionDuration>1.0</transitionDuration>
-              <videoPlayerRequired>False</videoPlayerRequired>
-            </imageItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
-          <state>
-            <name>nemeziz.png</name>
-            <x>658</x>
-            <y>367</y>
-            <width>114</width>
-            <height>97</height>
-            <id>3</id>
-            <imageItem>
-              <file name="nemeziz.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\nemeziz.png" />
-              <fileIsLocal>True</fileIsLocal>
-              <slideDelayInterval>6</slideDelayInterval>
-              <slideTransition>No effect</slideTransition>
-              <transitionDuration>1.0</transitionDuration>
-              <videoPlayerRequired>False</videoPlayerRequired>
-            </imageItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
-          <state>
-            <name>x.png</name>
-            <x>888</x>
-            <y>367</y>
-            <width>114</width>
-            <height>97</height>
-            <id>4</id>
-            <imageItem>
-              <file name="x.png" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\x.png" />
-              <fileIsLocal>True</fileIsLocal>
-              <slideDelayInterval>6</slideDelayInterval>
-              <slideTransition>No effect</slideTransition>
-              <transitionDuration>1.0</transitionDuration>
-              <videoPlayerRequired>False</videoPlayerRequired>
-            </imageItem>
+              <volume>100</volume>
+              <videoDisplayMode>2D</videoDisplayMode>
+              <automaticallyLoop>True</automaticallyLoop>
+            </videoItem>
             <brightSignExitCommands>
             </brightSignExitCommands>
             <notes />
           </state>
           <transition>
-            <sourceMediaState>menu.png</sourceMediaState>
+            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
             <userEvent>
               <name>rectangularTouchEvent</name>
               <parameters>
-                <x>27</x>
+                <x>26</x>
                 <y>132</y>
-                <width>101</width>
-                <height>42</height>
+                <width>110</width>
+                <height>39</height>
               </parameters>
             </userEvent>
-            <targetMediaState>copa.png</targetMediaState>
+            <targetMediaState>Piso_Copa.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayConnectingLine</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -397,86 +338,14 @@
             <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
           </transition>
           <transition>
-            <sourceMediaState>menu.png</sourceMediaState>
+            <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
             <userEvent>
-              <name>rectangularTouchEvent</name>
+              <name>mediaEnd</name>
               <parameters>
-                <x>154</x>
-                <y>134</y>
-                <width>89</width>
-                <height>37</height>
+                <parameter />
               </parameters>
             </userEvent>
-            <targetMediaState>predator.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>menu.png</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>263</x>
-                <y>132</y>
-                <width>106</width>
-                <height>40</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>nemeziz.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>menu.png</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>405</x>
-                <y>121</y>
-                <width>42</width>
-                <height>64</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>x.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>copa.png</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>422</x>
-                <y>0</y>
-                <width>57</width>
-                <height>56</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>copa.png</sourceMediaState>
-            <userEvent>
-              <name>timeout</name>
-              <parameters>
-                <parameter>6</parameter>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
+            <targetMediaState>Piso_Menu.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayLabel</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -484,98 +353,17 @@
             <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
           </transition>
           <transition>
-            <sourceMediaState>predator.png</sourceMediaState>
+            <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
             <userEvent>
               <name>rectangularTouchEvent</name>
               <parameters>
-                <x>423</x>
+                <x>438</x>
                 <y>0</y>
-                <width>56</width>
-                <height>57</height>
+                <width>40</width>
+                <height>33</height>
               </parameters>
             </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>predator.png</sourceMediaState>
-            <userEvent>
-              <name>timeout</name>
-              <parameters>
-                <parameter>6</parameter>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>nemeziz.png</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>420</x>
-                <y>0</y>
-                <width>59</width>
-                <height>63</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>nemeziz.png</sourceMediaState>
-            <userEvent>
-              <name>timeout</name>
-              <parameters>
-                <parameter>6</parameter>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>x.png</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>418</x>
-                <y>0</y>
-                <width>60</width>
-                <height>61</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>x.png</sourceMediaState>
-            <userEvent>
-              <name>timeout</name>
-              <parameters>
-                <parameter>6</parameter>
-              </parameters>
-            </userEvent>
-            <targetMediaState>menu.png</targetMediaState>
+            <targetMediaState>Piso_Menu.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayLabel</displayMode>
             <labelLocation>bottom</labelLocation>

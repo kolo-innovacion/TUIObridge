@@ -44,7 +44,7 @@ DwFlowField ff_attractors;
 DwGLSLProgram shd_attractors;
 
 public boolean UPDATE_PHYSICS  = true;
-public boolean DISPLAY_DIST    = !true;
+public boolean DISPLAY_DIST    = false;
 public boolean DISPLAY_FLOW    = !true;  
 public boolean AUTO_SPAWN      = true;
 public boolean APPLY_BLOOM     = true;
@@ -259,10 +259,12 @@ public void partsDraw() {
 
   if (!DISPLAY_DIST) {
     pg_canvas.beginDraw(); 
-    pg_canvas.blendMode(REPLACE);
-    pg_canvas.background(1);
-    pg_canvas.blendMode(BLEND);   
-    pg_canvas.image(pg_obstacles, 0, 0);
+    //pg_canvas.blendMode(REPLACE);
+    pg_canvas.background(0, 0);
+    //pg_canvas.blendMode(BLEND);   
+    pg_canvas.image(currentPage.movie, 0, 0);
+
+    //image(currentPage.movie, 0, 0);
     pg_canvas.endDraw();
     particles.displayParticles(pg_canvas);
   }

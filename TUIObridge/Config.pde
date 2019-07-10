@@ -9,7 +9,7 @@ float winScale=1.0;
 
 int winTol=20;
 //String presName="adidasFloor.bpf";
-String presName="adidasFloor01.bpf";
+String presName="presentation.bpf";
 
 XML initState;
 XML[] statesArr;
