@@ -67,14 +67,6 @@ void setupParticles() {
   DwFilter.get(context).merge.apply(ff_acc.tex_vel, ta);
 }
 
-void fullDraw() {
-  updateScene();
-  spawnParticles();
-  updatePartSim();
-  renderObstPart();
-  updateTitle();
-}
-
 void updatePartSim() {
   // update particle simulation
   particles.resizeWorld(width, height); 
@@ -156,7 +148,7 @@ public void spawnParticles() {
   sr.dim(radius, radius);
   sr.pos(px, vh-1-py);
   sr.vel(vx, vy);
-  particles.spawn(vw, vh, sr);
+  //particles.spawn(vw, vh, sr);
 
   if (mousePressed) {
     float pr = particles.getCollisionSize() * 0.5f;
