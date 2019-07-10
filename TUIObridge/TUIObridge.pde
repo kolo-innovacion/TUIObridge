@@ -24,6 +24,7 @@ void setup() {
   setupUDP();
   timerSetup();
   setupParticles();
+  colorMode(RGB, 255, 255, 255, 255);
 }
 
 void draw() {
@@ -33,6 +34,9 @@ void draw() {
   //start particles
   updateScene();
   spawnParticles();
+  updatePartSim();
+  renderObstPart();
+  updateTitle();
 }
 
 void setWindow() {
@@ -51,7 +55,7 @@ void setupGUI() {
   //instanceButtons();
   background(0);
   //frameRate(25.00);
-  frameRate(90.00);
+  frameRate(25.00);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);

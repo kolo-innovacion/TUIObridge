@@ -85,14 +85,15 @@ void updatePartSim() {
 void renderObstPart() {
   // render obstacles + particles
   pg_canvas.beginDraw(); 
-  pg_canvas.background(255);
-  pg_canvas.image(pg_obstacles, 0, 0);
+  pg_canvas.background(255, 0, 0, 0);
+  //pg_canvas.image(pg_obstacles, 0, 0);
   pg_canvas.endDraw();
   particles.displayParticles(pg_canvas);
 
-  blendMode(REPLACE);
+  //blendMode(REPLACE);
   image(pg_canvas, 0, 0);
-  blendMode(BLEND);
+  //blendMode(BLEND);
+  //frameRate(25.0);
 }
 
 void updateTitle() {
