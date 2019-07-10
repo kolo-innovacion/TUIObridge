@@ -12,6 +12,8 @@ void settings() {
   setupLog();
   loadConfig();
   setWindow();
+  partSettings();
+  smooth(0);
 }
 
 void setup() {
@@ -23,19 +25,21 @@ void setup() {
   tuioSetup();
   setupUDP();
   timerSetup();
+  partSetup();
 }
 
 void draw() {
   background(0);
   showPage();
   updateTUIO();
+  partsDraw();
 }
 
 void setWindow() {
   if (fullScr) {
     fullScreen();
   } else {
-    size(winX, winY);
+    size(winX, winY, P2D);
   }
 }
 
