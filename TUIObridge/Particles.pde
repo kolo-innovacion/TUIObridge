@@ -67,6 +67,38 @@ void setupParticles() {
   DwFilter.get(context).merge.apply(ff_acc.tex_vel, ta);
 }
 
+void fullDraw() {
+  updateScene();
+  spawnParticles();
+  updatePartSim();
+  renderObstPart();
+  updateTitle();
+}
+
+void updatePartSim() {
+  // update particle simulation
+  particles.resizeWorld(width, height); 
+  particles.createObstacleFlowField(pg_obstacles, new int[]{0, 0, 0, 255}, false);
+  particles.update(ff_acc);
+}
+
+void renderObstPart() {
+  // render obstacles + particles
+  pg_canvas.beginDraw(); 
+  pg_canvas.background(255);
+  pg_canvas.image(pg_obstacles, 0, 0);
+  pg_canvas.endDraw();
+  particles.displayParticles(pg_canvas);
+
+  blendMode(REPLACE);
+  image(pg_canvas, 0, 0);
+  blendMode(BLEND);
+}
+
+void updateTitle() {
+  String txt_fps = String.format(Locale.ENGLISH, "[%s]   [%7.2f fps]   [particles %,d] ", getClass().getSimpleName(), frameRate, particles.getCount() );
+  surface.setTitle(txt_fps);
+}
 
 void updateScene() {
 
