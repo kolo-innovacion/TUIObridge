@@ -32,6 +32,9 @@ void updateTUIO() {
     tuioCursorList = tuioClient.getTuioCursorList();
 
     //ArrayList<TuioCursor> tuioCursorList = tuioClient.getTuioCursorList();
+
+    //updateResize(tuioCursorList.size());
+
     for (int i=0; i<tuioCursorList.size(); i++) {
       TuioCursor tcur = tuioCursorList.get(i);
       ArrayList<TuioPoint> pointList = tcur.getPath();

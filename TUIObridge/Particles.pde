@@ -11,7 +11,7 @@ import processing.core.*;
 import processing.opengl.PGraphics2D;
 
 //myVars
-int partsCursor=25;
+int partsPerCurs=0x32;
 int maxParts=0x32;
 
 //original vars
@@ -70,6 +70,11 @@ void setupParticles() {
   ff_acc.resize(width, height);
   Merge.TexMad ta = new Merge.TexMad(pg_gravity, -0.05f, 0);
   DwFilter.get(context).merge.apply(ff_acc.tex_vel, ta);
+}
+
+void updateResize(int numCursors) {
+  maxParts=numCursors*partsPerCurs;
+  particles.resizeParticlesCount(maxParts);
 }
 
 void updatePartSim() {
