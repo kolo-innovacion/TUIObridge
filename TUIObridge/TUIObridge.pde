@@ -23,6 +23,7 @@ void setup() {
   tuioSetup();
   setupUDP();
   timerSetup();
+  setupParticles();
 }
 
 void draw() {
@@ -35,7 +36,7 @@ void setWindow() {
   if (fullScr) {
     fullScreen();
   } else {
-    size(winX, winY);
+    size(winX, winY, P2D);
   }
 }
 
@@ -46,7 +47,8 @@ void setupGUI() {
   //display=new Display();
   //instanceButtons();
   background(0);
-  frameRate(25.00);
+  //frameRate(25.00);
+  frameRate(90.00);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);

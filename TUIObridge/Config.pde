@@ -74,6 +74,7 @@ void loadConfig() {
   //fullScr=boolean(extInt(config, "fullscreen"));
   fullScr=boolean(config.getInt("fullscreen", 0));
   //fullScr=true;
+  //fullScr=true;
 
   if (fullScr) {
     winTol=0;
