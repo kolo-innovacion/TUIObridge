@@ -257,40 +257,16 @@ public void partsDraw() {
 
   particleSimulation();
 
-  if (!DISPLAY_DIST) {
-    pg_canvas.beginDraw(); 
-    //pg_canvas.blendMode(REPLACE);
-    pg_canvas.background(0, 0);
-    //pg_canvas.blendMode(BLEND);   
-    pg_canvas.image(currentPage.movie, 0, 0);
+  pg_canvas.beginDraw(); 
+  pg_canvas.blendMode(REPLACE);
+  pg_canvas.background(0, 0, 0, 0);
+  pg_canvas.blendMode(BLEND);   
+  //pg_canvas.image(currentPage.movie, 0, 0);
 
-    //image(currentPage.movie, 0, 0);
-    pg_canvas.endDraw();
-    particles.displayParticles(pg_canvas);
-  }
+  //image(currentPage.movie, 0, 0);
+  pg_canvas.endDraw();
+  particles.displayParticles(pg_canvas);
 
-  if (DISPLAY_DIST) {
-    int Z = DwGLTexture.SWIZZLE_0;
-    int R = DwGLTexture.SWIZZLE_R;
-    int G = DwGLTexture.SWIZZLE_G;
-    int B = DwGLTexture.SWIZZLE_B;
-    int A = DwGLTexture.SWIZZLE_A;
-    int[] RGBA = {R, G, B, A};
-
-    Merge.TexMad texA = new Merge.TexMad(particles.tex_obs_dist, 0.030f * particles.param.mul_obs, 0.0f);
-    Merge.TexMad texB = new Merge.TexMad(particles.tex_col_dist, 0.500f * particles.param.mul_col, 0.0f);
-    Merge.TexMad texC = new Merge.TexMad(particles.tex_coh_dist, 0.005f * particles.param.mul_coh, 0.0f);
-
-    particles.tex_obs_dist.swizzle(new int[]{R, R, R, Z});
-    particles.tex_col_dist.swizzle(new int[]{R, R, R, Z});
-    particles.tex_coh_dist.swizzle(new int[]{R, Z, Z, Z});
-
-    DwFilter.get(context).merge.apply(pg_canvas, texA, texB, texC);
-
-    particles.tex_coh_dist.swizzle(RGBA);
-    particles.tex_col_dist.swizzle(RGBA);
-    particles.tex_obs_dist.swizzle(RGBA);
-  }
 
   if (DISPLAY_FLOW) {
     particles.ff_sum.displayPixel(pg_canvas);
@@ -310,9 +286,9 @@ public void partsDraw() {
     filter.bloom.apply(pg_luminance, null, pg_canvas);
   }
 
-  blendMode(REPLACE);
+  blendMode(LIGHTEST);
   image(pg_canvas, 0, 0);
-  blendMode(BLEND);
+  //blendMode(BLEND);
 
   info();
 }
