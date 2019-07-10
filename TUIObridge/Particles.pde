@@ -22,7 +22,6 @@ int viewport_y = 0;
 
 PGraphics2D pg_canvas;
 PGraphics2D pg_obstacles;
-PGraphics2D pg_luminance;
 
 DwPixelFlow context;
 
@@ -143,6 +142,53 @@ void updateScene() {
   pg_obstacles.endDraw();
 }
 
+
+
+public void spawnParticles() {
+
+  float px, py, vx, vy, radius;
+  int count, vw, vh;
+
+  vw = width;
+  vh = height;
+
+  count = 1;
+  radius = 10;
+  px = vw/2f;
+  py = vh/4f;
+  vx = 0;
+  vy = 4;
+
+  DwFlowFieldParticles.SpawnRadial sr = new DwFlowFieldParticles.SpawnRadial();
+  sr.num(count);
+  sr.dim(radius, radius);
+  sr.pos(px, vh-1-py);
+  sr.vel(vx, vy);
+  //particles.spawn(vw, vh, sr);
+
+  if (mousePressed) {
+    float pr = particles.getCollisionSize() * 0.5f;
+    count = ceil(particles.getCount() * 0.01f);
+    count = min(max(count, 1), 4000);  
+    radius = ceil(sqrt(count * pr * pr));
+
+    //px = mouseX;
+    //py = mouseY;
+
+    px = width/2;
+    py = height/2;
+
+    vx = (mouseX - pmouseX) * +5;
+    vy = (mouseY - pmouseY) * -5;
+
+    sr.num(count);
+    sr.dim(radius, radius);
+    sr.pos(px, vh-1-py);
+    sr.vel(vx, vy);
+    particles.spawn(vw, vh, sr);
+  }
+}
+
 public void spawnCursor(int posX, int posY) {
 
   float px, py, vx, vy, radius;
@@ -186,19 +232,4 @@ public void spawnCursor(int posX, int posY) {
     sr.vel(vx, vy);
     particles.spawn(vw, vh, sr);
   }
-}
-
-void applyBloom() {
-
-  DwFilter filter = DwFilter.get(context);
-  filter.luminance_threshold.param.threshold = 0.3f; // when 0, all colors are used
-  filter.luminance_threshold.param.exponent  = 5;
-  filter.luminance_threshold.apply(pg_canvas, pg_luminance);
-
-  filter.bloom.setBlurLayers(10);
-  //      filter.bloom.gaussianpyramid.setBlurLayers(10);
-  filter.bloom.param.blur_radius = 1;
-  filter.bloom.param.mult   = 1.2f;    //map(mouseX, 0, width, 0, 10);
-  filter.bloom.param.radius = 0.1f;//map(mouseY, 0, height, 0, 1);
-  filter.bloom.apply(pg_luminance, null, pg_canvas);
 }
