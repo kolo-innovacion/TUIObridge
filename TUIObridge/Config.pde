@@ -142,7 +142,7 @@ void logln(String input) {
   //logString+=output+"\n";
   //output+=input+"\n perro";
   //println(output);
-  saveStrings("logs.txt", logArr);
+  saveStrings("log.txt", logArr);
 }
 
 String logForm(int input) {
