@@ -53,6 +53,10 @@ float mul_attractors = 5f;
 
 MouseObstacle[] mobs;
 
+//population control
+int partsPerCursor=50;
+int numCursors=0;
+
 public void partSettings() {
   if (START_FULLSCREEN) {
     viewport_w = displayWidth;
@@ -128,7 +132,7 @@ public boolean resizeScene() {
 }
 
 void controlPopulation() {
-  particles.resizeParticlesCount(150);
+  particles.resizeParticlesCount(int(numCursors*partsPerCursor));
 }
 //////////////////////////////////////////////////////////////////////////////
 //
