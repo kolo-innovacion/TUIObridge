@@ -46,7 +46,7 @@ DwGLSLProgram shd_attractors;
 public boolean UPDATE_PHYSICS  = true;
 public boolean DISPLAY_DIST    = false;
 public boolean DISPLAY_FLOW    = !true;  
-public boolean AUTO_SPAWN      = true;
+public boolean AUTO_SPAWN      = false;
 public boolean APPLY_BLOOM     = true;
 
 float mul_attractors = 5f;
