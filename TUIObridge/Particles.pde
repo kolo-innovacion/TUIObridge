@@ -113,6 +113,7 @@ public void partSetup() {
 
 // dynamically resize if surface-size changes
 public boolean resizeScene() {
+  controlPopulation();
 
   boolean[] RESIZED = { false };
   pg_canvas     = DwUtils.changeTextureSize(this, pg_canvas, width, height, 0, RESIZED);
@@ -126,7 +127,9 @@ public boolean resizeScene() {
   return RESIZED[0];
 }
 
-
+void controlPopulation() {
+  particles.resizeParticlesCount(150);
+}
 //////////////////////////////////////////////////////////////////////////////
 //
 // DRAW
@@ -376,7 +379,6 @@ public void autoSpawnParticles() {
     }
   }
 }
-
 
 
 
