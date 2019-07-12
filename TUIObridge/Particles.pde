@@ -317,15 +317,11 @@ public void partsDraw() {
   //blendMode(BLEND);
   info();
 
-  if (frameCount%480==0) {//every certain frames
-    int count=particles.getCount();
+  if (frameCount%96==0) {//every certain frames
+    //int count=particles.getCount();
 
-    println("KEYFRAME  PARTICLES:  "+particles.getCount());
-    if (count>1) {
-
-      println("PARTICLES:  "+count+"  RESIZE TO  "+(count-1));
-      particles.resizeParticlesCount((count-1));
-    }
+    //println("KEYFRAME  PARTICLES:  "+particles.getCount());
+    //particles.release();
   }
 
 
