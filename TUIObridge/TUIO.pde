@@ -7,8 +7,11 @@ ArrayList<TuioCursor> tuioCursorList;
 //float scaleY=0.750;//288/384
 
 //inverse scales:
-float scaleX=3.520;//384/1690=0.22721...
-float scaleY=1.3330;//288/384
+//float scaleX=3.520;//384/1690=0.22721...
+//float scaleY=1.3330;//288/384
+
+float scaleX=1.0;//384/1690=0.22721...
+float scaleY=1.0;//288/384
 
 boolean tuioVerbose = false; // print console debug messages
 boolean callback = false; // updates only after callbacks
@@ -45,6 +48,9 @@ void updateTUIO() {
         noStroke();
         fill(curColor);
         ellipse( tcur.getScreenX(display.sizeX)*scaleX, tcur.getScreenY(display.sizeY)*scaleY, 20, 20);
+
+        spawnCursor(int(tcur.getScreenX(display.sizeX)*scaleX), int(tcur.getScreenY(display.sizeY)*scaleY));
+
         fill(0);
         text(""+ tcur.getCursorID(), tcur.getScreenX(display.sizeX)-5, tcur.getScreenY(display.sizeY)+5);
       }

@@ -707,3 +707,48 @@ public void createGUI() {
   // .open();
   cp5.setVisible(false);
 }
+
+void spawnCursor(int posX, int posY) {
+
+  float px, py, vx, vy, radius;
+  int count, vw, vh;
+
+  vw = width;
+  vh = height;
+
+  count = 1;
+  radius = 10;
+  px = vw/2f;
+  py = vh/4f;
+  vx = 0;
+  vy = 4;
+
+  DwFlowFieldParticles.SpawnRadial sr = new DwFlowFieldParticles.SpawnRadial();
+  sr.num(count);
+  sr.dim(radius, radius);
+  sr.pos(px, vh-1-py);
+  sr.vel(vx, vy);
+  //particles.spawn(vw, vh, sr);
+
+  if (true) {
+    float pr = particles.getCollisionSize() * 0.5f;
+    count = ceil(particles.getCount() * 0.01f);
+    count = min(max(count, 1), 4000);  
+    radius = ceil(sqrt(count * pr * pr));
+
+    //px = mouseX;
+    //py = mouseY;
+
+    px = posX;
+    py = posY;
+
+    vx = (mouseX - pmouseX) * +5;
+    vy = (mouseY - pmouseY) * -5;
+
+    sr.num(count);
+    sr.dim(radius, radius);
+    sr.pos(px, vh-1-py);
+    sr.vel(vx, vy);
+    particles.spawn(vw, vh, sr);
+  }
+}
