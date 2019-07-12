@@ -472,7 +472,10 @@ public void keyReleased() {
   if (key == 'f') DISPLAY_FLOW   = !DISPLAY_FLOW;
   if (key == 'd') DISPLAY_DIST   = !DISPLAY_DIST;
   if (key == 'h') toggleGUI();
-  if (key == 'e') exit();
+  if (key == 'e') {
+    deLog("PROGRAM END");
+    exit();
+  }
 
   if (key == 'c') {
     auxColor++;

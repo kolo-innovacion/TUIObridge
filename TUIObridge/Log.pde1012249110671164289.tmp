@@ -1,20 +1,24 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-int DEBUG=1;
-String filePath = "log.txt";
-void setupLog() {
-  deLog("PROGRAM START");
+void setupLog0() {
+  //String localDir = System.getProperty("user.dir");
+  //println(localDir);
+  String filePath = "append01.txt";
+  String appendText = "This String will be appended to the file.";
+  appendUsingFileWriter(filePath, appendText);
+  appendUsingFileWriter(filePath, appendText);
+  appendUsingFileWriter(filePath, appendText);
 }
 
-void deLog(String text) {
+void appendUsingFileWriter(String filePath, String text) {
   File file = new File(filePath);
   FileWriter fr = null;
   try {
     // Below constructor argument decides whether to append or override
     fr = new FileWriter(file, true);
     //fr.write(text);
-    fr.append(timestamp()+getLevel(DEBUG)+"LOGGER\t"+text+"\n");
+    fr.append(text+"\n");
   } 
   catch (IOException e) {
     e.printStackTrace();
@@ -37,34 +41,27 @@ String timestamp() {
   output+=logForm(hour())+":";
   output+=logForm(minute())+":";
   output+=logForm(second())+".";
-  output+=String.format("%03d", (millis()%1000));
-  return output+"\t";
+  output+=String.format("%03d", (millis()%1000))+" ms  ";
+  return output;
 }
 String getLevel(int input) {
-
-  String output;
   switch (input) {
+
   case 1: 
-    output="DEBUG"; 
+    ; 
     break;
   case 2: 
-
-    output="INFO"; 
+    ; 
     break;
   case 3: 
-
-    output="WARN"; 
-    break;
-  case 4: 
-
-    output="ERROR"; 
-    break;
-  default: 
-
-    output="TRACE"; 
+    ; 
     break;
   }
-  return output+"\t";
+case 4: 
+  ; 
+  break;
+}
+return "";
 }
 
 String logForm(int input) {

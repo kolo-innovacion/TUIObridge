@@ -69,7 +69,7 @@ void instancePages() {
 
 void loadConfig() {
   config = loadXML("config.xml");
-  logln("config XML file has been loaded");
+  deLog("config XML file has been loaded");
 
   //fullScr=boolean(extInt(config, "fullscreen"));
   fullScr=boolean(config.getInt("fullscreen", 0));
@@ -116,44 +116,10 @@ XML nextLevel(XML input, String name) {
 
 boolean checkValid(XML input) {
   if (input!=null) {
-    //logln("VALID");
+    //deLog("VALID");
     return true;
   } else {
-    //logln("NULL ENCOUNTERED");
+    //deLog("NULL ENCOUNTERED");
     return false;
   }
 }
-
-void logln(String input) {
-  String output = "";
-  output+=year()+"-";
-  output+=logForm(month())+"-";
-  output+=logForm(day())+"  ";
-  output+=logForm(hour())+":";
-  output+=logForm(minute())+":";
-  output+=logForm(second())+"  ";
-  output+=String.format("%03d", (millis()%1000))+" ms  ";
-  output+="->  ";
-  output+=input;
-  logList.add(output);
-  //println(logList.size());
-  String[] logArr =null;
-  logArr = logList.toArray(new String[logList.size()]);
-  //logString+=output+"\n";
-  //output+=input+"\n perro";
-  //println(output);
-  saveStrings("log.txt", logArr);
-}
-
-String logForm(int input) {
-  return String.format("%02d", input);
-}
-
-ArrayList<String> logList;
-
-void setupLog() {
-
-  logList=new ArrayList<String>();
-}
-
-String logString="";

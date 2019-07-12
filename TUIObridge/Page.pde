@@ -18,9 +18,9 @@ class Page {
     movie=input;
     movie.loop();
     pageDict.set(name, index);
-    logln("Page "+name+" has been created.");
+    deLog("Page "+name+" has been created.");
     fetchTransitions();
-    logln("End of buttons creation on  "+name);
+    deLog("End of buttons creation on  "+name);
   }
   void fetchTransitions() {  
     for (int i=0; i<transArr.length; i++) {
@@ -167,7 +167,7 @@ class Page {
     //println("NEW"+input);
     //println("ORIGINAL: "+curr);
     XML[] buttonArr = input.getChildren("userDefinedEvent");
-    //logln(buttonArr);
+    //deLog(buttonArr);
     for (int i=0; i<buttonArr.length; i++) {
       XML temp = buttonArr[i];
 
