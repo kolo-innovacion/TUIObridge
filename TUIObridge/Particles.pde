@@ -117,7 +117,7 @@ public void partSetup() {
 
 // dynamically resize if surface-size changes
 public boolean resizeScene() {
-  controlPopulation();
+  //controlPopulation();
 
   boolean[] RESIZED = { false };
   pg_canvas     = DwUtils.changeTextureSize(this, pg_canvas, width, height, 0, RESIZED);
@@ -132,7 +132,15 @@ public boolean resizeScene() {
 }
 
 void controlPopulation() {
-  particles.resizeParticlesCount(int(numCursors*partsPerCursor));
+  if (frameCount%48==0) {
+    particles.resizeParticlesCount(0);
+    if ((particles.getCount()>(numCursors*partsPerCursor))) {
+
+      //println("PARTICLES: "+particles.getCount()+"  RESIZE TO:  "+((numCursors*partsPerCursor)-1));
+      //particles.resizeParticlesCount((numCursors*partsPerCursor)-1);
+    }
+  }
+  //particles.resizeParticlesCount(int(numCursors*partsPerCursor));
 }
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -251,7 +259,18 @@ public void particleSimulation() {
 public void partsDraw() {
 
   particles.param.timestep = 1/frameRate;
-
+  /*
+  if (frameCount%6==0) {
+   if (particles.getCount()>0) {
+   println("PARTICLES: "+particles.getCount()+"  RESIZE TO:  "+((numCursors*partsPerCursor)-1));
+   if (particles.getCount()>(numCursors*partsPerCursor)) {
+   particles.resizeParticlesCount((numCursors*partsPerCursor)-1);
+   }
+   
+   //particles.resizeParticlesCount((numCursors*partsPerCursor)+1);
+   }
+   }
+   */
   resizeScene();
 
   updateScene();
@@ -298,6 +317,18 @@ public void partsDraw() {
   //blendMode(BLEND);
 
   info();
+  if (frameCount%12==0) {//every certain frames
+
+    if (particles.getCount()>1) {
+      //particles exist
+
+      println("PARTICLES:  "+particles.getCount());
+      //particles.resizeParticlesCount();
+    }
+  }
+
+  //particles.resizeParticlesCount(1);
+  //MAKE ZERO:
 }
 
 
