@@ -84,7 +84,7 @@ public void partSetup() {
   particles.param.steps = 1;
   particles.param.shader_collision_mult = 0.2f;
 
-  particles.param.size_display   = 8;
+  particles.param.size_display   = 5;
   particles.param.size_collision = 8;
   particles.param.size_cohesion  = 2;
 
