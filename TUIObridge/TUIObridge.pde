@@ -7,7 +7,6 @@ Page currentPage;
 Page timeoutPage;
 boolean devMode=false;
 
-
 void settings() {
   setupLog();
   loadConfig();

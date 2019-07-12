@@ -341,7 +341,7 @@ void updateScene() {
   pg_obstacles.rect(10, 10, w-20, h-20);
   pg_obstacles.blendMode(BLEND);
   for (int i = 0; i < mobs.length; i++) {
-    mobs[i].draw(pg_obstacles, FG_MOBS);
+    //mobs[i].draw(pg_obstacles, FG_MOBS);
   }
   pg_obstacles.endDraw();
 }
