@@ -121,7 +121,7 @@ public boolean resizeScene() {
   pg_luminance  = DwUtils.changeTextureSize(this, pg_luminance, width, height, 0, RESIZED);
 
   if (RESIZED[0]) {
-    setParticleColor(2);
+    setParticleColor(3);
   }
   return RESIZED[0];
 }
