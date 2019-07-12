@@ -252,7 +252,7 @@ public void partsDraw() {
 
   updateScene();
 
-  autoSpawnParticles();
+  //autoSpawnParticles();
 
   addImpulse();
 
