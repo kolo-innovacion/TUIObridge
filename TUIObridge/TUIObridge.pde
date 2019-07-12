@@ -31,7 +31,7 @@ void setup() {
 void draw() {
   background(0);
   showPage();
-  updateTUIO();
+  updateTUIO();  
   partsDraw();
 }
 

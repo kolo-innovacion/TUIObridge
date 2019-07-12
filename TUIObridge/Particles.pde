@@ -315,17 +315,19 @@ public void partsDraw() {
   blendMode(LIGHTEST);
   image(pg_canvas, 0, 0);
   //blendMode(BLEND);
-
   info();
-  if (frameCount%12==0) {//every certain frames
 
-    if (particles.getCount()>1) {
-      //particles exist
+  if (frameCount%480==0) {//every certain frames
+    int count=particles.getCount();
 
-      println("PARTICLES:  "+particles.getCount());
-      //particles.resizeParticlesCount();
+    println("KEYFRAME  PARTICLES:  "+particles.getCount());
+    if (count>1) {
+
+      println("PARTICLES:  "+count+"  RESIZE TO  "+(count-1));
+      particles.resizeParticlesCount((count-1));
     }
   }
+
 
   //particles.resizeParticlesCount(1);
   //MAKE ZERO:
