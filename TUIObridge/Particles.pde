@@ -375,7 +375,7 @@ public void autoSpawnParticles() {
       int count = ceil(particles.getCount() * 0.01f);
       count = min(max(count, 1), 50000);  
       int radius = ceil(sqrt(count));
-      spawn(radius, count);
+      //spawn(radius, count);
     }
   }
 }
