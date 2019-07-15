@@ -141,15 +141,21 @@ public boolean resizeScene() {
 void controlPopulation() {
 
   int currCount=particles.getCount();
-  if (currCount>1) {
-  }
-  if (currCount>numCursors*partsPerCursor) {
-    println("EXTRA WARNING");
-    particles.resizeParticlesCount(currCount-1);
+
+  if (numCursors>0) {
+    if ((frameCount%(200*numCursors))==0) {
+
+      if (currCount>numCursors*partsPerCursor) {
+        println("RESIZE TO:  "+(currCount-1));
+        particles.resizeParticlesCount(currCount-1);
+      }
+    }
+  } else {
   }
 
   prevCursors=numCursors;
 }
+
 
 int targetLine(int real, int expected) {
   int output;
