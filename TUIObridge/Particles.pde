@@ -608,7 +608,7 @@ public void setParticleColor(int val) {
     r = 0.50f; 
     g = 0.50f; 
     b = 0.50f; 
-    a = 15.0f; 
+    a = 10.0f; 
     s = 0.25f;  
     break;
   case 4: 
