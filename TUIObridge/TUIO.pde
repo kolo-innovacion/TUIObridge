@@ -42,7 +42,7 @@ void updateTUIO() {
       TuioPoint start_point = pointList.get(0);
       for (int j=0; j<pointList.size(); j++) {
         TuioPoint end_point = pointList.get(j);
-        line(start_point.getScreenX(display.sizeX), start_point.getScreenY(display.sizeY), end_point.getScreenX(display.sizeX), end_point.getScreenY(display.sizeY));
+        //line(start_point.getScreenX(display.sizeX), start_point.getScreenY(display.sizeY), end_point.getScreenX(display.sizeX), end_point.getScreenY(display.sizeY));
         start_point = end_point;
       }
 
