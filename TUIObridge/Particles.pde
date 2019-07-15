@@ -167,34 +167,6 @@ void controlPopulation() {
   prevCursors=numCursors;
 }
 
-void controlPopulation0() {
-
-  int currCount=particles.getCount();
-
-  if (currCount>numCursors*partsPerCursor) {
-    overpop=true;
-  } else {
-    overpop=false;
-  }
-
-  if (numCursors>0) {
-    partAlfa=5.0;
-    if ((frameCount%(200*numCursors))==0) {
-
-      if (overpop) {
-        println("RESIZE TO:  "+(currCount-1));
-        particles.resizeParticlesCount(currCount-1);
-      }
-    }
-  } else {//if there are no cursors
-    if (currCount>0) {
-      partAlfa=targetLineF(partAlfa, 0.0, 0.020f);
-      elegantReset();
-    }
-  }
-  prevCursors=numCursors;
-}
-
 
 int targetLine(int real, int expected) {
   int output;
