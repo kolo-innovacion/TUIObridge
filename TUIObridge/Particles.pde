@@ -58,6 +58,8 @@ int partsPerCursor=50;
 int prevCursors=0;
 int numCursors=0;
 
+float partAlfa=5.0;
+
 public void partSettings() {
   if (START_FULLSCREEN) {
     viewport_w = displayWidth;
@@ -133,7 +135,7 @@ public boolean resizeScene() {
     //setParticleColor(3);
   }
 
-  setParticleColor(3);
+  setParticleColor();
   controlPopulation();
   return RESIZED[0];
 }
@@ -143,6 +145,7 @@ void controlPopulation() {
   int currCount=particles.getCount();
 
   if (numCursors>0) {
+    partAlfa=5.0;
     if ((frameCount%(200*numCursors))==0) {
 
       if (currCount>numCursors*partsPerCursor) {
@@ -150,9 +153,9 @@ void controlPopulation() {
         particles.resizeParticlesCount(currCount-1);
       }
     }
-  } else {
+  } else {//if there are no cursors
+    partAlfa=targetLineF(partAlfa, 0.0, 0.01);
   }
-
   prevCursors=numCursors;
 }
 
@@ -169,6 +172,32 @@ int targetLine(int real, int expected) {
   }
   //return 1;
 }
+
+float targetLineF(float real, float expected, float speed) {
+
+  float output;
+
+  if ((real<expected+speed)&&(real>expected-speed)) {
+    output=expected;
+
+    println("STABLE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+    return output;
+  } else {
+
+    if (real>expected) {
+      output=real-speed;
+      println("DECREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      return output;
+    } else if (real<expected) {
+      output=real+speed;
+      println("INCREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      return output;
+    } else {
+      return expected;
+    }
+  }
+}
+
 //////////////////////////////////////////////////////////////////////////////
 //
 // DRAW
@@ -538,11 +567,6 @@ public void keyReleased() {
     deLog("PROGRAM END");
     exit();
   }
-
-  if (key == 'c') {
-    auxColor++;
-    setParticleColor(auxColor%4);
-  }
 }
 
 public void toggleGUI() {
@@ -604,7 +628,22 @@ public void set_shader_collision_mult(float val) {
   particles.param.shader_collision_mult = val;
 }
 
-public void setParticleColor(int val) {
+public void setParticleColor() {
+  float r=1f, g=1f, b=1f, a=1f, s=1f;
+
+  //float[] ca = particles.param.col_A;
+  r = 0.50f; 
+  g = 0.50f; 
+  b = 0.50f; 
+  //a=map(mouseX, 0, width, 0.0, 1.0);
+  a=partAlfa;
+  s = 0.25f;  
+
+  particles.param.col_A = new float[]{ r, g, b, a };
+  particles.param.col_B = new float[]{ r*s, g*s, b*s, 0 };
+}
+
+public void setParticleColor0(int val) {
   float r=1f, g=1f, b=1f, a=1f, s=1f;
   float[] ca = particles.param.col_A;
   switch(val) {
