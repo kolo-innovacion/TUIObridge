@@ -154,7 +154,8 @@ void controlPopulation() {
       }
     }
   } else {//if there are no cursors
-    partAlfa=targetLineF(partAlfa, 0.0, 0.01);
+    partAlfa=targetLineF(partAlfa, 0.0, 0.020f);
+    elegantReset();
   }
   prevCursors=numCursors;
 }
@@ -171,6 +172,14 @@ int targetLine(int real, int expected) {
     return output;
   }
   //return 1;
+}
+
+void elegantReset() {
+  if ((partAlfa==0.0)&&(particles.getCount()>0)) {
+    reset();
+    println("RESET DONE");
+  } else {
+  }
 }
 
 float targetLineF(float real, float expected, float speed) {
