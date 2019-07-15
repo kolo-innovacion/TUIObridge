@@ -139,23 +139,58 @@ public boolean resizeScene() {
   controlPopulation();
   return RESIZED[0];
 }
+boolean overpop=true;
 
 void controlPopulation() {
 
   int currCount=particles.getCount();
 
+  if (currCount>numCursors*partsPerCursor) {
+    overpop=true;
+  } else {
+    overpop=false;
+  }
+
+  if (numCursors>0) {
+    partAlfa=5.0;
+
+    if (overpop) {
+      println("RESIZE TO:  "+(currCount-1));
+      particles.resizeParticlesCount(currCount-1);
+    }
+  } else {//if there are no cursors
+    if (currCount>0) {
+      partAlfa=targetLineF(partAlfa, 0.0, 0.020f);
+      elegantReset();
+    }
+  }
+  prevCursors=numCursors;
+}
+
+void controlPopulation0() {
+
+  int currCount=particles.getCount();
+
+  if (currCount>numCursors*partsPerCursor) {
+    overpop=true;
+  } else {
+    overpop=false;
+  }
+
   if (numCursors>0) {
     partAlfa=5.0;
     if ((frameCount%(200*numCursors))==0) {
 
-      if (currCount>numCursors*partsPerCursor) {
+      if (overpop) {
         println("RESIZE TO:  "+(currCount-1));
         particles.resizeParticlesCount(currCount-1);
       }
     }
   } else {//if there are no cursors
-    partAlfa=targetLineF(partAlfa, 0.0, 0.020f);
-    elegantReset();
+    if (currCount>0) {
+      partAlfa=targetLineF(partAlfa, 0.0, 0.020f);
+      elegantReset();
+    }
   }
   prevCursors=numCursors;
 }
@@ -175,7 +210,7 @@ int targetLine(int real, int expected) {
 }
 
 void elegantReset() {
-  if ((partAlfa==0.0)&&(particles.getCount()>0)) {
+  if ((partAlfa==0.0)) {
     reset();
     println("RESET DONE");
   } else {
@@ -381,17 +416,6 @@ public void partsDraw() {
   image(pg_canvas, 0, 0);
   //blendMode(BLEND);
   info();
-
-  if (frameCount%96==0) {//every certain frames
-    //int count=particles.getCount();
-
-    //println("KEYFRAME  PARTICLES:  "+particles.getCount());
-    //particles.release();
-  }
-
-
-  //particles.resizeParticlesCount(1);
-  //MAKE ZERO:
 }
 
 
@@ -652,50 +676,6 @@ public void setParticleColor() {
   particles.param.col_B = new float[]{ r*s, g*s, b*s, 0 };
 }
 
-public void setParticleColor0(int val) {
-  float r=1f, g=1f, b=1f, a=1f, s=1f;
-  float[] ca = particles.param.col_A;
-  switch(val) {
-  case 0: 
-    r = 0.10f; 
-    g = 0.50f; 
-    b = 1.00f; 
-    a = 10.0f; 
-    s = 0.50f;  
-    break;
-  case 1: 
-    r = 0.40f; 
-    g = 0.80f; 
-    b = 0.10f; 
-    a = 10.0f; 
-    s = 0.50f;  
-    break;
-  case 2: 
-    r = 0.80f; 
-    g = 0.40f; 
-    b = 0.10f; 
-    a = 10.0f; 
-    s = 0.50f;  
-    break;
-  case 3: 
-    r = 0.50f; 
-    g = 0.50f; 
-    b = 0.50f; 
-    //    a = 10.0f;
-    a=map(mouseX, 0, width, 0.0, 1.0);
-    s = 0.25f;  
-    break;
-  case 4: 
-    r = ca[0]; 
-    g = ca[1]; 
-    b = ca[2]; 
-    a =  1.0f; 
-    s = 1.00f;  
-    break;
-  }
-  particles.param.col_A = new float[]{ r, g, b, a };
-  particles.param.col_B = new float[]{ r*s, g*s, b*s, 0 };
-}
 
 public void updateSelections(float[] val) {
   int ID = 0;
@@ -837,27 +817,24 @@ void spawnCursor(int posX, int posY) {
   sr.dim(radius, radius);
   sr.pos(px, vh-1-py);
   sr.vel(vx, vy);
-  //particles.spawn(vw, vh, sr);
 
-  if (true) {
-    float pr = particles.getCollisionSize() * 0.5f;
-    count = ceil(particles.getCount() * 0.01f);
-    count = min(max(count, 1), 4000);  
-    radius = ceil(sqrt(count * pr * pr));
+  float pr = particles.getCollisionSize() * 0.5f;
+  count = ceil(particles.getCount() * 0.01f);
+  count = min(max(count, 1), 4000);  
+  radius = ceil(sqrt(count * pr * pr));
 
-    //px = mouseX;
-    //py = mouseY;
+  //px = mouseX;
+  //py = mouseY;
 
-    px = posX;
-    py = posY;
+  px = posX;
+  py = posY;
 
-    vx = (mouseX - pmouseX) * +5;
-    vy = (mouseY - pmouseY) * -5;
+  vx = (mouseX - pmouseX) * +5;
+  vy = (mouseY - pmouseY) * -5;
 
-    sr.num(count);
-    sr.dim(radius, radius);
-    sr.pos(px, vh-1-py);
-    sr.vel(vx, vy);
-    particles.spawn(vw, vh, sr);
-  }
+  sr.num(count);
+  sr.dim(radius, radius);
+  sr.pos(px, vh-1-py);
+  sr.vel(vx, vy);
+  particles.spawn(vw, vh, sr);
 }
