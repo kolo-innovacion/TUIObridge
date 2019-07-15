@@ -104,8 +104,10 @@ public void partSetup() {
   shd_attractors = context.createShader("data/attractors.frag");
 
   mobs = new MouseObstacle[2];
-  mobs[0] = new MouseObstacle(0, 1*width/3f, 1*height/2f, 20);
-  mobs[1] = new MouseObstacle(0, 2*width/3f, 1*height/2f, 20);
+  //mobs[0] = new MouseObstacle(0, 1*width/3f, 1*height/2f, 20);
+  //mobs[1] = new MouseObstacle(0, 2*width/3f, 1*height/2f, 20);
+  mobs[0] = new MouseObstacle(0, 100, 100, 20);
+  mobs[1] = new MouseObstacle(0, 200, 100, 20);
 
   resizeScene();
 
@@ -279,7 +281,7 @@ public void partsDraw() {
 
   addImpulse();
 
-  addAttractors();
+  //addAttractors();
 
   particleSimulation();
 
