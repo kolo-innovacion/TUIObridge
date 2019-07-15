@@ -55,6 +55,7 @@ MouseObstacle[] mobs;
 
 //population control
 int partsPerCursor=50;
+int prevCursors=0;
 int numCursors=0;
 
 public void partSettings() {
@@ -83,6 +84,7 @@ public void partSetup() {
 
 
   particles = new DwFlowFieldParticles(context, 1024 * 1024 * 4);
+
 
   particles.param.velocity_damping  = 1.00f;
   particles.param.steps = 1;
@@ -128,21 +130,38 @@ public boolean resizeScene() {
   pg_luminance  = DwUtils.changeTextureSize(this, pg_luminance, width, height, 0, RESIZED);
 
   if (RESIZED[0]) {
-    setParticleColor(3);
+    //setParticleColor(3);
   }
+
+  setParticleColor(3);
+  controlPopulation();
   return RESIZED[0];
 }
 
 void controlPopulation() {
-  if (frameCount%48==0) {
-    particles.resizeParticlesCount(0);
-    if ((particles.getCount()>(numCursors*partsPerCursor))) {
 
-      //println("PARTICLES: "+particles.getCount()+"  RESIZE TO:  "+((numCursors*partsPerCursor)-1));
-      //particles.resizeParticlesCount((numCursors*partsPerCursor)-1);
-    }
+  int currCount=particles.getCount();
+  if (currCount>1) {
   }
-  //particles.resizeParticlesCount(int(numCursors*partsPerCursor));
+  if (currCount>numCursors*partsPerCursor) {
+    println("EXTRA WARNING");
+    particles.resizeParticlesCount(currCount-1);
+  }
+
+  prevCursors=numCursors;
+}
+
+int targetLine(int real, int expected) {
+  int output;
+  if (real>expected) {
+    output=real-1;
+    println("ADJUST  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+    return output;
+  } else {
+    output=real;
+    return output;
+  }
+  //return 1;
 }
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -608,7 +627,8 @@ public void setParticleColor(int val) {
     r = 0.50f; 
     g = 0.50f; 
     b = 0.50f; 
-    a = 10.0f; 
+    //    a = 10.0f;
+    a=map(mouseX, 0, width, 0.0, 1.0);
     s = 0.25f;  
     break;
   case 4: 
