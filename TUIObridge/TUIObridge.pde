@@ -67,24 +67,14 @@ void showPage() {
 
 void switchPage(String input) {
   if (input==null) {//do nothing
+    println("NULL INPUT");
   } else {
+    //println("SWITCH FROM:  "+currentPage.name);
     currentPage=pages.get(pageDict.get(input));
+    println("SWITCH TO:  "+currentPage.name);
     currentPage.movie.jump(0.0);
     delay(100);
-    //set timeout next page
     startPageTimer();
-    /*
-    if (currentPage.timeout) {
-     timeoutPage=pages.get(pageDict.get(currentPage.timeoutTo));
-     println(currentPage.name+"  will timeout to  "+timeoutPage.name);
-     println("TIMER RUNNING:  "+pageTimer.isRunning());
-     println("TIMER PAUSED:  "+pageTimer.isPaused());
-     pageTimer.reset();
-     pageTimer.configure(100, 6000);
-     pageTimer.start();
-     println("pagTimer STARTED");
-     } else {
-     }*/
   }
 }
 

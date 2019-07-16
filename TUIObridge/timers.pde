@@ -4,7 +4,7 @@ import com.dhchoi.CountdownTimerService;
 CountdownTimer pageTimer;
 
 void timerSetup() {
-  pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
+  pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(1000, 7000);
   pageTimer.reset();
   //timer.start();
 }
@@ -27,7 +27,7 @@ void startPageTimer() {
     //println("TIMER PAUSED:  "+pageTimer.isPaused());
     pageTimer.stop();
     pageTimer.reset();
-    pageTimer.configure(100, currentPage.outTime);
+    pageTimer.configure(1000, currentPage.outTime);
     pageTimer.start();
     println("Page Timer from  "+currentPage.name+"  to "+currentPage.timeoutTo+"  in   "+currentPage.outTime+"  miliseconds" );
   } else {

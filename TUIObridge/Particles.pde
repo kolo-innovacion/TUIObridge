@@ -202,11 +202,11 @@ float targetLineF(float real, float expected, float speed) {
 
     if (real>expected) {
       output=real-speed;
-      println("DECREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      //println("DECREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
       return output;
     } else if (real<expected) {
       output=real+speed;
-      println("INCREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      //println("INCREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
       return output;
     } else {
       return expected;
