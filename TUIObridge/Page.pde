@@ -16,7 +16,9 @@ class Page {
     name=nam;
     //img=loadMedia(name);
     movie=input;
+    delay(10);
     movie.loop();
+    delay(10);
     pageDict.set(name, index);
     deLog("Page "+name+" has been created.");
     fetchTransitions();
