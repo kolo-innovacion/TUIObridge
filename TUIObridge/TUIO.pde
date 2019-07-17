@@ -10,8 +10,8 @@ ArrayList<TuioCursor> tuioCursorList;
 //float scaleX=3.520;//384/1690=0.22721...
 //float scaleY=1.3330;//288/384
 
-float scaleX=1.0;//384/1690=0.22721...
-float scaleY=1.0;//288/384
+float scaleX;//384/1690=0.22721...
+float scaleY;//288/384
 
 boolean tuioVerbose = false; // print console debug messages
 boolean callback = false; // updates only after callbacks
