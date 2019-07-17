@@ -1,4 +1,4 @@
-<config resx="480" resy="288" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100">
+<config resx="480" resy="288" fullscreen="0" winScale="1.0" targetIP="localhost" targetPort="6100" scaleX="1.0" scaleY="1.0" devMode="false">
 <userDefinedEvents name="loop">
       <userDefinedEvent name="menu">
         <userEvents>
