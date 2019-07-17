@@ -127,7 +127,8 @@ public boolean resizeScene() {
 
   boolean[] RESIZED = { false };
   pg_canvas     = DwUtils.changeTextureSize(this, pg_canvas, width, height, 0, RESIZED);
-  pg_obstacles  = DwUtils.changeTextureSize(this, pg_obstacles, width, height, 0, RESIZED);
+  //pg_obstacles  = DwUtils.changeTextureSize(this, pg_obstacles, width, height, 0, RESIZED);
+  pg_obstacles  = DwUtils.changeTextureSize(this, pg_obstacles, display.sizeX, display.sizeY, 0, RESIZED);
   pg_impulse    = DwUtils.changeTextureSize(this, pg_impulse, width, height, 0, RESIZED);
   pg_luminance  = DwUtils.changeTextureSize(this, pg_luminance, width, height, 0, RESIZED);
 
