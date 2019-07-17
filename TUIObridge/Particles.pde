@@ -18,12 +18,13 @@ import processing.core.*;
 import processing.opengl.PGraphics2D;
 import processing.opengl.PGraphicsOpenGL;
 
-boolean START_FULLSCREEN = false;
+//boolean START_FULLSCREEN = false;
+boolean START_FULLSCREEN = fullScr;
 
 int viewport_w = 1680;
 int viewport_h = 1024;
-int viewport_x = 230;
-int viewport_y = 0;
+int viewport_x;
+int viewport_y;
 
 int gui_w = 200;
 int gui_x = 30;

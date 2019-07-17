@@ -85,6 +85,8 @@ void loadConfig() {
   winScale=config.getFloat("winScale", 100);
   scaleX=config.getFloat("scaleX", 1.0);
   scaleY=config.getFloat("scaleY", 1.0);
+  viewport_x=config.getInt("viewportX", 0);
+  viewport_y=config.getInt("viewportY", 0);
   //winX=int(config.getInt("resx", 100)*winScale)+1*winTol;
   winX=int(config.getInt("resx", 100)*winScale);
   //winY=int(config.getInt("resy", 100)*winScale)+7*winTol;
