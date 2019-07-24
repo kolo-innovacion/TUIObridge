@@ -6,6 +6,7 @@ String initPage;
 Page currentPage;
 Page timeoutPage;
 boolean devMode=false;
+boolean alone=false;
 
 void settings() {
   setupLog();
@@ -33,6 +34,7 @@ void draw() {
   showPage();
   updateTUIO();  
   partsDraw();
+  checkAlone();
 }
 
 void setWindow() {
@@ -63,7 +65,7 @@ void showPage() {
    switchPage(currentPage.timeoutTo);
    }
    */
-  startIdle();
+  //startIdle();
 }
 
 void switchPage(String input) {  
@@ -91,4 +93,18 @@ void movieEvent(Movie m) {
 
 public void mousePressed() {
   switchPage(initPage);
+}
+int count=0;
+
+void checkAlone() {
+  if ((tuioCursorList.size()==0)&&(particles.getCount()==0)&&(!pageTimer.isRunning())&&(!idleTimer.isRunning())) {
+    alone=true;
+    count++;
+    idleTimer.reset(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
+    idleTimer.start();
+    println("SYSTEM IS ALONE"+count);
+  } else {
+    alone=false;
+    idleTimer.stop(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
+  }
 }
