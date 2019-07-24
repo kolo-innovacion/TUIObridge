@@ -65,23 +65,17 @@ void showPage() {
    */
 }
 
-void switchPage(String input) {  
-  println("-------------------------------Enter SWITCH PAGE function");
+void switchPage(String input) {
   if (input==null) {//do nothing
     println("NULL INPUT");
   } else {
-    println("VALID INPUT");
     //println("SWITCH FROM:  "+currentPage.name);
     currentPage=pages.get(pageDict.get(input));
     println("SWITCH TO:  "+currentPage.name);
     currentPage.movie.jump(0.0);
-    println("Set movie to 0.0: "+currentPage.movie.filename);
     delay(100);
-    println("End of 100 ms delay");
     startPageTimer();
   }
-
-  println("-------------------------------Leave SWITCH PAGE function");
 }
 
 void movieEvent(Movie m) {

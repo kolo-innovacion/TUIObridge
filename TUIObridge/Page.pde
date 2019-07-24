@@ -92,7 +92,7 @@ class Page {
 
     outTime = int(timePar.getFloatContent()*1000);
 
-    println("---TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
   void addMediaEnd(XML target, XML event) {
     //a media end event is the same as a timeout the difference is that the out time comes from the video duration
@@ -107,7 +107,7 @@ class Page {
     outTime = int(movie.duration()*1000);
 
 
-    println("---TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
 
   boolean eventIsButton(XML event) {    
