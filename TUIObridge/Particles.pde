@@ -545,9 +545,7 @@ static class MouseObstacle {
   }
 }
 
-public void mousePressed() {
-  switchPage(initPage);
-}
+
 
 public void mousePressed0() {
   if (mouseButton == RIGHT && !cp5.isMouseOver()) {

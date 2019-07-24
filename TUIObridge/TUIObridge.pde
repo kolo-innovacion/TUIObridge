@@ -63,7 +63,7 @@ void showPage() {
    switchPage(currentPage.timeoutTo);
    }
    */
-  turnIdle();
+  startIdle();
 }
 
 void switchPage(String input) {  
@@ -87,4 +87,8 @@ void switchPage(String input) {
 
 void movieEvent(Movie m) {
   m.read();
+}
+
+public void mousePressed() {
+  switchPage(initPage);
 }
