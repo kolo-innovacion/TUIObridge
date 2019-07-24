@@ -4,11 +4,9 @@ import com.dhchoi.CountdownTimerService;
 CountdownTimer pageTimer;
 CountdownTimer idleTimer;
 
-int idlePeriod=20000;
-
 void timerSetup() {
   pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
-  idleTimer = CountdownTimerService.getNewCountdownTimer(this).configure(200, idlePeriod);
+  idleTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
   //pageTimer.reset();
   //timer.start();
 }
@@ -19,23 +17,12 @@ void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
 }
 
 void onFinishEvent(CountdownTimer t) {
-  println(t.getId()+"  HAS ENDED");
-  if (t.getId()==0) {// timer 0 is pageTimer
-    switchPage(timeoutPage.name);
-  } else if (t.getId()==1) {//timer 1 is idleTimer
-    if ((currentPage.name.equals("Piso_Menu.mp4"))&&(particles.getCount()==0)) {
-      switchPage(initPage);
-    }
-  }
-
   aux=0;
 
-  /*
   if (currentPage.timeout) {
-   println("Timer  "+t+"  ended. Switching to:  "+timeoutPage.name);
-   switchPage(timeoutPage.name);
-   }
-   */
+    println("Timer  "+t+"  ended. Switching to:  "+timeoutPage.name);
+    switchPage(timeoutPage.name);
+  }
 }
 
 void startPageTimer() {
@@ -75,10 +62,9 @@ void startPageTimer() {
   println("-------------------------------------------Leave STARTPAGE TIMER");
 }
 
-void startIdle() {
-  if ((currentPage.name.equals("Piso_Menu.mp4"))&&(particles.getCount()==0)&&(!idleTimer.isRunning())&&(tuioCursorList.size()==0)) {
-    println("SYSTEM IS ALONE-----------------------------------------");
-    idleTimer.start();
+void turnIdle() {
+  if ((currentPage.name.equals("Piso_Menu.mp4"))&&(particles.getCount()==0)&&(!idleTimer.isRunning())) {
+    println("NOW ON MENU");
   } else {
   }
 }
