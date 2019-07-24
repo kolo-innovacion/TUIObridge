@@ -8,22 +8,18 @@ void timerSetup() {
   pageTimer.reset();
   //timer.start();
 }
-int aux=0;
+
 void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
-  aux++;
-  println(aux+"  Tick Event on timer  "+t+"  time left:  "+timeLeftUntilFinish);
 }
 
 void onFinishEvent(CountdownTimer t) {
-  aux=0;
   if (currentPage.timeout) {
-    println("Timer  "+t+"  ended. Switching to:  "+timeoutPage.name);
+    println("Timer ended. Switching to:  "+timeoutPage.name);
     switchPage(timeoutPage.name);
   }
 }
 
 void startPageTimer() {
-  aux=0;
   println("-------------------------------------------Enter STARTPAGE TIMER");
   if (currentPage.timeout) {
     println("Current Page HAS TIMEOUT");
