@@ -4,7 +4,7 @@ import com.dhchoi.CountdownTimerService;
 CountdownTimer pageTimer;
 CountdownTimer idleTimer;
 
-int idlePeriod=73685;
+int idlePeriod=10000;
 
 void timerSetup() {
   pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
@@ -62,20 +62,16 @@ void startPageTimer() {
     println("PAGETIMER STOPPED");
     pageTimer.reset(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
     println("PAGETIMER RESETTED");
-    /*
-    if (currentPage.outTime>20000) {
-     println(currentPage.name+"  has a timeout longer than 20 sec; timer will be configured to 10 sec");
-     pageTimer.configure(1000, 10000);
-     println("10 sec pageTimer configured");
-     } else {
-     pageTimer.configure(1000, currentPage.outTime);
-     
-     println(currentPage.name+"  pageTimer set to  "+currentPage.outTime);
-     }
-     */
-    pageTimer.configure(1000, currentPage.outTime);
-    println(currentPage.name+"  pageTimer set to  "+currentPage.outTime);
 
+    if (currentPage.outTime>20000) {
+      println(currentPage.name+"  has a timeout longer than 20 sec; timer will be configured to 10 sec");
+      pageTimer.configure(1000, 10000);
+      println("10 sec pageTimer configured");
+    } else {
+      pageTimer.configure(1000, currentPage.outTime);
+
+      println(currentPage.name+"  pageTimer set to  "+currentPage.outTime);
+    }
     pageTimer.start();
     println("pageTimer STARTED");
 

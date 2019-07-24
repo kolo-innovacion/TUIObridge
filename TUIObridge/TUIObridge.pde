@@ -101,7 +101,6 @@ void checkAlone() {
     alone=true;
     count++;
     idleTimer.reset(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
-    //idleTimer.configure(200, currentPage.outTime);
     idleTimer.start();
     println("SYSTEM IS ALONE"+count);
   } else {
