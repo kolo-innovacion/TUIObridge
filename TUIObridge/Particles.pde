@@ -546,6 +546,10 @@ static class MouseObstacle {
 }
 
 public void mousePressed() {
+  switchPage(initPage);
+}
+
+public void mousePressed0() {
   if (mouseButton == RIGHT && !cp5.isMouseOver()) {
     for (int i = 0; i < mobs.length; i++) {
       mobs[i].startMove(mouseX, mouseY);
@@ -553,13 +557,13 @@ public void mousePressed() {
   }
 }
 
-public void mouseDragged() {
+public void mouseDragged0() {
   for (int i = 0; i < mobs.length; i++) {
     mobs[i].move(mouseX, mouseY);
   }
 }
 
-public void mouseReleased() {
+public void mouseReleased0() {
   for (int i = 0; i < mobs.length; i++) {
     mobs[i].endMove(mouseX, mouseY);
   }
