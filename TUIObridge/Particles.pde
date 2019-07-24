@@ -187,7 +187,7 @@ int targetLine(int real, int expected) {
 
 void elegantReset() {
   if ((partAlfa==0.0)) {
-    reset();
+    partReset();
     println("RESET DONE");
   } else {
   }
@@ -571,7 +571,7 @@ public void mouseReleased0() {
 
 int auxColor=0;
 public void keyReleased() {
-  if (key == 'r') reset();
+  if (key == 'r') partReset();
   if (key == 't') UPDATE_PHYSICS = !UPDATE_PHYSICS;
   if (key == 'f') DISPLAY_FLOW   = !DISPLAY_FLOW;
   if (key == 'd') DISPLAY_DIST   = !DISPLAY_DIST;
@@ -607,7 +607,7 @@ public void spawn(int rad, int count) {
 }
 
 
-public void reset() {
+public void partReset() {
   particles.reset();
 }
 public void set_size_display(int val) {

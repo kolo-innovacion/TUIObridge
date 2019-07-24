@@ -2,10 +2,12 @@ import com.dhchoi.CountdownTimer;
 import com.dhchoi.CountdownTimerService;
 
 CountdownTimer pageTimer;
+CountdownTimer idleTimer;
 
 void timerSetup() {
-  pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(1000, 7000);
-  pageTimer.reset();
+  pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
+  idleTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
+  //pageTimer.reset();
   //timer.start();
 }
 int aux=0;
@@ -16,6 +18,7 @@ void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
 
 void onFinishEvent(CountdownTimer t) {
   aux=0;
+
   if (currentPage.timeout) {
     println("Timer  "+t+"  ended. Switching to:  "+timeoutPage.name);
     switchPage(timeoutPage.name);
@@ -33,9 +36,9 @@ void startPageTimer() {
     //println(currentPage.name+"  will timeout to  "+timeoutPage.name);
     //println("TIMER RUNNING:  "+pageTimer.isRunning());
     //println("TIMER PAUSED:  "+pageTimer.isPaused());
-    pageTimer.stop();
+    pageTimer.stop(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
     println("PAGETIMER STOPPED");
-    pageTimer.reset();
+    pageTimer.reset(CountdownTimer.StopBehavior.STOP_AFTER_INTERVAL);
     println("PAGETIMER RESETTED");
 
     if (currentPage.outTime>20000) {
@@ -57,4 +60,11 @@ void startPageTimer() {
   }
 
   println("-------------------------------------------Leave STARTPAGE TIMER");
-};
+}
+
+void turnIdle() {
+  if ((currentPage.name.equals("Piso_Menu.mp4"))&&(particles.getCount()==0)&&(!idleTimer.isRunning())) {
+    println("NOW ON MENU");
+  } else {
+  }
+}
