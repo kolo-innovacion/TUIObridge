@@ -4,7 +4,7 @@ import com.dhchoi.CountdownTimerService;
 CountdownTimer pageTimer;
 CountdownTimer idleTimer;
 
-int idlePeriod=10000;
+int idlePeriod=20000;
 
 void timerSetup() {
   pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(100, 7000);
@@ -18,21 +18,12 @@ void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
   println(aux+"  Tick Event on timer  "+t+"  time left:  "+timeLeftUntilFinish);
 }
 
-void onFinishEvent0(CountdownTimer t) {
-  println(t.getId()+"  HAS ENDED");
-  if (t.getId()==0) {// timer 0 is pageTimer
-    switchPage(timeoutPage.name);
-  }
-
-  aux=0;
-}
 void onFinishEvent(CountdownTimer t) {
   println(t.getId()+"  HAS ENDED");
   if (t.getId()==0) {// timer 0 is pageTimer
     switchPage(timeoutPage.name);
   } else if (t.getId()==1) {//timer 1 is idleTimer
-
-    if (alone) {
+    if ((currentPage.name.equals("Piso_Menu.mp4"))&&(particles.getCount()==0)) {
       switchPage(initPage);
     }
   }
