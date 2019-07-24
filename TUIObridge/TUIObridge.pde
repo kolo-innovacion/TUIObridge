@@ -63,7 +63,6 @@ void showPage() {
    switchPage(currentPage.timeoutTo);
    }
    */
-  turnIdle();
 }
 
 void switchPage(String input) {  
