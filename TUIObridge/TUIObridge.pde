@@ -65,7 +65,7 @@ void showPage() {
    */
   println(currentPage.movie.filename+"  playing. Position:  "+currentPage.movie.time()+"  /  "+currentPage.movie.duration()+" Framerate:  "+currentPage.movie.frameRate);
 
-  if (currentPage.movie.time()>=(currentPage.movie.duration()-(1.0/currentPage.movie.frameRate))) {
+  if (currentPage.movie.time()>=(currentPage.movie.duration()-(2*(1.0/currentPage.movie.frameRate)))) {
 
     println("ACHIEVED END OF MOVIE  "+currentPage.movie.filename+"----------------------------------------------------");
   }
@@ -79,7 +79,14 @@ void switchPage(String input) {
     currentPage=pages.get(pageDict.get(input));
     println("SWITCH TO:  "+currentPage.name);
     currentPage.movie.jump(0.0);
-    currentPage.movie.play();
+
+    if (currentPage.mediaEnd) {
+      currentPage.movie.noLoop();
+      currentPage.movie.play();
+    } else {
+      currentPage.movie.loop();
+    }
+
     delay(100);
     startPageTimer();
   }

@@ -4,8 +4,13 @@ class Page {
   String name;
   Movie movie;
   ArrayList<Button> pButtons;
+
   boolean timeout=false;
   String timeoutTo;
+
+  boolean mediaEnd=false;
+  String mediaEndTo;
+
   long outTime=0;
 
   Page(int ind, String nam, Movie input) {
@@ -24,6 +29,7 @@ class Page {
     fetchTransitions();
     deLog("End of buttons creation on  "+name);
   }
+
   void fetchTransitions() {  
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
@@ -36,31 +42,18 @@ class Page {
         if (eventIsButton(usrEvent)) {
           //println("BUTTON");
           addButton(target, usrEvent);
-        } else if (eventIsTimeout(usrEvent)) {
-          //println("TIMEOUT");
-          addTimeout(target, usrEvent);
         } else if (eventIsMediaEnd(usrEvent)) {
           addMediaEnd(target, usrEvent);
           //movie.noLoop();
+        } else {
+          //movie.loop();
         }
-        /*
-        if (eventIsTimeout(usrEvent)) {
-         println("TIMEOUT");
-         addTimeout(target, usrEvent);
-         } else {
-         }
-         */
       } else {
         //println("NOT MINE");
       }
-      // XML source = nextLevel(temp, "sourceMediaState");
-
-      //XML target = nextLevel(temp, "targetMediaState");
-      // XML usrEvent = nextLevel(temp, "userEvent");
-      // XML transType=nextLevel(usrEvent, "name");
-      // XML params= nextLevel(usrEvent, "parameters");
     }
   }
+
   void addButton(XML target, XML event) {
     String btnID = target.getContent();
 
@@ -98,8 +91,10 @@ class Page {
     //a media end event is the same as a timeout the difference is that the out time comes from the video duration
 
     timeout=true;
+    mediaEnd=true;
 
     timeoutTo = target.getContent();
+    mediaEndTo = target.getContent();
 
     //XML params= nextLevel(event, "parameters");
     //XML timePar= nextLevel(params, "parameter");

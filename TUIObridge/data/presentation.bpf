@@ -282,32 +282,14 @@
         <name>Playlist 0</name>
         <type>interactive</type>
         <states>
-          <initialState>Piso_Loop.mp4</initialState>
-          <state>
-            <name>Piso_Menu.mp4</name>
-            <x>602</x>
-            <y>216</y>
-            <width>114</width>
-            <height>97</height>
-            <id>0</id>
-            <videoItem>
-              <file name="Piso_Menu.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Menu.mp4" />
-              <fileIsLocal>True</fileIsLocal>
-              <volume>100</volume>
-              <videoDisplayMode>2D</videoDisplayMode>
-              <automaticallyLoop>True</automaticallyLoop>
-            </videoItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
+          <initialState>Piso_Copa.mp4</initialState>
           <state>
             <name>Piso_Copa.mp4</name>
-            <x>326</x>
-            <y>459</y>
+            <x>249</x>
+            <y>153</y>
             <width>114</width>
             <height>97</height>
-            <id>1</id>
+            <id>3</id>
             <videoItem>
               <file name="Piso_Copa.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Copa.mp4" />
               <fileIsLocal>True</fileIsLocal>
@@ -320,30 +302,12 @@
             <notes />
           </state>
           <state>
-            <name>Piso_Loop.mp4</name>
-            <x>590</x>
-            <y>51</y>
-            <width>114</width>
-            <height>97</height>
-            <id>2</id>
-            <videoItem>
-              <file name="Piso_Loop.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Loop.mp4" />
-              <fileIsLocal>True</fileIsLocal>
-              <volume>100</volume>
-              <videoDisplayMode>2D</videoDisplayMode>
-              <automaticallyLoop>True</automaticallyLoop>
-            </videoItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
-          <state>
             <name>Piso_Nemeziz.mp4</name>
-            <x>507</x>
-            <y>460</y>
+            <x>392</x>
+            <y>525</y>
             <width>114</width>
             <height>97</height>
-            <id>3</id>
+            <id>4</id>
             <videoItem>
               <file name="Piso_Nemeziz.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Nemeziz.mp4" />
               <fileIsLocal>True</fileIsLocal>
@@ -357,11 +321,11 @@
           </state>
           <state>
             <name>Piso_Predator.mp4</name>
-            <x>702</x>
-            <y>464</y>
+            <x>309</x>
+            <y>354</y>
             <width>114</width>
             <height>97</height>
-            <id>4</id>
+            <id>5</id>
             <videoItem>
               <file name="Piso_Predator.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_Predator.mp4" />
               <fileIsLocal>True</fileIsLocal>
@@ -373,84 +337,15 @@
             </brightSignExitCommands>
             <notes />
           </state>
-          <state>
-            <name>Piso_X.mp4</name>
-            <x>887</x>
-            <y>468</y>
-            <width>114</width>
-            <height>97</height>
-            <id>5</id>
-            <videoItem>
-              <file name="Piso_X.mp4" suffix="" path="C:\Users\a.thacker\GitHub\TUIObridge\TUIObridge\data\Piso_X.mp4" />
-              <fileIsLocal>True</fileIsLocal>
-              <volume>100</volume>
-              <videoDisplayMode>2D</videoDisplayMode>
-              <automaticallyLoop>True</automaticallyLoop>
-            </videoItem>
-            <brightSignExitCommands>
-            </brightSignExitCommands>
-            <notes />
-          </state>
           <transition>
-            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
-            <userEvent>
-              <name>mediaEnd</name>
-              <parameters>
-                <parameter />
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Loop.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
+            <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
             <userEvent>
               <name>rectangularTouchEvent</name>
               <parameters>
-                <x>26</x>
-                <y>132</y>
-                <width>110</width>
-                <height>39</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Copa.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>263</x>
-                <y>134</y>
-                <width>109</width>
-                <height>38</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Nemeziz.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>153</x>
-                <y>132</y>
-                <width>92</width>
-                <height>44</height>
+                <x>0</x>
+                <y>0</y>
+                <width>214</width>
+                <height>287</height>
               </parameters>
             </userEvent>
             <targetMediaState>Piso_Predator.mp4</targetMediaState>
@@ -461,75 +356,6 @@
             <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
           </transition>
           <transition>
-            <sourceMediaState>Piso_Menu.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>402</x>
-                <y>131</y>
-                <width>46</width>
-                <height>45</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_X.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
-            <userEvent>
-              <name>mediaEnd</name>
-              <parameters>
-                <parameter />
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Copa.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>438</x>
-                <y>0</y>
-                <width>40</width>
-                <height>33</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_Loop.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>0</x>
-                <y>0</y>
-                <width>479</width>
-                <height>287</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
             <sourceMediaState>Piso_Nemeziz.mp4</sourceMediaState>
             <userEvent>
               <name>mediaEnd</name>
@@ -537,7 +363,7 @@
                 <parameter />
               </parameters>
             </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
+            <targetMediaState>Piso_Predator.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayLabel</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -549,13 +375,13 @@
             <userEvent>
               <name>rectangularTouchEvent</name>
               <parameters>
-                <x>431</x>
+                <x>410</x>
                 <y>0</y>
-                <width>47</width>
-                <height>41</height>
+                <width>68</width>
+                <height>52</height>
               </parameters>
             </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
+            <targetMediaState>Piso_Predator.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayConnectingLine</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -570,7 +396,7 @@
                 <parameter />
               </parameters>
             </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
+            <targetMediaState>Piso_Copa.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayLabel</displayMode>
             <labelLocation>bottom</labelLocation>
@@ -582,46 +408,13 @@
             <userEvent>
               <name>rectangularTouchEvent</name>
               <parameters>
-                <x>433</x>
+                <x>261</x>
                 <y>0</y>
-                <width>45</width>
-                <height>43</height>
+                <width>218</width>
+                <height>288</height>
               </parameters>
             </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayConnectingLine</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_X.mp4</sourceMediaState>
-            <userEvent>
-              <name>mediaEnd</name>
-              <parameters>
-                <parameter />
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
-            <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
-            <displayMode>displayLabel</displayMode>
-            <labelLocation>bottom</labelLocation>
-            <assignInputToUserVariable>False</assignInputToUserVariable>
-            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
-          </transition>
-          <transition>
-            <sourceMediaState>Piso_X.mp4</sourceMediaState>
-            <userEvent>
-              <name>rectangularTouchEvent</name>
-              <parameters>
-                <x>423</x>
-                <y>0</y>
-                <width>55</width>
-                <height>51</height>
-              </parameters>
-            </userEvent>
-            <targetMediaState>Piso_Menu.mp4</targetMediaState>
+            <targetMediaState>Piso_Nemeziz.mp4</targetMediaState>
             <remainOnCurrentStateActions>None</remainOnCurrentStateActions>
             <displayMode>displayConnectingLine</displayMode>
             <labelLocation>bottom</labelLocation>
