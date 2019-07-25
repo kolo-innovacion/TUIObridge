@@ -88,9 +88,6 @@ class Page {
     //println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
   void addMediaEnd(XML target, XML event) {
-    //a media end event is the same as a timeout the difference is that the out time comes from the video duration
-
-    timeout=true;
     mediaEnd=true;
 
     timeoutTo = target.getContent();
