@@ -23,7 +23,6 @@ void setup() {
   instancePages();
   tuioSetup();
   setupUDP();
-  //timerSetup();
   partSetup();
   frameRate(25.00);
 }
@@ -71,7 +70,7 @@ void showPage() {
     } else {
     }
 
-    //println(frameCount+"ACHIEVED END OF MOVIE  "+currentPage.movie.filename+"----------------------------------------------------");
+    println(frameCount+"ACHIEVED END OF MOVIE  "+currentPage.movie.filename+"----------------------------------------------------");
   }
 }
 
