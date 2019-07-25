@@ -14,8 +14,8 @@ void onTickEvent(CountdownTimer t, long timeLeftUntilFinish) {
 
 void onFinishEvent(CountdownTimer t) {
   if (currentPage.timeout) {
-    //println("Timer ended. Switching to:  "+timeoutPage.name);
-    //switchPage(timeoutPage.name);
+    println("Timer ended. Switching to:  "+timeoutPage.name);
+    switchPage(timeoutPage.name);
   }
 }
 
