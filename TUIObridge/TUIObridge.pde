@@ -23,7 +23,7 @@ void setup() {
   instancePages();
   tuioSetup();
   setupUDP();
-  timerSetup();
+  //timerSetup();
   partSetup();
   frameRate(25.00);
 }
@@ -66,8 +66,12 @@ void showPage() {
   println(currentPage.movie.filename+"  playing. Position:  "+currentPage.movie.time()+"  /  "+currentPage.movie.duration()+" Framerate:  "+currentPage.movie.frameRate);
 
   if (currentPage.movie.time()>=(currentPage.movie.duration()-(2*(1.0/currentPage.movie.frameRate)))) {
+    if (currentPage.mediaEnd) {
+      switchPage(currentPage.mediaEndTo);
+    } else {
+    }
 
-    println("ACHIEVED END OF MOVIE  "+currentPage.movie.filename+"----------------------------------------------------");
+    //println(frameCount+"ACHIEVED END OF MOVIE  "+currentPage.movie.filename+"----------------------------------------------------");
   }
 }
 
@@ -88,7 +92,7 @@ void switchPage(String input) {
     }
 
     delay(100);
-    startPageTimer();
+    //startPageTimer();
   }
 }
 
