@@ -55,13 +55,11 @@ float mul_attractors = 5f;
 MouseObstacle[] mobs;
 
 //population control
-int partsPerCursor=150;
+int partsPerCursor=50;
 int prevCursors=0;
 int numCursors=0;
 
 float partAlfa=5.0;
-
-int partSize=3;
 
 public void partSettings() {
   if (START_FULLSCREEN) {
@@ -95,7 +93,7 @@ public void partSetup() {
   particles.param.steps = 1;
   particles.param.shader_collision_mult = 0.2f;
 
-  particles.param.size_display   = 3;
+  particles.param.size_display   = 5;
   particles.param.size_collision = 8;
   particles.param.size_cohesion  = 2;
 
