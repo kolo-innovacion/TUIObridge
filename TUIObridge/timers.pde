@@ -27,11 +27,9 @@ void startPageTimer() {
     //println("TIMER PAUSED:  "+pageTimer.isPaused());
     pageTimer.stop();
     pageTimer.reset();
-    if (currentPage.outTime>20000) {
-      pageTimer.configure(1000, 10000);
-    } else {
-      pageTimer.configure(1000, currentPage.outTime);
-    }
+
+    pageTimer.configure(1000, currentPage.outTime);
+
     pageTimer.start();
     println("Page Timer from  "+currentPage.name+"  to "+currentPage.timeoutTo+"  in   "+currentPage.outTime+"  miliseconds" );
   } else {
