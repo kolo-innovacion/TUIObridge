@@ -1,14 +1,27 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+boolean logDebug=true;
+
+String de="DEBUG";
+String in="INFORMATION";
+String wa="WARNING";
+String er="ERROR";
+String tr="TRACE";
+
+String tb="Button";
+String tc="CONFIG";
+String tg="Game";
+String tm="MAIN";
+String tl="LOGGER";
+
 int DEBUG=1;
-String filePath = "log.txt";
 void setupLog() {
   deLog("PROGRAM START");
 }
 
 void deLog(String text) {
-  File file = new File(filePath);
+  File file = new File("log.txt");
   FileWriter fr = null;
   try {
     // Below constructor argument decides whether to append or override
