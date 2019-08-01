@@ -8,8 +8,8 @@ Page timeoutPage;
 boolean devMode=false;
 
 void settings() {
-  //setupLog();
-  //loadConfig();
+  setupLog();
+  loadConfig();
   //setWindow();
   //partSettings();
   //smooth(0);

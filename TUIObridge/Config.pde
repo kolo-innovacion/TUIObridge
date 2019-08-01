@@ -7,16 +7,14 @@ int winY;
 boolean fullScr=false;
 float winScale=1.0;
 
-int winTol=20;
 //String presName="adidasFloor.bpf";
-String presName="presentation.bpf";
 
 XML initState;
 XML[] statesArr;
 XML[] transArr;
 
 void loadPres() {
-  pres = loadXML(presName);
+  pres = loadXML("presentation.bpf");
 
   XML zones=nextLevel(pres, "zones");
   XML zone=nextLevel(zones, "zone");
@@ -71,16 +69,11 @@ void instancePages() {
 
 void loadConfig() {
   config = loadXML("config.xml");
-  deLog("config XML file has been loaded");
+  deLog("XML config. file has been loaded");
 
   //fullScr=boolean(extInt(config, "fullscreen"));
   fullScr=boolean(config.getInt("fullscreen", 0));
   //fullScr=true;
-
-  if (fullScr) {
-    winTol=0;
-  } else {
-  }
 
   winScale=config.getFloat("winScale", 100);
   scaleX=config.getFloat("scaleX", 1.0);

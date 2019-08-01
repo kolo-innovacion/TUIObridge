@@ -1,0 +1,1 @@
+BrighAuthor presentation file must be named "presentation.bpf"
