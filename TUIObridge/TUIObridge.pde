@@ -8,31 +8,31 @@ Page timeoutPage;
 boolean devMode=false;
 
 void settings() {
-  setupLog();
-  loadConfig();
-  setWindow();
-  partSettings();
-  smooth(0);
+  //setupLog();
+  //loadConfig();
+  //setWindow();
+  //partSettings();
+  //smooth(0);
 }
 
 void setup() {
-  setupGUI();
-  instanceDisplay();
-  setupDict();
-  loadPres();
-  instancePages();
-  tuioSetup();
-  setupUDP();
-  timerSetup();
-  partSetup();
-  frameRate(25.00);
+  //setupGUI();
+  //instanceDisplay();
+  //setupDict();
+  //loadPres();
+  //instancePages();
+  //tuioSetup();
+  //setupUDP();
+  //timerSetup();
+  //partSetup();
+  //frameRate(25.00);
 }
 
 void draw() {
   background(0);
-  showPage();
-  updateTUIO();  
-  partsDraw();
+  //showPage();
+  //updateTUIO();  
+  //partsDraw();
 }
 
 void setWindow() {
