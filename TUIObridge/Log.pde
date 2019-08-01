@@ -9,15 +9,47 @@ String wa="WARNING";
 String er="ERROR";
 String tr="TRACE";
 
-String tb="Button";
-String tc="CONFIG";
-String tg="Game";
-String tm="MAIN";
-String tl="LOGGER";
+String buta="BUTTON";
+String cona="CONFIG";
+String dica="DICTIONARY";
+String disa="DISPLAY";
+String loga="LOGGER";
+String paga="PAGE";
+String para="PARTICLES";
+String tuia="TUIO";
+String udpa="UDP";
+String tima="TIMER";
 
 int DEBUG=1;
+
 void setupLog() {
   deLog("PROGRAM START");
+}
+
+void deLog(String level, String agent, String text) {
+
+  if ((agent.equals("DEBUG"))&&(logDebug==false)) {
+    //do not log (only case)
+  } else {
+
+    File file = new File("log.txt");
+    FileWriter fr = null;
+    try {
+      fr = new FileWriter(file, true);
+      fr.append(timestamp()+level+"\t"+agent+"\t"+text+"\n");
+    } 
+    catch (IOException e) {
+      e.printStackTrace();
+    } 
+    finally {
+      try {
+        fr.close();
+      } 
+      catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
 
 void deLog(String text) {
