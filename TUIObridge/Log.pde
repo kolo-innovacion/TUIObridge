@@ -6,6 +6,7 @@ boolean logConsole=true;
 
 String deb="DEBUG";
 String inf="INFORMATION";
+String met="METRIC";
 String war="WARNING";
 String err="ERROR";
 String tra="TRACE";
@@ -24,7 +25,7 @@ String tima="TIMER";
 int DEBUG=1;
 
 void setupLog() {
-  deLog("PROGRAM START");
+  deLog(inf, loga, "Program start");
 }
 
 void deLog(String level, String agent, String text) {
@@ -37,10 +38,11 @@ void deLog(String level, String agent, String text) {
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);
-      String logLine=timestamp()+level+"\t"+agent+"\t"+text+"\n";
+      String conLine=timestamp()+level+"\t"+agent+"\t"+text;
+      String logLine=conLine+"\n";
       fr.append(logLine);
       if (logConsole) {
-        println(logLine);
+        println(conLine);
       }
     } 
     catch (IOException e) {

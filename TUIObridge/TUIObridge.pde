@@ -29,6 +29,10 @@ void setup() {
 }
 
 void draw() {
+  if (exitFlag) {
+    exit();
+  }
+
   background(0);
   //showPage();
   //updateTUIO();  

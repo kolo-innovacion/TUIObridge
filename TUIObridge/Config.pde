@@ -12,7 +12,7 @@ float winScale=1.0;
 XML initState;
 XML[] statesArr;
 XML[] transArr;
-
+boolean exitFlag=false;
 void loadPres() {
   pres = loadXML("presentation.bpf");
 
@@ -70,26 +70,32 @@ void instancePages() {
 void loadConfig() {
   try {
     config = loadXML("config.xml");
-    deLog(inf, cona, "XML config. file has been loaded");
 
-    //fullScr=boolean(extInt(config, "fullscreen"));
-    fullScr=boolean(config.getInt("fullscreen", 0));
-    //fullScr=true;
+    if (config!=null) {
 
-    winScale=config.getFloat("winScale", 100);
-    scaleX=config.getFloat("scaleX", 1.0);
-    scaleY=config.getFloat("scaleY", 1.0);
-    viewport_x=config.getInt("viewportX", 0);
-    viewport_y=config.getInt("viewportY", 0);
-    //winX=int(config.getInt("resx", 100)*winScale)+1*winTol;
-    winX=int(config.getInt("resx", 100)*winScale);
-    //winY=int(config.getInt("resy", 100)*winScale)+7*winTol;
-    winY=int(config.getInt("resy", 100)*winScale);
-    targetIP=config.getString("targetIP", "255.255.255.255");
-    targetPort=config.getInt("targetPort", 5000);
+      deLog(inf, cona, "XML config. file loaded");
+
+      fullScr=boolean(config.getInt("fullscreen", 0));
+      winScale=config.getFloat("winScale", 100);
+      scaleX=config.getFloat("scaleX", 1.0);
+      scaleY=config.getFloat("scaleY", 1.0);
+      viewport_x=config.getInt("viewportX", 0);
+      viewport_y=config.getInt("viewportY", 0);
+      winX=int(config.getInt("resx", 100)*winScale);
+      winY=int(config.getInt("resy", 100)*winScale);
+      targetIP=config.getString("targetIP", "255.255.255.255");
+      targetPort=config.getInt("targetPort", 5000);
+    } else {
+      deLog(war, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
+      exitFlag=true;
+    }
   }
   catch(Exception e) {
-    deLog(war, cona, "Config. file not loaded. Default values will be used.");
+
+    println("enter exception");
+    //exit();
+  }
+  finally {
   }
 }
 
