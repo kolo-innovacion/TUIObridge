@@ -10,12 +10,15 @@ boolean devMode=false;
 void settings() {
   setupLog();
   loadConfig();
-  setGraphics();
+  setWindow();
   //partSettings();
   //smooth(0);
+  println("gggg");
 }
 
 void setup() {
+
+  println("hhhh");
   //setupGUI();
   //instanceDisplay();
   //setupDict();
@@ -39,13 +42,16 @@ void draw() {
   //partsDraw();
 }
 
-void setGraphics() {
+void setWindow() {
   if (fullScr) {
     fullScreen();
+    deLog(inf, cona, "Fullscreen mode. Width: "+width+" Height: "+height);
   } else {
     //size(winX, winY, P2D);
     size(winX, winY, P3D);
+    deLog(inf, cona, "Window created. Width: "+width+" Height: "+height);
   }
+  deLog(inf, cona, "Fullscreen value: "+fullScr);
 }
 
 void setupGUI() {

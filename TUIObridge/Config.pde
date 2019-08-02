@@ -5,6 +5,7 @@ XML pres;
 int winX;
 int winY;
 boolean fullScr=false;
+float fps;
 
 //String presName="adidasFloor.bpf";
 
@@ -75,6 +76,9 @@ void loadConfig() {
 
       fullScr=boolean(config.getInt("fullscreen", 0));
       deLog(inf, cona, "Fullscreen value: "+fullScr);
+
+      fps=config.getFloat("fps", 30.0);
+      deLog(inf, cona, "FPS: "+fps);
 
       winX=int(config.getInt("resx", 100));
       deLog(inf, cona, "Window X size: "+winX);
