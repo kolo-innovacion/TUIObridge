@@ -10,7 +10,7 @@ boolean devMode=false;
 void settings() {
   setupLog();
   loadConfig();
-  //setWindow();
+  setGraphics();
   //partSettings();
   //smooth(0);
 }
@@ -39,11 +39,12 @@ void draw() {
   //partsDraw();
 }
 
-void setWindow() {
+void setGraphics() {
   if (fullScr) {
     fullScreen();
   } else {
-    size(winX, winY, P2D);
+    //size(winX, winY, P2D);
+    size(winX, winY, P3D);
   }
 }
 
