@@ -5,7 +5,6 @@ XML pres;
 int winX;
 int winY;
 boolean fullScr=false;
-float winScale=1.0;
 
 //String presName="adidasFloor.bpf";
 
@@ -76,13 +75,14 @@ void loadConfig() {
       deLog(inf, cona, "XML config. file loaded");
 
       fullScr=boolean(config.getInt("fullscreen", 0));
-      winScale=config.getFloat("winScale", 100);
+      deLog(inf, cona, "XML config. file loaded");
+
       scaleX=config.getFloat("scaleX", 1.0);
       scaleY=config.getFloat("scaleY", 1.0);
       viewport_x=config.getInt("viewportX", 0);
       viewport_y=config.getInt("viewportY", 0);
-      winX=int(config.getInt("resx", 100)*winScale);
-      winY=int(config.getInt("resy", 100)*winScale);
+      winX=int(config.getInt("resx", 100));
+      winY=int(config.getInt("resy", 100));
       targetIP=config.getString("targetIP", "255.255.255.255");
       targetPort=config.getInt("targetPort", 5000);
     } else {
@@ -99,26 +99,6 @@ void loadConfig() {
   }
 }
 
-void loadConfig0() {
-  config = loadXML("config.xml");
-  deLog("XML config. file has been loaded");
-
-  //fullScr=boolean(extInt(config, "fullscreen"));
-  fullScr=boolean(config.getInt("fullscreen", 0));
-  //fullScr=true;
-
-  winScale=config.getFloat("winScale", 100);
-  scaleX=config.getFloat("scaleX", 1.0);
-  scaleY=config.getFloat("scaleY", 1.0);
-  viewport_x=config.getInt("viewportX", 0);
-  viewport_y=config.getInt("viewportY", 0);
-  //winX=int(config.getInt("resx", 100)*winScale)+1*winTol;
-  winX=int(config.getInt("resx", 100)*winScale);
-  //winY=int(config.getInt("resy", 100)*winScale)+7*winTol;
-  winY=int(config.getInt("resy", 100)*winScale);
-  targetIP=config.getString("targetIP", "255.255.255.255");
-  targetPort=config.getInt("targetPort", 5000);
-}
 int extInt(XML obj, String name) {
   return obj.getInt(name, 0);
 }
