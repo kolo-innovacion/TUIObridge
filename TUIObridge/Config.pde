@@ -71,30 +71,34 @@ void loadConfig() {
 
     if (config!=null) {
 
-      deLog(inf, cona, "XML config. file loaded");
+      deLog(inf, cona, "XML config. file loaded.");
 
       fullScr=boolean(config.getInt("fullscreen", 0));
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
+      deLog(inf, cona, "Fullscreen value: "+fullScr);
+
+      winX=int(config.getInt("resx", 100));
+      deLog(inf, cona, "Window X size: "+winX);
+
+      winY=int(config.getInt("resy", 100));
+      deLog(inf, cona, "Window Y size: "+winY);
 
       scaleX=config.getFloat("scaleX", 1.0);
-      deLog(inf, cona, "X scale value  :"+scaleX);
+      deLog(inf, cona, "X scale value: "+scaleX);
 
       scaleY=config.getFloat("scaleY", 1.0);
-      deLog(inf, cona, "Y scale value  :"+scaleY);
+      deLog(inf, cona, "Y scale value: "+scaleY);
 
       viewport_x=config.getInt("viewportX", 0);
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
+      deLog(inf, cona, "Window X offset: "+viewport_x);
 
       viewport_y=config.getInt("viewportY", 0);
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
-      winX=int(config.getInt("resx", 100));
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
-      winY=int(config.getInt("resy", 100));
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
-      targetIP=config.getString("targetIP", "255.255.255.255");
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
-      targetPort=config.getInt("targetPort", 5000);
-      deLog(inf, cona, "Fullscreen value  :"+fullScr);
+      deLog(inf, cona, "Window Y offset: " +viewport_y);
+
+      udpTargetIP=config.getString("targetIP", "255.255.255.255");
+      deLog(inf, cona, "UDP target IP address: "+udpTargetIP);
+
+      udpTargetPort=config.getInt("targetPort", 5000);
+      deLog(inf, cona, "UDP target port: "+udpTargetPort);
     } else {
       deLog(war, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
       exitFlag=true;

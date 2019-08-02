@@ -1,8 +1,8 @@
 import hypermedia.net.*;
 UDP udp;
 
-String targetIP="localhost";
-int targetPort=6100;
+String udpTargetIP="localhost";
+int udpTargetPort=6100;
 int inPort=6000;
 
 void setupUDP() {
@@ -10,13 +10,13 @@ void setupUDP() {
   //udp.log( true );     // <-- printout the connection activity
   udp.listen( true );
 
-  deLog("Target: "+targetIP+"  Port: "+targetPort);
+  deLog("Target: "+udpTargetIP+"  Port: "+udpTargetPort);
 }
 
 void sendUDP(String input) {
   String message  = input;
   //message = message+"\n";
-  udp.send( message, targetIP, targetPort );
+  udp.send( message, udpTargetIP, udpTargetPort );
 }
 
 void receive( byte[] data, String ip, int port ) {  // <-- extended handler
