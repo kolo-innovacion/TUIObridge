@@ -52,10 +52,7 @@ void setupGUI() {
   rectMode(CORNER);
   colorMode(RGB, 255);
   noStroke();
-  //display=new Display();
-  //instanceButtons();
   background(0);
-  //frameRate(25.00);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);
