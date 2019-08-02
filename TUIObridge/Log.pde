@@ -2,12 +2,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 boolean logDebug=true;
+boolean logConsole=true;
 
-String de="DEBUG";
-String in="INFORMATION";
-String wa="WARNING";
-String er="ERROR";
-String tr="TRACE";
+String deb="DEBUG";
+String inf="INFORMATION";
+String war="WARNING";
+String err="ERROR";
+String tra="TRACE";
 
 String buta="BUTTON";
 String cona="CONFIG";
@@ -36,7 +37,11 @@ void deLog(String level, String agent, String text) {
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);
-      fr.append(timestamp()+level+"\t"+agent+"\t"+text+"\n");
+      String logLine=timestamp()+level+"\t"+agent+"\t"+text+"\n";
+      fr.append(logLine);
+      if (logConsole) {
+        println(logLine);
+      }
     } 
     catch (IOException e) {
       e.printStackTrace();
