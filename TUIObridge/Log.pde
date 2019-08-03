@@ -38,7 +38,7 @@ void deLog(String level, String agent, String text) {
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);
-      String conLine=timestamp()+level+"\t"+agent+"\t"+text;
+      String conLine=timestamp()+level+","+agent+","+text;
       String logLine=conLine+"\n";
       fr.append(logLine);
       if (logConsole) {
@@ -66,7 +66,7 @@ void deLog(String text) {
     // Below constructor argument decides whether to append or override
     fr = new FileWriter(file, true);
     //fr.write(text);
-    fr.append(timestamp()+getLevel(DEBUG)+"LOGGER\t"+text+"\n");
+    fr.append(timestamp()+getLevel(DEBUG)+"LOGGER,"+text+"\n");
   } 
   catch (IOException e) {
     e.printStackTrace();
@@ -90,7 +90,7 @@ String timestamp() {
   output+=logForm(minute())+":";
   output+=logForm(second())+".";
   output+=String.format("%03d", (millis()%1000));
-  return output+"\t";
+  return output+",";
 }
 String getLevel(int input) {
 
@@ -116,7 +116,7 @@ String getLevel(int input) {
     output="TRACE"; 
     break;
   }
-  return output+"\t";
+  return output+",";
 }
 
 String logForm(int input) {
