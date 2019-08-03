@@ -13,12 +13,10 @@ void settings() {
   setWindow();
   //partSettings();
   //smooth(0);
-  println("gggg");
 }
 
 void setup() {
 
-  println("hhhh");
   //setupGUI();
   //instanceDisplay();
   //setupDict();
