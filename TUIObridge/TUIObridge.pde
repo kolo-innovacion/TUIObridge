@@ -12,15 +12,17 @@ void settings() {
   loadConfig();
   setWindow();
   //partSettings();
-  //smooth(0);
+  //smooth(0);// now on setup GUI
 }
 
 void setup() {
 
-  //setupGUI();
+  setupGUI();
   //instanceDisplay();
-  //setupDict();
-  //loadPres();
+  
+  setupDict();
+  
+  loadPres();
   //instancePages();
   //tuioSetup();
   //setupUDP();
@@ -41,6 +43,7 @@ void draw() {
 }
 
 void setWindow() {
+  deLog(inf, cona, "Fullscreen value: "+fullScr);
   if (fullScr) {
     fullScreen();
     deLog(inf, cona, "Fullscreen mode. Width: "+width+" Height: "+height);
@@ -49,14 +52,14 @@ void setWindow() {
     size(winX, winY, P3D);
     deLog(inf, cona, "Window created. Width: "+width+" Height: "+height);
   }
-  deLog(inf, cona, "Fullscreen value: "+fullScr);
 }
 
 void setupGUI() {
   rectMode(CORNER);
-  colorMode(RGB, 255);
+  colorMode(RGB, 255, 255, 255, 255);
   noStroke();
   background(0);
+  //smooth(0);
 }
 void showPage() {
   //image(currentPage.img, 0, 0);

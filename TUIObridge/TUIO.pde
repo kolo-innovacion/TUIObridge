@@ -46,14 +46,14 @@ void updateTUIO() {
         start_point = end_point;
       }
 
-      spawnCursor(int(tcur.getScreenX(display.sizeX)*scaleX), int(tcur.getScreenY(display.sizeY)*scaleY));
+      spawnCursor(int(tcur.getScreenX(winX)*scaleX), int(tcur.getScreenY(winY)*scaleY));
       if (devMode) {
         stroke(192, 192, 192);
         noStroke();
         fill(curColor);
-        ellipse( tcur.getScreenX(display.sizeX)*scaleX, tcur.getScreenY(display.sizeY)*scaleY, 20, 20);
+        ellipse( tcur.getScreenX(winX)*scaleX, tcur.getScreenY(winY)*scaleY, 20, 20);
         fill(0);
-        text(""+ tcur.getCursorID(), tcur.getScreenX(display.sizeX)-5, tcur.getScreenY(display.sizeY)+5);
+        text(""+ tcur.getCursorID(), tcur.getScreenX(winX)-5, tcur.getScreenY(winY)+5);
       }
     }
   }
@@ -92,7 +92,7 @@ boolean inRange(int input, int lef, int rig) {
 
 void addTuioCursor(TuioCursor tcur) {
   if (tuioVerbose) deLog("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
-  checkPress(tcur.getScreenX(display.sizeX), tcur.getScreenY(display.sizeY));
+  checkPress(tcur.getScreenX(winX), tcur.getScreenY(winY));
   //startPageTimer();
   //redraw();
 }
