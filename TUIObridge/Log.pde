@@ -60,6 +60,9 @@ void deLog(String level, String agent, String text) {
 }
 
 void deLog(String text) {
+}
+
+void deLog0(String text) {
   File file = new File("log.txt");
   FileWriter fr = null;
   try {
