@@ -63,22 +63,25 @@ void xploreTrans() {
 
 
 void instancePages() {
+  if (exitFlag) {
+  } else {
 
 
-  pages=new ArrayList<Page>();//global creation of Page objects array
+    pages=new ArrayList<Page>();//global creation of Page objects array
 
-  for (int i=0; i<statesArr.length; i++) {
-    XML tempState=nextLevel(statesArr[i], "name");
-    String tempName=tempState.getContent();
-    println("Page and index:  "+tempName);
-    //pages.add(new Page(i, tempName));
-    Movie tempMovie = new Movie(this, tempName);
-    delay(10);
-    //tempMovie.loop();
-    pages.add(new Page(i, tempName, tempMovie));
-    delay(10);
+    for (int i=0; i<statesArr.length; i++) {
+      XML tempState=nextLevel(statesArr[i], "name");
+      String tempName=tempState.getContent();
+      println("Page and index:  "+tempName);
+      //pages.add(new Page(i, tempName));
+      Movie tempMovie = new Movie(this, tempName);
+      delay(10);
+      //tempMovie.loop();
+      pages.add(new Page(i, tempName, tempMovie));
+      delay(10);
+    }
+    switchPage(initPage);
   }
-  switchPage(initPage);
 }
 
 boolean loadConfig() {

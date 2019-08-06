@@ -21,7 +21,7 @@ void setup() {
 
   setupDict();
   exitFlag = loadPres();
-  //instancePages();
+  instancePages();
   //tuioSetup();
   //setupUDP();
   //timerSetup();
