@@ -13,26 +13,41 @@ XML initState;
 XML[] statesArr;
 XML[] transArr;
 boolean exitFlag=false;
-void loadPres() {
-  pres = loadXML("presentation.bpf");
 
-  XML zones=nextLevel(pres, "zones");
-  XML zone=nextLevel(zones, "zone");
-  XML playlist=nextLevel(zone, "playlist");
-  XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
+boolean loadPres() {
+  if (exitFlag) {
+    return true;
+    //do nothing
+  } else {
+    pres = loadXML("presentation.bpf");
+
+    if (pres==null) {
+      deLog(err, cona, "Unable to load -presentation.bpf- file. Program can't run without this. Please check documentation.");
+      return true;
+    } else {
+
+      deLog(inf, cona, "-presentation.bpf- file loaded.");
+
+      XML zones=nextLevel(pres, "zones");
+      XML zone=nextLevel(zones, "zone");
+      XML playlist=nextLevel(zone, "playlist");
+      XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
 
 
-  initState=nextLevel(rootStates, "initialState");//this will be initial page
-  initPage=initState.getContent();
-  println("-------Init page is:  "+initPage);
+      initState=nextLevel(rootStates, "initialState");//this will be initial page
+      initPage=initState.getContent();
 
-  statesArr=rootStates.getChildren("state");//this will be  the pages
-  println(statesArr.length);
+      deLog(deb, cona, "Initial page is "+initPage);
 
-  transArr=rootStates.getChildren("transition");//buttons and timeouts
-  println(transArr.length);
 
-  //xploreTrans();
+      statesArr=rootStates.getChildren("state");//this will be  the pages
+      //println(statesArr.length);
+
+      transArr=rootStates.getChildren("transition");//buttons and timeouts
+      //println(transArr.length);
+      return false;
+    }
+  }
 }
 
 void xploreTrans() {
@@ -66,7 +81,51 @@ void instancePages() {
   switchPage(initPage);
 }
 
-void loadConfig() {
+boolean loadConfig() {
+
+  config = loadXML("config.xml");
+
+  if (config!=null) {
+
+    deLog(inf, cona, "XML config. file loaded.");
+
+    fullScr=boolean(config.getInt("fullscreen", 0));
+    deLog(inf, cona, "Fullscreen value: "+fullScr);
+
+    fps=config.getFloat("fps", 30.0);
+    deLog(inf, cona, "FPS: "+fps);
+
+    winX=int(config.getInt("resx", 100));
+    deLog(inf, cona, "Window X size: "+winX);
+
+    winY=int(config.getInt("resy", 100));
+    deLog(inf, cona, "Window Y size: "+winY);
+
+    scaleX=config.getFloat("scaleX", 1.0);
+    deLog(inf, cona, "X scale value: "+scaleX);
+
+    scaleY=config.getFloat("scaleY", 1.0);
+    deLog(inf, cona, "Y scale value: "+scaleY);
+
+    viewport_x=config.getInt("viewportX", 0);
+    deLog(inf, cona, "Window X offset: "+viewport_x);
+
+    viewport_y=config.getInt("viewportY", 0);
+    deLog(inf, cona, "Window Y offset: " +viewport_y);
+
+    udpTargetIP=config.getString("targetIP", "255.255.255.255");
+    deLog(inf, cona, "UDP target IP address: "+udpTargetIP);
+
+    udpTargetPort=config.getInt("targetPort", 5000);
+    deLog(inf, cona, "UDP target port: "+udpTargetPort);
+    return false;
+  } else {
+    deLog(err, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
+    return true;
+  }//end else
+}
+
+void loadConfig0() {
   try {
     config = loadXML("config.xml");
 
@@ -104,7 +163,7 @@ void loadConfig() {
       udpTargetPort=config.getInt("targetPort", 5000);
       deLog(inf, cona, "UDP target port: "+udpTargetPort);
     } else {
-      deLog(war, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
+      deLog(err, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
       exitFlag=true;
     }
   }
@@ -125,9 +184,6 @@ String extString(XML obj, String name) {
   return obj.getString(name, "null");
 }
 
-void instanceDisplay() {
-  display=new Display();//used for tuio
-}
 
 XML nextLevel(XML input, String name) {
   XML temp = input.getChild(name);

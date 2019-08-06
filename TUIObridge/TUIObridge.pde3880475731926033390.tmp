@@ -8,7 +8,7 @@ boolean devMode=false;
 
 void settings() {
   setupLog();
-  exitFlag=loadConfig();
+  loadConfig();
   setWindow();
   //partSettings();
   //smooth(0);// now on setup GUI
@@ -20,7 +20,8 @@ void setup() {
   //instanceDisplay();
 
   setupDict();
-  exitFlag = loadPres();
+
+  loadPres();
   //instancePages();
   //tuioSetup();
   //setupUDP();
@@ -31,12 +32,10 @@ void setup() {
 
 void draw() {
   if (exitFlag) {
-    deLog(err, cona, "Requirements not achieved for proper execution. Program exit. Please check log and documentation.");
     exit();
   }
 
   background(0);
-
   //showPage();
   //updateTUIO();  
   //partsDraw();
@@ -61,14 +60,12 @@ void setupGUI() {
   background(0);
   //smooth(0);
 }
-
 void showPage() {
   //image(currentPage.img, 0, 0);
 
   image(currentPage.movie, 0, 0);
   //currentPage=pages.get(currPage);
   currentPage.showButtons();
-
   /*
   if (currentPage.timeout&&(currentPage.movie.time()>=currentPage.movie.duration())) {
    switchPage(currentPage.timeoutTo);
