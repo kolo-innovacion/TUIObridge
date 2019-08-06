@@ -72,7 +72,7 @@ void instancePages() {
     for (int i=0; i<statesArr.length; i++) {
       XML tempState=nextLevel(statesArr[i], "name");
       String tempName=tempState.getContent();
-      println("Page and index:  "+tempName);
+      //println("Page and index:  "+tempName);
       //pages.add(new Page(i, tempName));
       Movie tempMovie = new Movie(this, tempName);
       delay(10);

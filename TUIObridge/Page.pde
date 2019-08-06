@@ -20,9 +20,10 @@ class Page {
     movie.loop();
     delay(10);
     pageDict.set(name, index);
-    deLog("Page "+name+" has been created.");
+    //deLog("Page "+name+" has been created.");
+    deLog(deb, paga, "Created page: "+name);
     fetchTransitions();
-    deLog("End of buttons creation on  "+name);
+    deLog(deb, paga, "End of buttons creation on  "+name);
   }
   void fetchTransitions() {  
     for (int i=0; i<transArr.length; i++) {

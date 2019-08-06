@@ -22,8 +22,8 @@ void setup() {
   setupDict();
   exitFlag = loadPres();
   instancePages();
-  //tuioSetup();
-  //setupUDP();
+  tuioSetup();
+  setupUDP();
   //timerSetup();
   //partSetup();
   //frameRate(25.00);
