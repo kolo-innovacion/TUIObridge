@@ -81,6 +81,7 @@ void switchPage(String input) {
     //println("NULL INPUT");
   } else {
     ////println("SWITCH FROM:  "+currentPage.name);
+    deLog(deb, cona, "Switch page from:  "+currentPage+"  to  "+input);
     currentPage=pages.get(pageDict.get(input));
     //println("SWITCH TO:  "+currentPage.name);
     currentPage.movie.jump(0.0);
