@@ -72,7 +72,7 @@ void checkPress(int curX, int curY) {
     if (checkX&&checkY) {
       //deLog(temp.identifier);
       sendUDP(temp.identifier);
-      //println(temp.identifier+"  activated");
+      ////println(temp.identifier+"  activated");
       switchPage(temp.identifier);//if no callpage is assigned, nothing happens
       //in this case, button is pressed, send UDP!
       temp.setState(true);

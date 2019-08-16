@@ -18,9 +18,11 @@ class Button {
     sizeY=sy;
     currState=false;
     prevState=false;
+
+    deLog(deb, cona, "Created button: "+id);
     //callPage=null;
-    deLog(identifier+"  created on  ("+posX+","+posY+")");
-    println("-------------------------Button Added");
+    //deLog(identifier+"  created on  ("+posX+","+posY+")");
+    //println("-------------------------Button Added");
   }
 
   void setState(boolean input) {

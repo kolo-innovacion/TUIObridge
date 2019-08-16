@@ -28,6 +28,6 @@ void receive( byte[] data, String ip, int port ) {  // <-- extended handler
   String message = new String( data );
 
   // print the result
-  println( "receive: \""+message+"\" from "+ip+" on port "+port );
+  //println( "receive: \""+message+"\" from "+ip+" on port "+port );
   switchPage(message);
 }

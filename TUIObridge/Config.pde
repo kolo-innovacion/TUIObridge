@@ -41,10 +41,10 @@ boolean loadPres() {
 
 
       statesArr=rootStates.getChildren("state");//this will be  the pages
-      //println(statesArr.length);
+      ////println(statesArr.length);
 
       transArr=rootStates.getChildren("transition");//buttons and timeouts
-      //println(transArr.length);
+      ////println(transArr.length);
       return false;
     }
   }
@@ -72,7 +72,7 @@ void instancePages() {
     for (int i=0; i<statesArr.length; i++) {
       XML tempState=nextLevel(statesArr[i], "name");
       String tempName=tempState.getContent();
-      //println("Page and index:  "+tempName);
+      ////println("Page and index:  "+tempName);
       //pages.add(new Page(i, tempName));
       Movie tempMovie = new Movie(this, tempName);
       delay(10);
@@ -172,7 +172,7 @@ void loadConfig0() {
   }
   catch(Exception e) {
 
-    println("enter exception");
+    //println("enter exception");
     //exit();
   }
   finally {
@@ -191,10 +191,10 @@ String extString(XML obj, String name) {
 XML nextLevel(XML input, String name) {
   XML temp = input.getChild(name);
   if (checkValid(temp)) {
-    //println("Succesfull access to:  "+name);
+    ////println("Succesfull access to:  "+name);
     return temp;
   } else {
-    println("NOT able to access to:  "+name);
+    //println("NOT able to access to:  "+name);
     return null;
   }
   //return temp;

@@ -21,7 +21,7 @@ class Page {
     delay(10);
     pageDict.set(name, index);
     //deLog("Page "+name+" has been created.");
-    deLog(deb, paga, "Created page: "+name);
+    deLog(deb, cona, "Created page: "+name);
     fetchTransitions();
     //deLog(deb, paga, "End of buttons creation on  "+name);
   }
@@ -29,16 +29,16 @@ class Page {
     for (int i=0; i<transArr.length; i++) {
       XML temp = transArr[i];
       if (isMine(temp)) {//checks if this transition is relevant to itself as a source
-        //println("RELEVANT");
+        ////println("RELEVANT");
 
         XML target = nextLevel(temp, "targetMediaState");
         XML usrEvent = nextLevel(temp, "userEvent");
         //movie.loop();
         if (eventIsButton(usrEvent)) {
-          //println("BUTTON");
+          ////println("BUTTON");
           addButton(target, usrEvent);
         } else if (eventIsTimeout(usrEvent)) {
-          //println("TIMEOUT");
+          ////println("TIMEOUT");
           addTimeout(target, usrEvent);
         } else if (eventIsMediaEnd(usrEvent)) {
           addMediaEnd(target, usrEvent);
@@ -46,13 +46,13 @@ class Page {
         }
         /*
         if (eventIsTimeout(usrEvent)) {
-         println("TIMEOUT");
+         //println("TIMEOUT");
          addTimeout(target, usrEvent);
          } else {
          }
          */
       } else {
-        //println("NOT MINE");
+        ////println("NOT MINE");
       }
       // XML source = nextLevel(temp, "sourceMediaState");
 
@@ -79,7 +79,7 @@ class Page {
 
     pButtons.add(new Button(btnID, int(x), int(y), int(w), int(h)));
 
-    println("Button for  "+btnID+"  with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
+    //println("Button for  "+btnID+"  with:  "+x+"  "+y+"  "+w+"  "+h+"  ");
   }
 
   void addTimeout(XML target, XML event) {
@@ -93,8 +93,10 @@ class Page {
 
     outTime = int(timePar.getFloatContent()*1000);
 
-    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
-    
+    deLog(deb, cona, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
+
+    //println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+
     deLog(deb, paga, "End of buttons creation on  "+name);
   }
   void addMediaEnd(XML target, XML event) {
@@ -109,8 +111,9 @@ class Page {
 
     outTime = int(movie.duration()*1000);
 
+    deLog(deb, cona, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
 
-    println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
+    //println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
 
   boolean eventIsButton(XML event) {    
@@ -159,18 +162,18 @@ class Page {
   PImage loadMedia(String input) {
     PImage temp = loadImage(input);
     if (temp!=null) {
-      println(input+"  loaded successfully");
+      //println(input+"  loaded successfully");
       return temp;
     } else {
 
-      println(input+"  NOT loaded");
+      //println(input+"  NOT loaded");
       return null;
     }
   }
 
   void instButtons(XML input) {    
-    //println("NEW"+input);
-    //println("ORIGINAL: "+curr);
+    ////println("NEW"+input);
+    ////println("ORIGINAL: "+curr);
     XML[] buttonArr = input.getChildren("userDefinedEvent");
     //deLog(buttonArr);
     for (int i=0; i<buttonArr.length; i++) {
@@ -206,10 +209,10 @@ class Page {
     tempImg=loadImage(input);
 
     if (tempImg!=null) {
-      println("Unable to load"+input);
+      //println("Unable to load"+input);
       return tempImg;
     } else {
-      println("Image Loaded"+input);
+      //println("Image Loaded"+input);
       return tempImg;
     }
   }

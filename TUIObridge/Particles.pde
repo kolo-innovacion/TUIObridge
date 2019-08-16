@@ -157,7 +157,7 @@ void controlPopulation() {
     partAlfa=5.0;
 
     if (overpop) {
-      println("RESIZE TO:  "+(currCount-1));
+      //println("RESIZE TO:  "+(currCount-1));
       particles.resizeParticlesCount(currCount-1);
     }
   } else {//if there are no cursors
@@ -174,7 +174,7 @@ int targetLine(int real, int expected) {
   int output;
   if (real>expected) {
     output=real-1;
-    println("ADJUST  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+    //println("ADJUST  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
     return output;
   } else {
     output=real;
@@ -186,7 +186,7 @@ int targetLine(int real, int expected) {
 void elegantReset() {
   if ((partAlfa==0.0)) {
     reset();
-    println("RESET DONE");
+    //println("RESET DONE");
   } else {
   }
 }
@@ -198,17 +198,17 @@ float targetLineF(float real, float expected, float speed) {
   if ((real<expected+speed)&&(real>expected-speed)) {
     output=expected;
 
-    println("STABLE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+    //println("STABLE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
     return output;
   } else {
 
     if (real>expected) {
       output=real-speed;
-      //println("DECREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      ////println("DECREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
       return output;
     } else if (real<expected) {
       output=real+speed;
-      //println("INCREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
+      ////println("INCREASE  "+real+"  TO  "+expected+"  NXT VALUE  "+output);
       return output;
     } else {
       return expected;
@@ -336,7 +336,7 @@ public void partsDraw() {
   /*
   if (frameCount%6==0) {
    if (particles.getCount()>0) {
-   println("PARTICLES: "+particles.getCount()+"  RESIZE TO:  "+((numCursors*partsPerCursor)-1));
+   //println("PARTICLES: "+particles.getCount()+"  RESIZE TO:  "+((numCursors*partsPerCursor)-1));
    if (particles.getCount()>(numCursors*partsPerCursor)) {
    particles.resizeParticlesCount((numCursors*partsPerCursor)-1);
    }

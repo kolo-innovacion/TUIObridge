@@ -78,11 +78,11 @@ void showPage() {
 
 void switchPage(String input) {
   if (input==null) {//do nothing
-    println("NULL INPUT");
+    //println("NULL INPUT");
   } else {
-    //println("SWITCH FROM:  "+currentPage.name);
+    ////println("SWITCH FROM:  "+currentPage.name);
     currentPage=pages.get(pageDict.get(input));
-    println("SWITCH TO:  "+currentPage.name);
+    //println("SWITCH TO:  "+currentPage.name);
     currentPage.movie.jump(0.0);
     delay(100);
     startPageTimer();
