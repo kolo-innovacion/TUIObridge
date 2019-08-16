@@ -19,7 +19,7 @@ class Button {
     currState=false;
     prevState=false;
 
-    deLog(deb, cona, "Created button: "+id);
+    deLog(inf, buta, "Created button: "+id);
     //callPage=null;
     //deLog(identifier+"  created on  ("+posX+","+posY+")");
     //println("-------------------------Button Added");

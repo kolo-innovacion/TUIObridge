@@ -10,7 +10,8 @@ void setupUDP() {
   //udp.log( true );     // <-- printout the connection activity
   udp.listen( true );
 
-  deLog("Target: "+udpTargetIP+"  Port: "+udpTargetPort);
+  //deLog("Target: "+udpTargetIP+"  Port: "+udpTargetPort);
+  deLog(inf, udpa, "UDP client started with target  "+udpTargetIP+":"+udpTargetPort);
 }
 
 void sendUDP(String input) {

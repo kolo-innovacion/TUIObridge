@@ -6,6 +6,7 @@ CountdownTimer pageTimer;
 void timerSetup() {
   pageTimer = CountdownTimerService.getNewCountdownTimer(this).configure(1000, 7000);
   pageTimer.reset();
+  deLog(inf, tima, "Timer setup ready.");
   //timer.start();
 }
 
@@ -31,6 +32,8 @@ void startPageTimer() {
     pageTimer.configure(1000, currentPage.outTime);
 
     pageTimer.start();
+
+    deLog(deb, tima, "Timeout started from  "+currentPage.name+"  to  "+currentPage.timeoutTo+"  in  "+currentPage.outTime+"  milliseconds.");
     //println("Page Timer from  "+currentPage.name+"  to "+currentPage.timeoutTo+"  in   "+currentPage.outTime+"  miliseconds" );
   } else {
     //pageTimer.stop();

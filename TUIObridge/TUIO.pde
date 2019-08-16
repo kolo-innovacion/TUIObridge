@@ -20,6 +20,7 @@ int curColor=color(0, 255, 0);
 
 void tuioSetup() {
   tuioClient  = new TuioProcessing(this);
+  deLog(inf, tuia, "TUIO client started. ");
   if (!callback) {
     //frameRate(60);
     loop();

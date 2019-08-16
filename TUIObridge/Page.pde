@@ -21,7 +21,7 @@ class Page {
     delay(10);
     pageDict.set(name, index);
     //deLog("Page "+name+" has been created.");
-    deLog(deb, cona, "Created page: "+name);
+    deLog(inf, paga, "Created page: "+name);
     fetchTransitions();
     //deLog(deb, paga, "End of buttons creation on  "+name);
   }
@@ -93,11 +93,11 @@ class Page {
 
     outTime = int(timePar.getFloatContent()*1000);
 
-    deLog(deb, cona, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
+    deLog(inf, paga, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
 
     //println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
 
-    deLog(deb, paga, "End of buttons creation on  "+name);
+    deLog(inf, paga, "End of buttons creation on  "+name);
   }
   void addMediaEnd(XML target, XML event) {
     //a media end event is the same as a timeout the difference is that the out time comes from the video duration
@@ -111,7 +111,7 @@ class Page {
 
     outTime = int(movie.duration()*1000);
 
-    deLog(deb, cona, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
+    deLog(inf, paga, "Page  "+name+"  timeouts to  "+timeoutTo+"  at  "+outTime+"  milliseconds.");
 
     //println("-------------------TIMEOUT FROM  "+name+"  to  "+timeoutTo+"  @  "+outTime+"  seconds");
   }
