@@ -7,12 +7,22 @@ int winY;
 boolean fullScr=false;
 float fps;
 
+int viewport_x;
+int viewport_y;
+
 //String presName="adidasFloor.bpf";
 
 XML initState;
 XML[] statesArr;
 XML[] transArr;
 boolean exitFlag=false;
+
+void winSetup() {
+  surface.setLocation(viewport_x, viewport_y);
+  surface.setResizable(false);
+
+  surface.setTitle("TUIO Bridge 0.1.0");
+}
 
 boolean loadPres() {
   if (exitFlag) {

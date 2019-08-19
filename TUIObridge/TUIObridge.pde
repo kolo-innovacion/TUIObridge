@@ -27,6 +27,7 @@ void setup() {
   setupUDP();
   timerSetup();
   //partSetup();
+  winSetup();
   frameRate(fps);
 }
 
