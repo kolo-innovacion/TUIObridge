@@ -36,6 +36,11 @@ void updateTUIO() {
 
   for (int i=0; i<tuioCursorList.size(); i++) {
     TuioCursor tcur = tuioCursorList.get(i);
+
+
+    fill(255, 0, 0, 255);
+    ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
+
     ArrayList<TuioPoint> pointList = tcur.getPath();
 
     if (pointList.size()>0) {
@@ -51,8 +56,8 @@ void updateTUIO() {
       if (devMode) {
         stroke(192, 192, 192);
         noStroke();
-        fill(curColor);
-        ellipse( tcur.getScreenX(winX)*scaleX, tcur.getScreenY(winY)*scaleY, 20, 20);
+        //fill(255);
+        //ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
         fill(0);
         text(""+ tcur.getCursorID(), tcur.getScreenX(winX)-5, tcur.getScreenY(winY)+5);
       }
