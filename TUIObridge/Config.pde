@@ -10,6 +10,8 @@ float fps;
 int viewport_x;
 int viewport_y;
 
+int partsPerCursor;
+int partSize;
 //String presName="adidasFloor.bpf";
 
 XML initState;
@@ -126,6 +128,12 @@ boolean loadConfig() {
 
     viewport_y=config.getInt("viewportY", 0);
     deLog(inf, cona, "Window Y offset: " +viewport_y);
+
+    partsPerCursor=config.getInt("partsPerCursor", 50);
+    deLog(inf, cona, "Particles per cursor:  " +partsPerCursor);
+
+    partSize=config.getInt("partSize", 10);
+    deLog(inf, cona, "Particle size:  " +partSize);
 
     udpTargetIP=config.getString("targetIP", "255.255.255.255");
     deLog(inf, cona, "UDP target IP address: "+udpTargetIP);

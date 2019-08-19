@@ -2,7 +2,7 @@
 PImage part;
 void setupPart() {
   part=loadImage("particle.png");
-  part.resize(10, 10);
+  part.resize(partSize, partSize);
 }
 
 class Particle {
