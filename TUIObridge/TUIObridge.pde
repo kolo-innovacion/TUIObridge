@@ -47,12 +47,19 @@ void draw() {
 }
 
 void mousePressed() {
-
-  //for (int i=0; i<100; i++) {ps.addParticle(mouseX, mouseY);}
+  //update last value on p1 and normalize:
   p1.x=float(mouseX)/width;
   p1.y=float(mouseY)/height;
   println(p1.x+"  ,  "+p1.y);
-  //pv.x=p1.x-p0.x;
+
+  //resulting vector is last minus previous
+  pv.x=p1.x-p0.x;
+  pv.y=p1.y-p0.y;
+
+  println(pv.x+"  ,  "+pv.y);
+  //previouse vector is now the last one (update)
+  p0.x=p1.x;
+  p0.y=p1.y;
 }
 
 void setWindow() {

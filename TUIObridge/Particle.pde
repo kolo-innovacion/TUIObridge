@@ -13,8 +13,12 @@ class Particle {
 
     //acceleration = new PVector(-0.250f, random(-0.50f, 0.450f));
 
-    acceleration = new PVector(random(-0.60f, 0.20f), random(-0.50f, 0.450f));
-    velocity = new PVector(random(-1.0f, 1.0f), random(-2.0f, 1.0f));
+    //acceleration = new PVector(random(-0.60f, 0.20f), random(-0.50f, 0.450f));
+    acceleration = new PVector(pv.x+random(-0.250f, 0.250f), pv.y+random(-0.250f, 0.250f));
+    //acceleration = new PVector(pv.x, pv.y);
+    //acceleration = new PVector(random(-0.50f, 0.50f), random(-0.50f, 0.50f));
+    velocity = new PVector(random(-1.0f, 1.0f), random(-1.0f, 1.0f));
+    //velocity = new PVector(pv.x, pv.y);
     //velocity = new PVector(0.10f, 0.10f);
     position.x=x;
     position.y=y;
