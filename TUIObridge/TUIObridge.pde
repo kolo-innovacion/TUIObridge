@@ -45,6 +45,13 @@ void draw() {
   //partsDraw();
 }
 
+void mousePressed() {
+  for (int i=0; i<10; i++) {
+
+    ps.addParticle(mouseX, mouseY);
+  }
+}
+
 void setWindow() {
   deLog(inf, cona, "Fullscreen value: "+fullScr);
   if (fullScr) {

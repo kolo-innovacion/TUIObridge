@@ -41,6 +41,7 @@ class Particle {
     noStroke();
     //stroke(255, lifespan);
     fill(255, 0, 0, lifespan*alfa);
+    fill(255, 0, 0, 255);
     //ellipse(position.x, position.y, 8, 8);
     ellipse(position.x, position.y, radius, radius);
   }
