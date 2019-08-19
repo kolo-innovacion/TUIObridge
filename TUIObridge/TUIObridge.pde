@@ -46,7 +46,7 @@ void draw() {
   //partsDraw();
 }
 
-void mousePressed() {
+void mousePressed1() {
   //update last value on p1 and normalize:
   p1.x=float(mouseX)/width;
   p1.y=float(mouseY)/height;
@@ -55,6 +55,21 @@ void mousePressed() {
   //resulting vector is last minus previous
   pv.x=p1.x-p0.x;
   pv.y=p1.y-p0.y;
+
+  println(pv.x+"  ,  "+pv.y);
+  //previouse vector is now the last one (update)
+  p0.x=p1.x;
+  p0.y=p1.y;
+}
+void updateVectors0(int x, int y) {
+  //update last value on p1 and normalize:
+  p1.x=float(x)/width;
+  p1.y=float(y)/height;
+  println(p1.x+"  ,  "+p1.y);
+
+  //resulting vector is last minus previous
+  pv.x=random(-0.50f, 0.50f);
+  pv.y=random(-0.50f, 0.50f);
 
   println(pv.x+"  ,  "+pv.y);
   //previouse vector is now the last one (update)
