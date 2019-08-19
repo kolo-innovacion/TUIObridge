@@ -47,7 +47,7 @@ void updateTUIO() {
         start_point = end_point;
       }
 
-      spawnCursor(int(tcur.getScreenX(winX)*scaleX), int(tcur.getScreenY(winY)*scaleY));
+      //spawnCursor(int(tcur.getScreenX(winX)*scaleX), int(tcur.getScreenY(winY)*scaleY));
       if (devMode) {
         stroke(192, 192, 192);
         noStroke();
