@@ -1,4 +1,9 @@
 // A simple Particle class
+PImage part;
+void setupPart() {
+  part=loadImage("particle.png");
+  part.resize(10, 10);
+}
 
 class Particle {
   PVector position=new PVector();
@@ -25,7 +30,7 @@ class Particle {
     lifespan = 125.0;
     lifespan = random(5.0f, 125.0f);
     radius=int(random(3.0, 9.0));
-    alfa=random(0.50f, 1.0f);
+    alfa=random(1.0f, 2.0f);
   }
 
   void run() {
@@ -41,13 +46,21 @@ class Particle {
   }
 
   // Method to display
-  void display() {
+  void display0() {
     noStroke();
     //stroke(255, lifespan);
     fill(255, 255, 255, lifespan*alfa);
     //fill(255, 0, 0, 255);
     //ellipse(position.x, position.y, 8, 8);
     ellipse(position.x, position.y, radius, radius);
+  }  
+  void display() {
+    push();
+    translate(position.x-(part.width/2), position.y-(part.height/2));
+
+    tint(255, 255, 255, lifespan*alfa);
+    image(part, 0, 0);
+    pop();
   }
 
   // Is the particle still useful?

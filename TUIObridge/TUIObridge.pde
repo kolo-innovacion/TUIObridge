@@ -27,6 +27,7 @@ void setup() {
   tuioSetup();
   setupUDP();
   timerSetup();
+  setupPart();
   setupPS();
   winSetup();
   frameRate(fps);
