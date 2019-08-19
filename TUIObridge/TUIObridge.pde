@@ -27,7 +27,7 @@ void setup() {
   setupUDP();
   timerSetup();
   //partSetup();
-  //frameRate(25.00);
+  frameRate(fps);
 }
 
 void draw() {
@@ -38,7 +38,7 @@ void draw() {
 
   background(0);
 
-  //showPage();
+  showPage();
   //updateTUIO();  
   //partsDraw();
 }
