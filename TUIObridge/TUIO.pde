@@ -41,7 +41,8 @@ void updateTUIO() {
     //fill(255, 0, 0, 255);
     //ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
 
-    ps.addParticle(tcur.getScreenX(winX), tcur.getScreenY(winY) );
+    //ps.addParticle(tcur.getScreenX(winX), tcur.getScreenY(winY) );
+    spawn(tcur.getScreenX(winX), tcur.getScreenY(winY) );
 
     ArrayList<TuioPoint> pointList = tcur.getPath();
 

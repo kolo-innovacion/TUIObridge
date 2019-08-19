@@ -38,3 +38,9 @@ class ParticleSystem {
 void setupPS() {
   ps = new ParticleSystem(new PVector(100.0f, 100.0f));
 }
+
+void spawn(int x, int y) {
+  for (int i=0; i<100; i++) {
+    ps.addParticle(x, y);
+  }
+}

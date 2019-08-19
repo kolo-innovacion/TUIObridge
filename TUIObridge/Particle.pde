@@ -20,7 +20,7 @@ class Particle {
     position.y=y;
     lifespan = 125.0;
     lifespan = random(5.0f, 125.0f);
-    radius=int(random(2.0, 8.0));
+    radius=int(random(3.0, 9.0));
     alfa=random(0.50f, 1.0f);
   }
 
@@ -40,8 +40,8 @@ class Particle {
   void display() {
     noStroke();
     //stroke(255, lifespan);
-    fill(255, 0, 0, lifespan*alfa);
-    fill(255, 0, 0, 255);
+    fill(255, 255, 255, lifespan*alfa);
+    //fill(255, 0, 0, 255);
     //ellipse(position.x, position.y, 8, 8);
     ellipse(position.x, position.y, radius, radius);
   }
