@@ -1,2 +1,2 @@
-<config fps="25.0" resx="480" resy="288" fullscreen="0" targetIP="localhost" targetPort="6100" scaleX="1.0" scaleY="1.0" devMode="false" viewportX="0" viewportY="0">
+<config fps="25.0" resx="480" resy="288" fullscreen="0" targetIP="localhost" targetPort="6100" scaleX="2.60" scaleY="0.70" devMode="false" viewportX="-3" viewportY="-26">
 </config>

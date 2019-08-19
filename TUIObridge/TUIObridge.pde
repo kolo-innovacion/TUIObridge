@@ -84,8 +84,7 @@ void setWindow() {
     fullScreen();
     deLog(inf, cona, "Fullscreen mode. Width: "+width+" Height: "+height);
   } else {
-    //size(winX, winY, P2D);
-    size(winX, winY, P3D);
+    size(winX, winY);
     deLog(inf, cona, "Window created. Width: "+width+" Height: "+height);
   }
 }

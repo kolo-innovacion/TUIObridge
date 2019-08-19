@@ -103,7 +103,7 @@ boolean inRange(int input, int lef, int rig) {
 
 void addTuioCursor(TuioCursor tcur) {
   if (tuioVerbose) deLog("add cur "+tcur.getCursorID()+" ("+tcur.getSessionID()+ ") " +tcur.getX()+" "+tcur.getY());
-  checkPress(tcur.getScreenX(winX), tcur.getScreenY(winY));
+  checkPress(int(tcur.getScreenX(winX)*scaleX), int(tcur.getScreenY(winY)*scaleY));
   //startPageTimer();
   //redraw();
 }
