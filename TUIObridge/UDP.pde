@@ -30,5 +30,6 @@ void receive( byte[] data, String ip, int port ) {  // <-- extended handler
 
   // print the result
   //println( "receive: \""+message+"\" from "+ip+" on port "+port );
+  deLog(inf, udpa, message);
   switchPage(message);
 }

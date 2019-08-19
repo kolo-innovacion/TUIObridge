@@ -86,7 +86,7 @@ void instancePages() {
       ////println("Page and index:  "+tempName);
       //pages.add(new Page(i, tempName));
       Movie tempMovie = new Movie(this, tempName);
-      delay(10);
+      delay(100);
       //tempMovie.loop();
       pages.add(new Page(i, tempName, tempMovie));
       delay(10);

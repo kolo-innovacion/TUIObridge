@@ -30,6 +30,7 @@ void setup() {
   setupPS();
   winSetup();
   frameRate(fps);
+  deLog(inf, cona, "FrameRate set to  "+fps);
 }
 
 void draw() {

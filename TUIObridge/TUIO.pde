@@ -42,7 +42,7 @@ void updateTUIO() {
     //ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
 
     //ps.addParticle(tcur.getScreenX(winX), tcur.getScreenY(winY) );
-    spawn(tcur.getScreenX(winX), tcur.getScreenY(winY) );
+    spawn(int(tcur.getScreenX(winX)*scaleX), int(tcur.getScreenY(winY)*scaleY) );
 
     ArrayList<TuioPoint> pointList = tcur.getPath();
 
@@ -83,6 +83,8 @@ void checkPress(int curX, int curY) {
       sendUDP(temp.identifier);
       ////println(temp.identifier+"  activated");
       switchPage(temp.identifier);//if no callpage is assigned, nothing happens
+
+      deLog(met, tuia, temp.identifier);
       //in this case, button is pressed, send UDP!
       temp.setState(true);
     } else {
