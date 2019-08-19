@@ -63,21 +63,6 @@ void mousePressed1() {
   p0.x=p1.x;
   p0.y=p1.y;
 }
-void updateVectors0(int x, int y) {
-  //update last value on p1 and normalize:
-  p1.x=float(x)/width;
-  p1.y=float(y)/height;
-  println(p1.x+"  ,  "+p1.y);
-
-  //resulting vector is last minus previous
-  pv.x=random(-0.50f, 0.50f);
-  pv.y=random(-0.50f, 0.50f);
-
-  println(pv.x+"  ,  "+pv.y);
-  //previouse vector is now the last one (update)
-  p0.x=p1.x;
-  p0.y=p1.y;
-}
 
 void setWindow() {
   deLog(inf, cona, "Fullscreen value: "+fullScr);
@@ -95,7 +80,7 @@ void setupGUI() {
   colorMode(RGB, 255, 255, 255, 255);
   noStroke();
   background(0);
-  //smooth(0);
+  surface.setTitle("Loading...");
 }
 
 void showPage() {

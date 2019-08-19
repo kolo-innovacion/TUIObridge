@@ -37,7 +37,7 @@ boolean loadPres() {
       return true;
     } else {
 
-      deLog(inf, cona, "-presentation.bpf- file loaded.");
+      deLog(inf, cona, "presentation.bpf file loaded.");
 
       XML zones=nextLevel(pres, "zones");
       XML zone=nextLevel(zones, "zone");

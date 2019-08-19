@@ -34,7 +34,7 @@ void deLog(String level, String agent, String text) {
     //do not log (only case)
   } else {
 
-    File file = new File("log.txt");
+    File file = new File("tuioBridgeLog.csv");
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);
@@ -55,31 +55,6 @@ void deLog(String level, String agent, String text) {
       catch (IOException e) {
         e.printStackTrace();
       }
-    }
-  }
-}
-
-void deLog(String text) {
-}
-
-void deLog0(String text) {
-  File file = new File("log.txt");
-  FileWriter fr = null;
-  try {
-    // Below constructor argument decides whether to append or override
-    fr = new FileWriter(file, true);
-    //fr.write(text);
-    fr.append(timestamp()+getLevel(DEBUG)+"LOGGER,"+text+"\n");
-  } 
-  catch (IOException e) {
-    e.printStackTrace();
-  } 
-  finally {
-    try {
-      fr.close();
-    } 
-    catch (IOException e) {
-      e.printStackTrace();
     }
   }
 }

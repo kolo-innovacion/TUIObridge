@@ -46,14 +46,6 @@ class Particle {
   }
 
   // Method to display
-  void display0() {
-    noStroke();
-    //stroke(255, lifespan);
-    fill(255, 255, 255, lifespan*alfa);
-    //fill(255, 0, 0, 255);
-    //ellipse(position.x, position.y, 8, 8);
-    ellipse(position.x, position.y, radius, radius);
-  }  
   void display() {
     push();
     translate(position.x-(part.width/2), position.y-(part.height/2));
