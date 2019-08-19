@@ -26,7 +26,7 @@ void setup() {
   tuioSetup();
   setupUDP();
   timerSetup();
-  //partSetup();
+  setupPS();
   winSetup();
   frameRate(fps);
 }
@@ -41,6 +41,7 @@ void draw() {
 
   showPage();
   updateTUIO();  
+  ps.run();
   //partsDraw();
 }
 
