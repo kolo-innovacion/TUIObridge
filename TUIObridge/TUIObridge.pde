@@ -47,10 +47,12 @@ void draw() {
 }
 
 void mousePressed() {
-  for (int i=0; i<100; i++) {
 
-    ps.addParticle(mouseX, mouseY);
-  }
+  //for (int i=0; i<100; i++) {ps.addParticle(mouseX, mouseY);}
+  p1.x=float(mouseX)/width;
+  p1.y=float(mouseY)/height;
+  println(p1.x+"  ,  "+p1.y);
+  //pv.x=p1.x-p0.x;
 }
 
 void setWindow() {

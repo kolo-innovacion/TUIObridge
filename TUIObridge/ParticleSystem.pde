@@ -5,6 +5,11 @@ ParticleSystem ps;
 
 PVector gOrigin = new PVector(0, 0);
 
+PVector p0 = new PVector(0.0f, 0.0f);
+PVector p1 = new PVector(1.0f, 0.0f);
+PVector pv = new PVector(0.0f, 0.0f);
+
+
 class ParticleSystem {
   ArrayList<Particle> particles;
   PVector origin;
@@ -31,7 +36,7 @@ class ParticleSystem {
         //println("X");
       }
     }
-    println("KILLED:  "+count);
+    //println("KILLED:  "+count);
   }
 }
 
