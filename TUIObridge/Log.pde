@@ -34,7 +34,7 @@ void deLog(String level, String agent, String text) {
     //do not log (only case)
   } else {
 
-    File file = new File("tuioBridgeLog.csv");
+    File file = new File("tuioBridgeLog.txt");
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);

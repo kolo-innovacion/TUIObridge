@@ -22,7 +22,7 @@ void winSetup() {
   surface.setResizable(false);
   surface.setTitle("TUIO Bridge 0.1.0");
 
-  deLog(inf, cona, "Window fixed to viewport on  "+viewport_x+"  ,  "+viewport_y);
+  deLog(inf, cona, "Window fixed to viewport on  X: "+viewport_x+"  and  Y: "+viewport_y);
 }
 
 boolean loadPres() {
@@ -101,13 +101,13 @@ boolean loadConfig() {
 
   if (config!=null) {
 
-    deLog(inf, cona, "XML config. file loaded.");
+    deLog(inf, cona, "config.xml file loaded.");
 
     fullScr=boolean(config.getInt("fullscreen", 0));
     deLog(inf, cona, "Fullscreen value: "+fullScr);
 
     fps=config.getFloat("fps", 30.0);
-    deLog(inf, cona, "FPS: "+fps);
+    //deLog(inf, cona, "FPS: "+fps);
 
     winX=int(config.getInt("resx", 100));
     deLog(inf, cona, "Window X size: "+winX);
