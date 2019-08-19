@@ -42,6 +42,7 @@ class ParticleSystem {
 
 void setupPS() {
   ps = new ParticleSystem(new PVector(100.0f, 100.0f));
+  deLog(inf, para, "Particle system created.");
 }
 
 void spawn(int x, int y) {
