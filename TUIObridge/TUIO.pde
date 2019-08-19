@@ -38,8 +38,10 @@ void updateTUIO() {
     TuioCursor tcur = tuioCursorList.get(i);
 
 
-    fill(255, 0, 0, 255);
-    ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
+    //fill(255, 0, 0, 255);
+    //ellipse( tcur.getScreenX(winX), tcur.getScreenY(winY), 20, 20);
+
+    ps.addParticle(tcur.getScreenX(winX), tcur.getScreenY(winY) );
 
     ArrayList<TuioPoint> pointList = tcur.getPath();
 
