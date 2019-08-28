@@ -22,10 +22,13 @@ String tuia="TUIO";
 String udpa="UDP";
 String tima="TIMER";
 
+String fileName="tuioBridgeLog"+year()+logForm(month())+logForm(day())+".txt";
+
 int DEBUG=1;
 
 void setupLog() {
   deLog(inf, loga, "Program start");
+  fileName="tuioBridgeLog"+year()+logForm(month())+logForm(day())+".txt";
 }
 
 void deLog(String level, String agent, String text) {
@@ -34,7 +37,8 @@ void deLog(String level, String agent, String text) {
     //do not log (only case)
   } else {
 
-    File file = new File("tuioBridgeLog.txt");
+    //    File file = new File("tuioBridgeLog.txt");
+    File file = new File(fileName);
     FileWriter fr = null;
     try {
       fr = new FileWriter(file, true);
