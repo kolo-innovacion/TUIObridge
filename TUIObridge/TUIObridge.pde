@@ -10,6 +10,7 @@ boolean devMode=false;
 void settings() {
   setupLog();
   exitFlag=loadConfig();
+  exitFlag=loadZone();
   setWindow();
   //partSettings();
   //smooth(0);// now on setup GUI

@@ -27,6 +27,37 @@ void winSetup() {
   deLog(inf, cona, "Window fixed to viewport on  X: "+viewport_x+"  and  Y: "+viewport_y);
 }
 
+
+boolean loadZone() {
+  if (exitFlag) {
+    return true;
+    //do nothing
+  } else {
+    pres = loadXML("presentation.bpf");
+
+    if (pres==null) {
+      deLog(err, cona, "Unable to load -presentation.bpf- file. Program can't run without this. Please check documentation.");
+      return true;
+    } else {
+
+      deLog(inf, cona, "presentation.bpf file loaded.");
+
+      XML zones=nextLevel(pres, "zones");
+      XML zone=nextLevel(zones, "zone");
+
+      XML wid=zone.getChild("width");
+      winX=wid.getIntContent();
+      deLog(inf, cona, "Window X size: "+winX);
+
+      XML hei=zone.getChild("height");
+      winY=hei.getIntContent();
+      deLog(inf, cona, "Window Y size: "+winY);
+
+      return false;
+    }
+  }
+}
+
 boolean loadPres() {
   if (exitFlag) {
     return true;
@@ -43,6 +74,7 @@ boolean loadPres() {
 
       XML zones=nextLevel(pres, "zones");
       XML zone=nextLevel(zones, "zone");
+
       XML playlist=nextLevel(zone, "playlist");
       XML rootStates=nextLevel(playlist, "states");//the xml rootStates contains init state, states and transitions
 
@@ -114,11 +146,11 @@ boolean loadConfig() {
     fps=config.getFloat("fps", 30.0);
     //deLog(inf, cona, "FPS: "+fps);
 
-    winX=int(config.getInt("resx", 100));
-    deLog(inf, cona, "Window X size: "+winX);
+    //winX=int(config.getInt("resx", 100));
+    //deLog(inf, cona, "Window X size: "+winX);
 
-    winY=int(config.getInt("resy", 100));
-    deLog(inf, cona, "Window Y size: "+winY);
+    //winY=int(config.getInt("resy", 100));
+    //deLog(inf, cona, "Window Y size: "+winY);
 
     scaleX=config.getFloat("scaleX", 1.0);
     deLog(inf, cona, "X scale value: "+scaleX);
