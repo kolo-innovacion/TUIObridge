@@ -108,6 +108,9 @@ boolean loadConfig() {
     fullScr=boolean(config.getInt("fullscreen", 0));
     deLog(inf, cona, "Fullscreen value: "+fullScr);
 
+    udpLineFeed=boolean(config.getInt("udpLineFeed", 0));
+    deLog(inf, cona, "Line Feed after UDP: "+udpLineFeed);
+
     fps=config.getFloat("fps", 30.0);
     //deLog(inf, cona, "FPS: "+fps);
 

@@ -4,6 +4,7 @@ UDP udp;
 String udpTargetIP="localhost";
 int udpTargetPort=6100;
 int inPort=6000;
+boolean udpLineFeed=false;
 
 void setupUDP() {
   udp = new UDP( this, inPort );
@@ -16,7 +17,11 @@ void setupUDP() {
 
 void sendUDP(String input) {
   String message  = input;
-  //message = message+"\n";
+
+  if (udpLineFeed) {
+    message  = message+"\n";
+  } else {
+  }
   udp.send( message, udpTargetIP, udpTargetPort );
 }
 
