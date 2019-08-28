@@ -23,6 +23,8 @@ void winSetup() {
   surface.setLocation(viewport_x, viewport_y);
   surface.setResizable(false);
   surface.setTitle(mainTitle);
+  surface.setAlwaysOnTop(true);
+  surface.setResizable(false);
 
   deLog(inf, cona, "Window fixed to viewport on  X: "+viewport_x+"  and  Y: "+viewport_y);
 }
