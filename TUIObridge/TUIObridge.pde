@@ -7,6 +7,12 @@ Page timeoutPage;
 //boolean devMode=true;
 boolean devMode=false;
 
+//gui vars
+
+PImage winIcon;
+String mainTitle="TUIO Player 0.1.0 - Kolo DS";
+String loadingTitle="Loading...";
+
 void settings() {
   setupLog();
   exitFlag=loadConfig();
@@ -66,6 +72,7 @@ void mousePressed1() {
   p0.y=p1.y;
 }
 
+
 void setWindow() {
   deLog(inf, cona, "Fullscreen value: "+fullScr);
   if (fullScr) {
@@ -82,7 +89,10 @@ void setupGUI() {
   colorMode(RGB, 255, 255, 255, 255);
   noStroke();
   background(0);
-  surface.setTitle("Loading...");
+  winIcon=loadImage("kolo.png");
+  surface.setIcon(winIcon);
+  surface.setTitle(loadingTitle);
+  noCursor();
 }
 
 void showPage() {

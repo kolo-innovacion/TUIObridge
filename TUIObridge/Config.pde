@@ -22,7 +22,7 @@ boolean exitFlag=false;
 void winSetup() {
   surface.setLocation(viewport_x, viewport_y);
   surface.setResizable(false);
-  surface.setTitle("TUIO Bridge 0.1.0");
+  surface.setTitle(mainTitle);
 
   deLog(inf, cona, "Window fixed to viewport on  X: "+viewport_x+"  and  Y: "+viewport_y);
 }
