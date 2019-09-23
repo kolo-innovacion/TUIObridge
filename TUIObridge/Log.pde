@@ -28,7 +28,7 @@ int DEBUG=1;
 
 void setupLog() {
   deLog(inf, loga, "Program start");
-  fileName="tuioBridgeLog"+year()+logForm(month())+logForm(day())+".txt";
+  //fileName="tuioBridgeLog"+year()+logForm(month())+logForm(day())+".txt";
 }
 
 void deLog(String level, String agent, String text) {
