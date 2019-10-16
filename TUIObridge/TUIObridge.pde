@@ -6,6 +6,8 @@ Page currentPage;
 Page timeoutPage;
 //boolean devMode=true;
 boolean devMode=false;
+IntDict pageDict;
+
 
 //gui vars
 
@@ -55,7 +57,9 @@ void draw() {
   ps.run();
   //partsDraw();
 }
-
+void setupDict() {
+  pageDict = new IntDict();
+}
 void mousePressed1() {
   //update last value on p1 and normalize:
   p1.x=float(mouseX)/width;
