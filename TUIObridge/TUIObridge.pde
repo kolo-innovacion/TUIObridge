@@ -35,6 +35,7 @@ void setup() {
   instancePages();
   tuioSetup();
   setupUDP();
+  updateSerialStatus();
   timerSetup();
   setupPart();
   setupPS();

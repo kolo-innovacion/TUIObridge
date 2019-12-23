@@ -27,7 +27,6 @@ void sendUDP(String input) {
 
 void receive( byte[] data, String ip, int port ) {  // <-- extended handler
 
-
   // get the "real" message =
   // forget the ";\n" at the end <-- !!! only for a communication with Pd !!!
   //data = subset(data, 0, data.length-2);
