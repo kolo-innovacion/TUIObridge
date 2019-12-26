@@ -35,12 +35,13 @@ void setup() {
   instancePages();
   tuioSetup();
   setupUDP();
-  updateSerialStatus();
+  //updateSerialStatus();
   timerSetup();
   setupPart();
   setupPS();
   winSetup();
   frameRate(fps);
+  updateSerialStatus();
   deLog(inf, cona, "FrameRate set to  "+fps);
   deLog(inf, cona, "End of setup. Start playback.");
 }

@@ -17,8 +17,12 @@ int attemptSerial() {
     myPort = new Serial(this, comPort, 9600);
   }
   catch(Exception e) {
+    //deLog(war, sera, "Unable to communicate on COM port "+comPort);
+    deLog(war, sera, "Return 0 "+comPort);
     return 0;
   }
+
+  deLog(war, sera, "Return 2 "+comPort);
   return 2;
 }
 
