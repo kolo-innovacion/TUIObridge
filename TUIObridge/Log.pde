@@ -20,7 +20,7 @@ String paga="PAGE";
 String para="PARTICLES";
 String tuia="TUIO";
 String udpa="UDP";
-String sera="UDP";
+String sera="SERIAL";
 String tima="TIMER";
 
 String fileName="tuioBridgeLog"+year()+logForm(month())+logForm(day())+".txt";

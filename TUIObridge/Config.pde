@@ -177,6 +177,11 @@ boolean loadConfig() {
 
     udpTargetPort=config.getInt("targetPort", 5000);
     deLog(inf, cona, "UDP target port: "+udpTargetPort);
+
+    //start serial params
+    comPort=config.getString("comPort", null);
+    deLog(inf, cona, "COM port: "+comPort);
+
     return false;
   } else {
     deLog(err, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
