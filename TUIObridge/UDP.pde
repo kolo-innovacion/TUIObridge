@@ -3,7 +3,7 @@ UDP udp;
 
 String udpTargetIP="localhost";
 int udpTargetPort=6100;
-int inPort=6000;
+int inPort=5000;
 boolean udpLineFeed=false;
 
 void setupUDP() {
