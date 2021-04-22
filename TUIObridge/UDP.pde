@@ -2,8 +2,8 @@ import hypermedia.net.*;
 UDP udp;
 
 String udpTargetIP="localhost";
-int udpTargetPort=6100;
-int inPort=5000;
+int udpTargetPort=5000;
+int inPort=5100;
 boolean udpLineFeed=false;
 
 void setupUDP() {

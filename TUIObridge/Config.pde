@@ -177,6 +177,10 @@ boolean loadConfig() {
 
     udpTargetPort=config.getInt("targetPort", 5000);
     deLog(inf, cona, "UDP target port: "+udpTargetPort);
+    
+    inPort=config.getInt("inPort", 5100);
+    deLog(inf, cona, "UDP incoming port: "+inPort);
+    
     return false;
   } else {
     deLog(err, cona, "Unable to load -config.xml- file. Program can't run without this. Please check documentation.");
